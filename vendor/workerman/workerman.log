@@ -1,0 +1,1229 @@
+2018-02-06 20:07:40 pid:13860 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-06 20:07:47 pid:13860 Workerman[WebsocketTest.php] stopping ...
+2018-02-06 20:07:47 pid:13860 Workerman[WebsocketTest.php] has been stopped
+2018-02-06 20:09:12 pid:14069 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-07 17:10:45 pid:14069 Workerman[WebsocketTest.php] stopping ...
+2018-02-07 17:10:45 pid:14069 Workerman[WebsocketTest.php] has been stopped
+2018-02-07 19:22:51 pid:2263 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-07 19:23:05 pid:2267 ArgumentCountError: Too few arguments to function {closure}(), 1 passed and exactly 2 expected in /home/staralex/battleship.io/WebsocketTest.php:21
+Stack trace:
+#0 [internal function]: {closure}(Object(Workerman\Connection\TcpConnection))
+#1 /home/staralex/battleship.io/vendor/workerman/workerman/Connection/TcpConnection.php(868): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection))
+#2 /home/staralex/battleship.io/vendor/workerman/workerman/Connection/TcpConnection.php(782): Workerman\Connection\TcpConnection->destroy()
+#3 /home/staralex/battleship.io/vendor/workerman/workerman/Protocols/Websocket.php(415): Workerman\Connection\TcpConnection->close()
+#4 /home/staralex/battleship.io/vendor/workerman/workerman/Protocols/Websocket.php(57): Workerman\Protocols\Websocket::dealHandshake('\r\n', Object(Workerman\Connection\TcpConnection))
+#5 /home/staralex/battleship.io/vendor/workerman/workerman/Connection/TcpConnection.php(621): Workerman\Protocols\Websocket::input('\r\n', Object(Workerman\Connection\TcpConnection))
+#6 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #24)
+#7 /home/staralex/battleship.io/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#8 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#9 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#10 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#11 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#12 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(459): Workerman\Worker::forkWorkers()
+#13 /home/staralex/battleship.io/WebsocketTest.php(26): Workerman\Worker::runAll()
+#14 {main}
+2018-02-07 19:23:05 pid:2267 Worker process terminated
+2018-02-07 19:23:05 pid:2263 worker[none:2267] exit with status 64000
+2018-02-07 19:23:55 pid:2263 Workerman[WebsocketTest.php] stopping ...
+2018-02-07 19:23:55 pid:2263 Workerman[WebsocketTest.php] has been stopped
+2018-02-07 19:23:56 pid:2460 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-07 19:25:49 pid:2461 ArgumentCountError: Too few arguments to function {closure}(), 1 passed and exactly 2 expected in /home/staralex/battleship.io/WebsocketTest.php:21
+Stack trace:
+#0 [internal function]: {closure}(Object(Workerman\Connection\TcpConnection))
+#1 /home/staralex/battleship.io/vendor/workerman/workerman/Connection/TcpConnection.php(868): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection))
+#2 /home/staralex/battleship.io/vendor/workerman/workerman/Connection/TcpConnection.php(782): Workerman\Connection\TcpConnection->destroy()
+#3 /home/staralex/battleship.io/vendor/workerman/workerman/Protocols/Websocket.php(415): Workerman\Connection\TcpConnection->close()
+#4 /home/staralex/battleship.io/vendor/workerman/workerman/Protocols/Websocket.php(57): Workerman\Protocols\Websocket::dealHandshake('\r\n', Object(Workerman\Connection\TcpConnection))
+#5 /home/staralex/battleship.io/vendor/workerman/workerman/Connection/TcpConnection.php(621): Workerman\Protocols\Websocket::input('\r\n', Object(Workerman\Connection\TcpConnection))
+#6 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #24)
+#7 /home/staralex/battleship.io/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#8 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#9 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#10 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#11 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#12 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(459): Workerman\Worker::forkWorkers()
+#13 /home/staralex/battleship.io/WebsocketTest.php(26): Workerman\Worker::runAll()
+#14 {main}
+2018-02-07 19:25:49 pid:2461 Worker process terminated
+2018-02-07 19:25:49 pid:2460 worker[none:2461] exit with status 64000
+2018-02-07 19:25:58 pid:2464 ArgumentCountError: Too few arguments to function {closure}(), 1 passed and exactly 2 expected in /home/staralex/battleship.io/WebsocketTest.php:21
+Stack trace:
+#0 [internal function]: {closure}(Object(Workerman\Connection\TcpConnection))
+#1 /home/staralex/battleship.io/vendor/workerman/workerman/Connection/TcpConnection.php(868): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection))
+#2 /home/staralex/battleship.io/vendor/workerman/workerman/Connection/TcpConnection.php(782): Workerman\Connection\TcpConnection->destroy()
+#3 /home/staralex/battleship.io/vendor/workerman/workerman/Protocols/Websocket.php(415): Workerman\Connection\TcpConnection->close()
+#4 /home/staralex/battleship.io/vendor/workerman/workerman/Protocols/Websocket.php(57): Workerman\Protocols\Websocket::dealHandshake('\r\n', Object(Workerman\Connection\TcpConnection))
+#5 /home/staralex/battleship.io/vendor/workerman/workerman/Connection/TcpConnection.php(621): Workerman\Protocols\Websocket::input('\r\n', Object(Workerman\Connection\TcpConnection))
+#6 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #24)
+#7 /home/staralex/battleship.io/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#8 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#9 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#10 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#11 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#12 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(459): Workerman\Worker::forkWorkers()
+#13 /home/staralex/battleship.io/WebsocketTest.php(26): Workerman\Worker::runAll()
+#14 {main}
+2018-02-07 19:25:58 pid:2464 Worker process terminated
+2018-02-07 19:25:58 pid:2460 worker[none:2464] exit with status 64000
+2018-02-07 19:28:20 pid:2702 ArgumentCountError: Too few arguments to function {closure}(), 1 passed and exactly 2 expected in /home/staralex/battleship.io/WebsocketTest.php:21
+Stack trace:
+#0 [internal function]: {closure}(Object(Workerman\Connection\TcpConnection))
+#1 /home/staralex/battleship.io/vendor/workerman/workerman/Connection/TcpConnection.php(868): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection))
+#2 /home/staralex/battleship.io/vendor/workerman/workerman/Connection/TcpConnection.php(782): Workerman\Connection\TcpConnection->destroy()
+#3 /home/staralex/battleship.io/vendor/workerman/workerman/Protocols/Websocket.php(415): Workerman\Connection\TcpConnection->close()
+#4 /home/staralex/battleship.io/vendor/workerman/workerman/Protocols/Websocket.php(57): Workerman\Protocols\Websocket::dealHandshake('\r\n', Object(Workerman\Connection\TcpConnection))
+#5 /home/staralex/battleship.io/vendor/workerman/workerman/Connection/TcpConnection.php(621): Workerman\Protocols\Websocket::input('\r\n', Object(Workerman\Connection\TcpConnection))
+#6 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #25)
+#7 /home/staralex/battleship.io/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#8 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#9 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#10 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#11 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#12 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#13 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#14 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#15 /home/staralex/battleship.io/WebsocketTest.php(26): Workerman\Worker::runAll()
+#16 {main}
+2018-02-07 19:28:20 pid:2702 Worker process terminated
+2018-02-07 19:28:20 pid:2460 worker[none:2702] exit with status 64000
+2018-02-07 19:28:23 pid:2460 Workerman[WebsocketTest.php] stopping ...
+2018-02-07 19:28:23 pid:2460 Workerman[WebsocketTest.php] has been stopped
+2018-02-07 19:28:24 pid:3065 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-07 19:29:37 pid:3065 Workerman[WebsocketTest.php] stopping ...
+2018-02-07 19:29:37 pid:3065 Workerman[WebsocketTest.php] has been stopped
+2018-02-07 19:29:37 pid:3240 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-07 19:32:42 pid:3240 Workerman[WebsocketTest.php] stopping ...
+2018-02-07 19:32:42 pid:3240 Workerman[WebsocketTest.php] has been stopped
+2018-02-07 19:32:42 pid:3631 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-07 19:33:32 pid:3631 Workerman[WebsocketTest.php] stopping ...
+2018-02-07 19:33:32 pid:3631 Workerman[WebsocketTest.php] has been stopped
+2018-02-07 19:33:33 pid:3776 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-07 20:15:53 pid:3776 Workerman[WebsocketTest.php] stopping ...
+2018-02-07 20:15:53 pid:3776 Workerman[WebsocketTest.php] has been stopped
+2018-02-07 21:42:53 pid:22241 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-07 21:46:02 pid:22241 Workerman[WebsocketTest.php] stopping ...
+2018-02-07 21:46:02 pid:22241 Workerman[WebsocketTest.php] has been stopped
+2018-02-07 21:46:02 pid:22811 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-07 22:23:28 pid:22811 Workerman[WebsocketTest.php] stopping ...
+2018-02-07 22:23:28 pid:22811 Workerman[WebsocketTest.php] has been stopped
+2018-02-07 22:23:29 pid:27998 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-07 22:30:58 pid:27998 Workerman[WebsocketTest.php] stopping ...
+2018-02-07 22:30:58 pid:27998 Workerman[WebsocketTest.php] has been stopped
+2018-02-07 22:38:54 pid:30238 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-07 22:41:23 pid:30238 Workerman[WebsocketTest.php] stopping ...
+2018-02-07 22:41:23 pid:30238 Workerman[WebsocketTest.php] has been stopped
+2018-02-07 22:41:23 pid:30658 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-07 22:42:49 pid:30658 Workerman[WebsocketTest.php] stopping ...
+2018-02-07 22:42:50 pid:30658 Workerman[WebsocketTest.php] has been stopped
+2018-02-07 22:42:50 pid:31002 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-07 22:43:55 pid:31002 Workerman[WebsocketTest.php] stopping ...
+2018-02-07 22:43:55 pid:31002 Workerman[WebsocketTest.php] has been stopped
+2018-02-07 22:43:56 pid:31213 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-07 22:44:36 pid:31213 Workerman[WebsocketTest.php] stopping ...
+2018-02-07 22:44:36 pid:31213 Workerman[WebsocketTest.php] has been stopped
+2018-02-07 22:44:37 pid:31311 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-07 22:51:33 pid:31311 Workerman[WebsocketTest.php] stopping ...
+2018-02-07 22:51:33 pid:31311 Workerman[WebsocketTest.php] has been stopped
+2018-02-07 22:51:33 pid:32274 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-07 22:51:47 pid:32278 Error: Cannot access private property Battleship\App\Player::$connection in /home/staralex/battleship.io/src/App/BattleshipServer.php:42
+Stack trace:
+#0 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection), 'asdasd')
+#1 /home/staralex/battleship.io/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection), 'asdasd')
+#2 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #33)
+#3 /home/staralex/battleship.io/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#4 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#5 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#6 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#8 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(459): Workerman\Worker::forkWorkers()
+#9 /home/staralex/battleship.io/src/App/BattleshipServer.php(63): Workerman\Worker::runAll()
+#10 /home/staralex/battleship.io/WebsocketTest.php(8): Battleship\App\BattleshipServer->run()
+#11 {main}
+2018-02-07 22:51:47 pid:32278 Worker process terminated
+2018-02-07 22:51:47 pid:32274 worker[none:32278] exit with status 64000
+2018-02-07 22:52:10 pid:32274 Workerman[WebsocketTest.php] stopping ...
+2018-02-07 22:52:10 pid:32274 Workerman[WebsocketTest.php] has been stopped
+2018-02-07 22:52:10 pid:32363 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-08 18:18:51 pid:32363 Workerman[WebsocketTest.php] stopping ...
+2018-02-08 18:18:52 pid:32363 Workerman[WebsocketTest.php] has been stopped
+2018-02-08 18:18:53 pid:14829 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-08 18:25:14 pid:14829 Workerman[WebsocketTest.php] stopping ...
+2018-02-08 18:25:14 pid:14829 Workerman[WebsocketTest.php] has been stopped
+2018-02-08 18:25:15 pid:15736 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-08 18:28:03 pid:15736 Workerman[WebsocketTest.php] stopping ...
+2018-02-08 18:28:03 pid:15736 Workerman[WebsocketTest.php] has been stopped
+2018-02-08 18:28:03 pid:16114 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-08 18:28:31 pid:16117 Error: Cannot access private property Battleship\App\Player::$enemy in /home/staralex/battleship.io/src/App/BattleshipServer.php:44
+Stack trace:
+#0 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection), 'findEnemy')
+#1 /home/staralex/battleship.io/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection), 'findEnemy')
+#2 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #26)
+#3 /home/staralex/battleship.io/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#4 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#5 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#6 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#8 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(459): Workerman\Worker::forkWorkers()
+#9 /home/staralex/battleship.io/src/App/BattleshipServer.php(70): Workerman\Worker::runAll()
+#10 /home/staralex/battleship.io/WebsocketTest.php(8): Battleship\App\BattleshipServer->run()
+#11 {main}
+2018-02-08 18:28:31 pid:16117 Worker process terminated
+2018-02-08 18:28:31 pid:16114 worker[none:16117] exit with status 64000
+2018-02-08 18:30:37 pid:16114 Workerman[WebsocketTest.php] stopping ...
+2018-02-08 18:30:38 pid:16114 Workerman[WebsocketTest.php] has been stopped
+2018-02-08 18:30:38 pid:16515 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-08 18:30:44 pid:16519 Error: Call to undefined method Battleship\App\Player::setInSearch() in /home/staralex/battleship.io/src/App/BattleshipServer.php:45
+Stack trace:
+#0 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection), 'findEnemy')
+#1 /home/staralex/battleship.io/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection), 'findEnemy')
+#2 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #26)
+#3 /home/staralex/battleship.io/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#4 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#5 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#6 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#8 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(459): Workerman\Worker::forkWorkers()
+#9 /home/staralex/battleship.io/src/App/BattleshipServer.php(70): Workerman\Worker::runAll()
+#10 /home/staralex/battleship.io/WebsocketTest.php(8): Battleship\App\BattleshipServer->run()
+#11 {main}
+2018-02-08 18:30:44 pid:16519 Worker process terminated
+2018-02-08 18:30:44 pid:16515 worker[none:16519] exit with status 64000
+2018-02-08 18:30:59 pid:16515 Workerman[WebsocketTest.php] stopping ...
+2018-02-08 18:30:59 pid:16515 Workerman[WebsocketTest.php] has been stopped
+2018-02-08 18:30:59 pid:16575 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-08 18:31:02 pid:16579 Error: Call to undefined method Battleship\App\Player::setInSearch() in /home/staralex/battleship.io/src/App/BattleshipServer.php:45
+Stack trace:
+#0 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection), 'findEnemy')
+#1 /home/staralex/battleship.io/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection), 'findEnemy')
+#2 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #26)
+#3 /home/staralex/battleship.io/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#4 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#5 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#6 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#8 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(459): Workerman\Worker::forkWorkers()
+#9 /home/staralex/battleship.io/src/App/BattleshipServer.php(70): Workerman\Worker::runAll()
+#10 /home/staralex/battleship.io/WebsocketTest.php(8): Battleship\App\BattleshipServer->run()
+#11 {main}
+2018-02-08 18:31:02 pid:16579 Worker process terminated
+2018-02-08 18:31:02 pid:16575 worker[none:16579] exit with status 64000
+2018-02-08 18:31:24 pid:16578 Error: Call to undefined method Battleship\App\Player::setInSearch() in /home/staralex/battleship.io/src/App/BattleshipServer.php:45
+Stack trace:
+#0 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection), 'findEnemy')
+#1 /home/staralex/battleship.io/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection), 'findEnemy')
+#2 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #26)
+#3 /home/staralex/battleship.io/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#4 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#5 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#6 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#8 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(459): Workerman\Worker::forkWorkers()
+#9 /home/staralex/battleship.io/src/App/BattleshipServer.php(70): Workerman\Worker::runAll()
+#10 /home/staralex/battleship.io/WebsocketTest.php(8): Battleship\App\BattleshipServer->run()
+#11 {main}
+2018-02-08 18:31:24 pid:16578 Worker process terminated
+2018-02-08 18:31:24 pid:16575 worker[none:16578] exit with status 64000
+2018-02-08 18:31:37 pid:16575 Workerman[WebsocketTest.php] stopping ...
+2018-02-08 18:31:37 pid:16575 Workerman[WebsocketTest.php] has been stopped
+2018-02-08 18:31:37 pid:16674 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-08 18:32:36 pid:16674 Workerman[WebsocketTest.php] stopping ...
+2018-02-08 18:32:36 pid:16674 Workerman[WebsocketTest.php] has been stopped
+2018-02-08 18:32:37 pid:16819 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-08 18:33:06 pid:16819 Workerman[WebsocketTest.php] stopping ...
+2018-02-08 18:33:06 pid:16819 Workerman[WebsocketTest.php] has been stopped
+2018-02-08 18:33:07 pid:16890 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-08 18:34:42 pid:16890 Workerman[WebsocketTest.php] stopping ...
+2018-02-08 18:34:42 pid:16890 Workerman[WebsocketTest.php] has been stopped
+2018-02-08 18:34:43 pid:17131 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-08 18:36:09 pid:17131 Workerman[WebsocketTest.php] stopping ...
+2018-02-08 18:36:09 pid:17131 Workerman[WebsocketTest.php] has been stopped
+2018-02-08 18:36:10 pid:17336 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-08 18:36:36 pid:17336 Workerman[WebsocketTest.php] stopping ...
+2018-02-08 18:36:36 pid:17336 Workerman[WebsocketTest.php] has been stopped
+2018-02-08 18:36:36 pid:17405 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-08 18:45:33 pid:17405 Workerman[WebsocketTest.php] stopping ...
+2018-02-08 18:45:33 pid:17405 Workerman[WebsocketTest.php] has been stopped
+2018-02-08 18:45:34 pid:18668 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-08 19:32:09 pid:18668 Workerman[WebsocketTest.php] stopping ...
+2018-02-08 19:32:09 pid:18668 Workerman[WebsocketTest.php] has been stopped
+2018-02-08 23:01:35 pid:20810 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-08 23:02:04 pid:20810 Workerman[WebsocketTest.php] stopping ...
+2018-02-08 23:02:04 pid:20810 Workerman[WebsocketTest.php] has been stopped
+2018-02-08 23:03:52 pid:21146 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-08 23:04:29 pid:21146 Workerman[WebsocketTest.php] stopping ...
+2018-02-08 23:04:29 pid:21146 Workerman[WebsocketTest.php] has been stopped
+2018-02-08 23:04:29 pid:21239 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-08 23:06:12 pid:21239 Workerman[WebsocketTest.php] stopping ...
+2018-02-08 23:06:12 pid:21239 Workerman[WebsocketTest.php] has been stopped
+2018-02-08 23:16:08 pid:22791 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-08 23:16:28 pid:22791 Workerman[WebsocketTest.php] stopping ...
+2018-02-08 23:16:28 pid:22791 Workerman[WebsocketTest.php] has been stopped
+2018-02-08 23:16:31 pid:22846 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-08 23:17:03 pid:22846 Workerman[WebsocketTest.php] stopping ...
+2018-02-08 23:17:03 pid:22846 Workerman[WebsocketTest.php] has been stopped
+2018-02-08 23:17:04 pid:22938 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-08 23:17:53 pid:22938 Workerman[WebsocketTest.php] stopping ...
+2018-02-08 23:17:54 pid:22938 Workerman[WebsocketTest.php] has been stopped
+2018-02-08 23:17:54 pid:23071 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 01:21:01 pid:23071 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 01:21:01 pid:23071 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 19:51:51 pid:32088 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 19:53:10 pid:32088 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 19:53:10 pid:32088 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 20:04:41 pid:1548 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 20:05:09 pid:1548 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 20:05:10 pid:1548 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 20:05:11 pid:1548 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 20:05:11 pid:1548 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 20:05:11 pid:1548 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 20:05:11 pid:1548 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 20:05:11 pid:1548 worker[none:1552] exit with status 9
+2018-02-09 20:05:11 pid:1548 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 20:05:58 pid:1747 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 20:06:25 pid:1747 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 20:06:27 pid:1747 worker[none:1751] exit with status 9
+2018-02-09 20:06:27 pid:1747 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 20:07:07 pid:1918 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 20:07:49 pid:1918 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 20:07:49 pid:1918 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 20:21:19 pid:3956 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 20:22:58 pid:3956 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 20:22:58 pid:3956 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 20:22:59 pid:4199 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 20:24:20 pid:4199 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 20:24:20 pid:4199 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 20:24:24 pid:4402 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 20:28:18 pid:4402 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 20:28:18 pid:4402 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 20:28:19 pid:4939 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 20:30:41 pid:4939 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 20:30:41 pid:4939 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 20:30:41 pid:5253 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 20:32:33 pid:5253 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 20:32:33 pid:5253 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 20:32:34 pid:5555 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 20:32:43 pid:5555 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 20:32:43 pid:5555 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 20:32:44 pid:5583 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 20:33:26 pid:5583 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 20:33:26 pid:5583 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 20:33:27 pid:5692 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 20:34:14 pid:5692 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 20:34:14 pid:5692 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 20:35:30 pid:6005 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 20:37:06 pid:6005 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 20:37:07 pid:6005 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 20:37:07 pid:6229 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 20:37:53 pid:6229 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 20:37:53 pid:6229 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 20:37:54 pid:6363 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 20:44:49 pid:6363 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 20:44:49 pid:6363 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 20:44:50 pid:7291 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 20:45:09 pid:7291 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 20:45:09 pid:7291 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 20:45:09 pid:7343 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 20:45:26 pid:7343 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 20:45:26 pid:7343 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 20:45:27 pid:7385 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 20:53:07 pid:7385 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 20:53:07 pid:7385 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 20:53:08 pid:8483 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 20:53:47 pid:8483 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 20:53:47 pid:8483 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 20:53:48 pid:8483 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 20:53:49 pid:8589 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 20:53:49 pid:8589 Workerman[WebsocketTest.php] already running
+2018-02-09 20:53:51 pid:8593 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 20:53:51 pid:8593 Workerman[WebsocketTest.php] already running
+2018-02-09 20:54:12 pid:8639 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 20:54:31 pid:8639 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 20:54:33 pid:8639 worker[none:8644] exit with status 9
+2018-02-09 20:54:33 pid:8639 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 20:57:55 pid:9162 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 20:58:06 pid:9162 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 20:58:08 pid:9162 worker[none:9166] exit with status 9
+2018-02-09 20:58:08 pid:9162 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 21:11:16 pid:10954 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 21:11:53 pid:10954 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 21:11:55 pid:10954 worker[none:10955] exit with status 9
+2018-02-09 21:11:55 pid:10954 worker[none:10956] exit with status 9
+2018-02-09 21:11:55 pid:10954 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 21:12:38 pid:11144 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 21:12:44 pid:11144 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 21:12:44 pid:11144 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 21:12:45 pid:11144 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 21:12:45 pid:11144 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 21:12:46 pid:11144 worker[none:11148] exit with status 9
+2018-02-09 21:12:46 pid:11144 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 21:14:51 pid:11456 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 21:14:56 pid:11456 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 21:14:57 pid:11456 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 21:14:57 pid:11456 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 21:14:58 pid:11456 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 21:14:58 pid:11456 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 21:14:58 pid:11456 worker[none:11460] exit with status 9
+2018-02-09 21:14:58 pid:11456 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 21:15:09 pid:11498 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 21:15:14 pid:11498 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 21:15:14 pid:11498 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 21:15:14 pid:11498 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 21:15:14 pid:11498 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 21:15:15 pid:11498 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 21:15:15 pid:11498 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 21:15:15 pid:11498 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 21:15:15 pid:11498 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 21:15:15 pid:11498 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 21:15:15 pid:11498 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 21:15:16 pid:11498 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 21:15:16 pid:11498 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 21:15:16 pid:11498 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 21:15:16 pid:11498 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 21:15:16 pid:11498 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 21:15:16 pid:11498 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 21:15:16 pid:11498 worker[none:11502] exit with status 9
+2018-02-09 21:15:16 pid:11498 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 21:16:41 pid:11726 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 21:16:51 pid:11726 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 21:16:53 pid:11726 worker[none:11728] exit with status 9
+2018-02-09 21:16:53 pid:11726 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 21:17:26 pid:11831 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 21:17:37 pid:11831 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 21:17:37 pid:11831 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 21:17:50 pid:11913 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 21:17:53 pid:11917 Worker process terminated
+2018-02-09 21:18:19 pid:11913 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 21:18:19 pid:11913 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 21:18:23 pid:11988 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 21:18:27 pid:11991 Worker process terminated
+2018-02-09 21:18:29 pid:11988 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 21:18:29 pid:11988 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 21:18:33 pid:12015 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 21:18:41 pid:12019 Worker process terminated
+2018-02-09 21:18:44 pid:12015 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 21:18:44 pid:12015 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 21:20:31 pid:12308 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 21:20:34 pid:12312 Worker process terminated
+2018-02-09 21:20:37 pid:12308 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 21:20:37 pid:12308 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 21:20:39 pid:12332 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 21:20:49 pid:12334 Worker process terminated
+2018-02-09 21:20:50 pid:12332 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 21:20:50 pid:12332 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 21:22:16 pid:12578 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 21:22:21 pid:12582 Worker process terminated
+2018-02-09 21:22:32 pid:12578 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 21:22:32 pid:12578 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 21:25:08 pid:12970 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 21:25:12 pid:12974 Worker process terminated
+2018-02-09 21:25:14 pid:12970 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 21:25:15 pid:12970 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 21:25:16 pid:12993 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 21:25:23 pid:12996 Worker process terminated
+2018-02-09 21:25:24 pid:12993 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 21:25:24 pid:12993 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 21:28:46 pid:13470 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 21:28:56 pid:13473 Worker process terminated
+2018-02-09 21:29:04 pid:13470 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 21:29:04 pid:13470 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 21:29:18 pid:13569 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 21:53:22 pid:13569 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 21:53:22 pid:13569 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 21:53:22 pid:16771 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 22:02:10 pid:16771 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 22:02:10 pid:16771 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 22:02:11 pid:17987 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 22:03:13 pid:17987 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 22:03:13 pid:17987 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 22:03:17 pid:18143 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 22:05:40 pid:18143 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 22:05:40 pid:18143 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 22:05:41 pid:18456 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 22:11:35 pid:18456 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 22:11:36 pid:18456 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 22:11:36 pid:19313 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-09 22:12:04 pid:19313 Workerman[WebsocketTest.php] stopping ...
+2018-02-09 22:12:06 pid:19313 worker[none:19317] exit with status 9
+2018-02-09 22:12:06 pid:19313 Workerman[WebsocketTest.php] has been stopped
+2018-02-09 22:12:35 pid:19452 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 00:02:10 pid:19452 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 00:02:10 pid:19452 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 00:02:11 pid:2318 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 00:05:27 pid:2318 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 00:05:27 pid:2318 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 00:05:28 pid:2791 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 00:24:48 pid:2791 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 00:24:48 pid:2791 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 00:24:49 pid:5312 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 00:28:42 pid:5312 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 00:28:42 pid:5312 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 00:28:42 pid:5873 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 00:29:26 pid:5873 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 00:29:26 pid:5873 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 00:29:27 pid:5966 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 00:38:17 pid:5966 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 00:38:17 pid:5966 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 00:38:18 pid:7163 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 00:38:53 pid:7163 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 00:38:53 pid:7163 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 00:38:53 pid:7269 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 00:46:04 pid:7269 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 00:46:04 pid:7269 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 00:46:06 pid:8255 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 00:48:04 pid:8255 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 00:48:04 pid:8255 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 00:48:04 pid:8546 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 00:48:26 pid:8546 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 00:48:26 pid:8546 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 00:48:26 pid:8597 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 00:49:25 pid:8597 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 00:49:25 pid:8597 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 00:49:26 pid:8728 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 00:52:23 pid:8728 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 00:52:23 pid:8728 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 00:52:23 pid:9154 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 01:00:07 pid:9154 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 01:00:07 pid:9154 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 01:00:08 pid:10189 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 01:00:16 pid:10189 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 01:00:18 pid:10189 worker[none:10190] exit with status 9
+2018-02-10 01:00:18 pid:10189 worker[none:10191] exit with status 9
+2018-02-10 01:00:18 pid:10189 worker[none:10192] exit with status 9
+2018-02-10 01:00:18 pid:10189 worker[none:10193] exit with status 9
+2018-02-10 01:00:18 pid:10189 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 01:02:09 pid:10461 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 01:02:40 pid:10461 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 01:02:42 pid:10461 worker[none:10464] exit with status 9
+2018-02-10 01:02:42 pid:10461 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 01:04:31 pid:10772 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 01:04:32 pid:10774 Worker process terminated
+2018-02-10 01:04:41 pid:10772 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 01:04:41 pid:10772 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 01:06:44 pid:11068 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 01:06:52 pid:11068 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 01:06:54 pid:11068 worker[none:11072] exit with status 9
+2018-02-10 01:06:54 pid:11068 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 01:11:04 pid:11680 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 01:11:14 pid:11680 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 01:11:16 pid:11680 worker[none:11684] exit with status 9
+2018-02-10 01:11:16 pid:11680 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 01:15:42 pid:12286 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 01:15:48 pid:12286 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 01:15:50 pid:12286 worker[none:12290] exit with status 9
+2018-02-10 01:15:50 pid:12286 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 01:16:08 pid:12391 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 01:16:12 pid:12391 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 01:16:14 pid:12391 worker[none:12395] exit with status 9
+2018-02-10 01:16:14 pid:12391 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 01:33:24 pid:14247 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 01:33:34 pid:14247 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 01:33:35 pid:14247 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 01:33:35 pid:14247 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 01:33:36 pid:14247 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 01:33:36 pid:14247 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 01:33:36 pid:14247 worker[none:14252] exit with status 9
+2018-02-10 01:33:36 pid:14247 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 01:33:46 pid:14318 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 01:33:50 pid:14323 Worker process terminated
+2018-02-10 01:33:53 pid:14318 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 01:33:53 pid:14318 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 01:36:33 pid:14699 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 01:36:41 pid:14702 Worker process terminated
+2018-02-10 01:37:44 pid:14699 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 01:37:44 pid:14699 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 01:37:45 pid:14874 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 01:37:47 pid:14878 Worker process terminated
+2018-02-10 01:39:21 pid:14874 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 01:39:21 pid:14874 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 01:39:21 pid:15093 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 01:39:25 pid:15097 Worker process terminated
+2018-02-10 01:40:04 pid:15093 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 01:40:05 pid:15093 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 01:40:05 pid:15202 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 01:43:55 pid:15202 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 01:43:55 pid:15202 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 01:43:55 pid:15715 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 01:51:09 pid:15715 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 01:51:09 pid:15715 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 01:51:09 pid:16661 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 01:52:23 pid:16661 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 01:52:23 pid:16661 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 01:52:23 pid:16835 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 02:00:33 pid:16835 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 02:00:33 pid:16835 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 02:00:33 pid:17920 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 02:02:46 pid:17920 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 02:02:46 pid:17920 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 02:02:46 pid:18210 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 02:02:57 pid:18210 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 02:02:57 pid:18210 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 02:02:58 pid:18245 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 02:03:07 pid:18245 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 02:03:07 pid:18245 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 02:03:07 pid:18280 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 02:05:31 pid:18280 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 02:05:31 pid:18280 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 02:05:31 pid:18632 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 02:05:33 pid:18635 Worker process terminated
+2018-02-10 02:05:36 pid:18632 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 02:05:36 pid:18632 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 02:05:37 pid:18648 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 02:05:38 pid:18652 Worker process terminated
+2018-02-10 02:05:39 pid:18648 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 02:05:39 pid:18648 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 14:53:14 pid:20870 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 14:57:41 pid:20870 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 14:57:41 pid:20870 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 14:57:41 pid:21450 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 14:59:35 pid:21450 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 14:59:35 pid:21450 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 14:59:35 pid:21713 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 14:59:37 pid:21717 Worker process terminated
+2018-02-10 14:59:39 pid:21724 Worker process terminated
+2018-02-10 14:59:41 pid:21713 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 14:59:41 pid:21713 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 15:00:25 pid:21858 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 15:00:44 pid:21858 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 15:00:44 pid:21858 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 15:00:44 pid:21902 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 15:03:11 pid:21902 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 15:03:11 pid:21902 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 15:03:12 pid:22225 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 15:07:23 pid:22225 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 15:07:23 pid:22225 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 15:07:24 pid:22791 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 15:28:39 pid:22791 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 15:28:39 pid:22791 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 15:28:40 pid:25688 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 15:28:44 pid:25688 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 15:28:46 pid:25688 worker[none:25692] exit with status 9
+2018-02-10 15:28:46 pid:25688 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 15:29:21 pid:25786 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 15:29:28 pid:25786 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 15:29:30 pid:25786 worker[none:25790] exit with status 9
+2018-02-10 15:29:30 pid:25786 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 15:33:39 pid:26350 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 15:38:57 pid:26350 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 15:38:57 pid:26350 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 15:38:57 pid:27078 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 15:39:01 pid:27078 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 15:39:03 pid:27078 worker[none:27081] exit with status 9
+2018-02-10 15:39:03 pid:27078 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 15:44:13 pid:27827 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 15:53:23 pid:27827 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 15:53:23 pid:27827 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 15:53:24 pid:29031 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 15:55:41 pid:29031 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 15:55:43 pid:29031 worker[none:29034] exit with status 9
+2018-02-10 15:55:43 pid:29031 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 15:55:44 pid:29342 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 15:55:56 pid:29342 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 15:55:58 pid:29342 worker[none:29346] exit with status 9
+2018-02-10 15:55:58 pid:29342 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 15:56:14 pid:29405 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 16:16:36 pid:29405 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 16:16:36 pid:29405 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 16:16:36 pid:32386 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 16:16:42 pid:32386 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 16:16:44 pid:32386 worker[none:32390] exit with status 9
+2018-02-10 16:16:44 pid:32386 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 16:17:50 pid:32548 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 16:17:57 pid:32548 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 16:17:59 pid:32548 worker[none:32552] exit with status 9
+2018-02-10 16:17:59 pid:32548 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 16:18:51 pid:32689 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 16:18:54 pid:32689 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 16:18:56 pid:32689 worker[none:32693] exit with status 9
+2018-02-10 16:18:56 pid:32689 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 16:19:46 pid:348 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 16:19:48 pid:348 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 16:19:50 pid:348 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 16:19:50 pid:348 worker[none:352] exit with status 9
+2018-02-10 16:19:50 pid:348 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 16:19:56 pid:382 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 16:19:59 pid:382 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 16:19:59 pid:382 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 16:19:59 pid:382 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 16:19:59 pid:382 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 16:20:00 pid:382 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 16:20:00 pid:382 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 16:20:00 pid:382 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 16:20:00 pid:382 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 16:20:00 pid:382 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 16:20:00 pid:382 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 16:20:01 pid:382 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 16:20:01 pid:382 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 16:20:01 pid:382 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 16:20:01 pid:382 worker[none:386] exit with status 9
+2018-02-10 16:20:01 pid:382 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 16:23:47 pid:924 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 16:30:56 pid:924 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 16:30:56 pid:924 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 16:30:57 pid:2090 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 16:40:39 pid:2090 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 16:40:39 pid:2090 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 16:40:40 pid:3390 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 16:52:04 pid:3390 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 16:52:04 pid:3390 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 16:52:05 pid:4888 Workerman[WebsocketTest.php] start in DEBUG mode
+2018-02-10 17:26:26 pid:4888 Workerman[WebsocketTest.php] stopping ...
+2018-02-10 17:26:26 pid:4888 Workerman[WebsocketTest.php] has been stopped
+2018-02-10 17:26:34 pid:9408 Workerman[index.php] start in DEBUG mode
+2018-02-10 17:31:07 pid:9408 Workerman[index.php] stopping ...
+2018-02-10 17:31:08 pid:9408 Workerman[index.php] has been stopped
+2018-02-10 17:31:08 pid:10046 Workerman[index.php] start in DEBUG mode
+2018-02-10 17:31:25 pid:10046 Workerman[index.php] stopping ...
+2018-02-10 17:31:27 pid:10046 worker[none:10048] exit with status 9
+2018-02-10 17:31:27 pid:10046 Workerman[index.php] has been stopped
+2018-02-10 17:31:45 pid:10162 Workerman[index.php] start in DEBUG mode
+2018-02-10 18:45:58 pid:10162 Workerman[index.php] stopping ...
+2018-02-10 18:45:58 pid:10162 Workerman[index.php] has been stopped
+2018-02-10 18:45:58 pid:19838 Workerman[index.php] start in DEBUG mode
+2018-02-10 18:50:54 pid:19838 Workerman[index.php] stopping ...
+2018-02-10 18:50:54 pid:19838 Workerman[index.php] has been stopped
+2018-02-10 18:50:55 pid:20526 Workerman[index.php] start in DEBUG mode
+2018-02-10 18:51:48 pid:20526 Workerman[index.php] stopping ...
+2018-02-10 18:51:49 pid:20526 Workerman[index.php] has been stopped
+2018-02-10 18:51:49 pid:20643 Workerman[index.php] start in DEBUG mode
+2018-02-10 18:52:44 pid:20643 Workerman[index.php] stopping ...
+2018-02-10 18:52:44 pid:20643 Workerman[index.php] has been stopped
+2018-02-10 18:52:45 pid:20767 Workerman[index.php] start in DEBUG mode
+2018-02-10 18:52:57 pid:20767 Workerman[index.php] stopping ...
+2018-02-10 18:52:57 pid:20767 Workerman[index.php] has been stopped
+2018-02-10 18:53:01 pid:20815 Workerman[index.php] start in DEBUG mode
+2018-02-10 19:10:04 pid:20815 Workerman[index.php] stopping ...
+2018-02-10 19:10:04 pid:20815 Workerman[index.php] has been stopped
+2018-02-10 19:10:04 pid:23249 Workerman[index.php] start in DEBUG mode
+2018-02-10 19:11:25 pid:23249 Workerman[index.php] stopping ...
+2018-02-10 19:11:26 pid:23249 Workerman[index.php] has been stopped
+2018-02-10 19:11:26 pid:23458 Workerman[index.php] start in DEBUG mode
+2018-02-10 19:12:01 pid:23458 Workerman[index.php] stopping ...
+2018-02-10 19:12:01 pid:23458 Workerman[index.php] has been stopped
+2018-02-10 19:57:41 pid:30046 Workerman[index.php] start in DEBUG mode
+2018-02-10 19:57:55 pid:30048 Error: Call to undefined method Battleship\App\Player::getConnection() in /home/staralex/battleship.io/src/Helper/GameHelper.php:161
+Stack trace:
+#0 /home/staralex/battleship.io/src/App/BattleshipServer.php(48): Battleship\Helper\GameHelper::findEnemy(Array, Object(Battleship\App\Player))
+#1 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection), '{"msg":"findEne...')
+#2 /home/staralex/battleship.io/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection), '{"msg":"findEne...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #40)
+#4 /home/staralex/battleship.io/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#6 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#7 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#9 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(459): Workerman\Worker::forkWorkers()
+#10 /home/staralex/battleship.io/src/App/BattleshipServer.php(88): Workerman\Worker::runAll()
+#11 /home/staralex/battleship.io/index.php(10): Battleship\App\BattleshipServer->run()
+#12 {main}
+2018-02-10 19:57:55 pid:30048 Worker process terminated
+2018-02-10 19:57:55 pid:30046 worker[none:30048] exit with status 64000
+2018-02-10 19:57:59 pid:30046 Workerman[index.php] stopping ...
+2018-02-10 19:57:59 pid:30046 Workerman[index.php] has been stopped
+2018-02-10 19:58:39 pid:30196 Workerman[index.php] start in DEBUG mode
+2018-02-10 21:52:56 pid:30196 Workerman[index.php] stopping ...
+2018-02-10 21:52:56 pid:30196 Workerman[index.php] has been stopped
+2018-02-10 21:52:56 pid:13909 Workerman[index.php] start in DEBUG mode
+2018-02-10 21:53:04 pid:13913 Exception: The argument must be an instance of Cell in /home/staralex/battleship.io/src/CellList.php:39
+Stack trace:
+#0 /home/staralex/battleship.io/src/App/Board/GameBoard.php(25): Battleship\CellList->push(Object(Battleship\App\Cell))
+#1 /home/staralex/battleship.io/src/App/Player.php(56): Battleship\App\Board\GameBoard->__construct()
+#2 /home/staralex/battleship.io/src/App/BattleshipServer.php(33): Battleship\App\Player->__construct()
+#3 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection), 'GET / HTTP/1.1\r...')
+#4 /home/staralex/battleship.io/vendor/workerman/workerman/Protocols/Websocket.php(388): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection), 'GET / HTTP/1.1\r...')
+#5 /home/staralex/battleship.io/vendor/workerman/workerman/Protocols/Websocket.php(57): Workerman\Protocols\Websocket::dealHandshake('GET / HTTP/1.1\r...', Object(Workerman\Connection\TcpConnection))
+#6 /home/staralex/battleship.io/vendor/workerman/workerman/Connection/TcpConnection.php(621): Workerman\Protocols\Websocket::input('GET / HTTP/1.1\r...', Object(Workerman\Connection\TcpConnection))
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #26)
+#8 /home/staralex/battleship.io/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#9 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#10 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#11 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#12 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#13 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(459): Workerman\Worker::forkWorkers()
+#14 /home/staralex/battleship.io/src/App/BattleshipServer.php(140): Workerman\Worker::runAll()
+#15 /home/staralex/battleship.io/index.php(10): Battleship\App\BattleshipServer->run()
+#16 {main}
+2018-02-10 21:53:04 pid:13913 Worker process terminated
+2018-02-10 21:53:05 pid:13909 worker[none:13913] exit with status 64000
+2018-02-10 21:53:09 pid:13909 Workerman[index.php] stopping ...
+2018-02-10 21:53:09 pid:13909 Workerman[index.php] has been stopped
+2018-02-10 21:54:13 pid:14115 Workerman[index.php] start in DEBUG mode
+2018-02-10 21:54:16 pid:14117 Exception: The argument must be an instance of Cell in /home/staralex/battleship.io/src/CellList.php:40
+Stack trace:
+#0 /home/staralex/battleship.io/src/App/Board/GameBoard.php(25): Battleship\CellList->push(Object(Battleship\App\Cell))
+#1 /home/staralex/battleship.io/src/App/Player.php(56): Battleship\App\Board\GameBoard->__construct()
+#2 /home/staralex/battleship.io/src/App/BattleshipServer.php(33): Battleship\App\Player->__construct()
+#3 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection), 'GET / HTTP/1.1\r...')
+#4 /home/staralex/battleship.io/vendor/workerman/workerman/Protocols/Websocket.php(388): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection), 'GET / HTTP/1.1\r...')
+#5 /home/staralex/battleship.io/vendor/workerman/workerman/Protocols/Websocket.php(57): Workerman\Protocols\Websocket::dealHandshake('GET / HTTP/1.1\r...', Object(Workerman\Connection\TcpConnection))
+#6 /home/staralex/battleship.io/vendor/workerman/workerman/Connection/TcpConnection.php(621): Workerman\Protocols\Websocket::input('GET / HTTP/1.1\r...', Object(Workerman\Connection\TcpConnection))
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #26)
+#8 /home/staralex/battleship.io/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#9 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#10 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#11 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#12 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#13 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(459): Workerman\Worker::forkWorkers()
+#14 /home/staralex/battleship.io/src/App/BattleshipServer.php(140): Workerman\Worker::runAll()
+#15 /home/staralex/battleship.io/index.php(10): Battleship\App\BattleshipServer->run()
+#16 {main}
+2018-02-10 21:54:16 pid:14117 Worker process terminated
+2018-02-10 21:54:17 pid:14115 worker[none:14117] exit with status 64000
+2018-02-10 21:54:20 pid:14115 Workerman[index.php] stopping ...
+2018-02-10 21:54:20 pid:14115 Workerman[index.php] has been stopped
+2018-02-10 22:53:46 pid:21756 Workerman[index.php] start in DEBUG mode
+2018-02-10 22:53:59 pid:21762 ParseError: syntax error, unexpected ';', expecting ',' or ')' in /home/staralex/battleship.io/src/Helper/GameHelper.php:156
+Stack trace:
+#0 /home/staralex/battleship.io/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/home/staralex/...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('Battleship\\Help...')
+#2 /home/staralex/battleship.io/src/App/BattleshipServer.php(48): spl_autoload_call('Battleship\\Help...')
+#3 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection), '{"msg":"findEne...')
+#4 /home/staralex/battleship.io/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection), '{"msg":"findEne...')
+#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #26)
+#6 /home/staralex/battleship.io/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#7 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#8 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#9 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#10 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#11 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(459): Workerman\Worker::forkWorkers()
+#12 /home/staralex/battleship.io/src/App/BattleshipServer.php(140): Workerman\Worker::runAll()
+#13 /home/staralex/battleship.io/index.php(10): Battleship\App\BattleshipServer->run()
+#14 {main}
+2018-02-10 22:53:59 pid:21762 Worker process terminated
+2018-02-10 22:53:59 pid:21756 worker[none:21762] exit with status 64000
+2018-02-10 22:54:15 pid:21756 Workerman[index.php] stopping ...
+2018-02-10 22:54:15 pid:21756 Workerman[index.php] has been stopped
+2018-02-10 22:55:05 pid:21969 Workerman[index.php] start in DEBUG mode
+2018-02-10 22:55:11 pid:21974 Error: Call to a member function isOccupied() on null in /home/staralex/battleship.io/src/Helper/GameHelper.php:59
+Stack trace:
+#0 /home/staralex/battleship.io/src/App/BattleshipServer.php(49): Battleship\Helper\GameHelper::generateBoard(Object(Battleship\App\Player))
+#1 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection), '{"msg":"findEne...')
+#2 /home/staralex/battleship.io/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection), '{"msg":"findEne...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #40)
+#4 /home/staralex/battleship.io/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#6 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#7 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#9 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(459): Workerman\Worker::forkWorkers()
+#10 /home/staralex/battleship.io/src/App/BattleshipServer.php(140): Workerman\Worker::runAll()
+#11 /home/staralex/battleship.io/index.php(10): Battleship\App\BattleshipServer->run()
+#12 {main}
+2018-02-10 22:55:11 pid:21974 Worker process terminated
+2018-02-10 22:55:11 pid:21969 worker[none:21974] exit with status 64000
+2018-02-10 22:56:11 pid:21969 Workerman[index.php] stopping ...
+2018-02-10 22:56:11 pid:21969 Workerman[index.php] has been stopped
+2018-02-10 22:56:12 pid:22130 Workerman[index.php] start in DEBUG mode
+2018-02-10 22:59:59 pid:22130 Workerman[index.php] stopping ...
+2018-02-10 22:59:59 pid:22130 Workerman[index.php] has been stopped
+2018-02-10 22:59:59 pid:22659 Workerman[index.php] start in DEBUG mode
+2018-02-10 23:05:09 pid:22659 Workerman[index.php] stopping ...
+2018-02-10 23:05:09 pid:22659 Workerman[index.php] has been stopped
+2018-02-10 23:05:09 pid:23343 Workerman[index.php] start in DEBUG mode
+2018-02-10 23:05:13 pid:23347 Worker process terminated
+2018-02-10 23:08:29 pid:23343 Workerman[index.php] stopping ...
+2018-02-10 23:08:29 pid:23343 Workerman[index.php] has been stopped
+2018-02-10 23:08:29 pid:23809 Workerman[index.php] start in DEBUG mode
+2018-02-10 23:23:23 pid:23809 Workerman[index.php] stopping ...
+2018-02-10 23:23:23 pid:23809 Workerman[index.php] has been stopped
+2018-02-10 23:23:24 pid:25880 Workerman[index.php] start in DEBUG mode
+2018-02-10 23:29:35 pid:25880 Workerman[index.php] stopping ...
+2018-02-10 23:29:35 pid:25880 Workerman[index.php] has been stopped
+2018-02-10 23:29:36 pid:26774 Workerman[index.php] start in DEBUG mode
+2018-02-10 23:31:17 pid:26774 Workerman[index.php] stopping ...
+2018-02-10 23:31:17 pid:26774 Workerman[index.php] has been stopped
+2018-02-10 23:31:18 pid:27001 Workerman[index.php] start in DEBUG mode
+2018-02-10 23:37:21 pid:27001 Workerman[index.php] stopping ...
+2018-02-10 23:37:21 pid:27001 Workerman[index.php] has been stopped
+2018-02-10 23:37:22 pid:27819 Workerman[index.php] start in DEBUG mode
+2018-02-10 23:38:20 pid:27819 Workerman[index.php] stopping ...
+2018-02-10 23:38:20 pid:27819 Workerman[index.php] has been stopped
+2018-02-10 23:38:22 pid:27958 Workerman[index.php] start in DEBUG mode
+2018-02-10 23:51:49 pid:27958 Workerman[index.php] stopping ...
+2018-02-10 23:51:49 pid:27958 Workerman[index.php] has been stopped
+2018-02-10 23:51:49 pid:29803 Workerman[index.php] start in DEBUG mode
+2018-02-10 23:53:00 pid:29803 Workerman[index.php] stopping ...
+2018-02-10 23:53:00 pid:29803 Workerman[index.php] has been stopped
+2018-02-10 23:53:00 pid:29987 Workerman[index.php] start in DEBUG mode
+2018-02-10 23:54:56 pid:29987 Workerman[index.php] stopping ...
+2018-02-10 23:54:56 pid:29987 Workerman[index.php] has been stopped
+2018-02-10 23:54:56 pid:30248 Workerman[index.php] start in DEBUG mode
+2018-02-10 23:55:41 pid:30248 Workerman[index.php] stopping ...
+2018-02-10 23:55:41 pid:30248 Workerman[index.php] has been stopped
+2018-02-10 23:55:41 pid:30363 Workerman[index.php] start in DEBUG mode
+2018-02-10 23:59:25 pid:30363 Workerman[index.php] stopping ...
+2018-02-10 23:59:25 pid:30363 Workerman[index.php] has been stopped
+2018-02-10 23:59:26 pid:30999 Workerman[index.php] start in DEBUG mode
+2018-02-11 00:04:11 pid:30999 Workerman[index.php] stopping ...
+2018-02-11 00:04:11 pid:30999 Workerman[index.php] has been stopped
+2018-02-11 00:04:11 pid:31680 Workerman[index.php] start in DEBUG mode
+2018-02-11 00:04:19 pid:31682 Worker process terminated
+2018-02-11 00:04:36 pid:31680 Workerman[index.php] stopping ...
+2018-02-11 00:04:36 pid:31680 Workerman[index.php] has been stopped
+2018-02-11 00:04:36 pid:31740 Workerman[index.php] start in DEBUG mode
+2018-02-11 00:04:47 pid:31744 Worker process terminated
+2018-02-11 00:05:00 pid:31740 Workerman[index.php] stopping ...
+2018-02-11 00:05:00 pid:31740 Workerman[index.php] has been stopped
+2018-02-11 00:05:01 pid:31805 Workerman[index.php] start in DEBUG mode
+2018-02-11 00:05:05 pid:31809 Worker process terminated
+2018-02-11 00:05:15 pid:31805 Workerman[index.php] stopping ...
+2018-02-11 00:05:15 pid:31805 Workerman[index.php] has been stopped
+2018-02-11 00:07:11 pid:32119 Workerman[index.php] start in DEBUG mode
+2018-02-11 00:09:32 pid:32119 Workerman[index.php] stopping ...
+2018-02-11 00:09:32 pid:32119 Workerman[index.php] has been stopped
+2018-02-11 00:09:33 pid:32433 Workerman[index.php] start in DEBUG mode
+2018-02-11 00:11:36 pid:32433 Workerman[index.php] stopping ...
+2018-02-11 00:11:36 pid:32433 Workerman[index.php] has been stopped
+2018-02-11 00:11:37 pid:32716 Workerman[index.php] start in DEBUG mode
+2018-02-11 00:11:38 pid:32718 Worker process terminated
+2018-02-11 00:11:40 pid:32716 Workerman[index.php] stopping ...
+2018-02-11 00:11:40 pid:32716 Workerman[index.php] has been stopped
+2018-02-11 00:24:41 pid:2117 Workerman[index.php] start in DEBUG mode
+2018-02-11 00:25:56 pid:2117 Workerman[index.php] stopping ...
+2018-02-11 00:25:56 pid:2117 Workerman[index.php] has been stopped
+2018-02-11 00:25:56 pid:2289 Workerman[index.php] start in DEBUG mode
+2018-02-11 00:25:57 pid:2292 Worker process terminated
+2018-02-11 00:25:58 pid:2294 Worker process terminated
+2018-02-11 00:26:01 pid:2290 Worker process terminated
+2018-02-11 00:26:01 pid:2305 Worker process terminated
+2018-02-11 00:26:02 pid:2307 Worker process terminated
+2018-02-11 00:26:02 pid:2311 Worker process terminated
+2018-02-11 00:26:03 pid:2312 Worker process terminated
+2018-02-11 00:26:03 pid:2315 Worker process terminated
+2018-02-11 00:26:03 pid:2316 Worker process terminated
+2018-02-11 00:26:03 pid:2317 Worker process terminated
+2018-02-11 00:26:04 pid:2318 Worker process terminated
+2018-02-11 00:26:04 pid:2300 Worker process terminated
+2018-02-11 00:26:04 pid:2322 Worker process terminated
+2018-02-11 00:26:04 pid:2324 Worker process terminated
+2018-02-11 00:26:04 pid:2325 Worker process terminated
+2018-02-11 00:26:05 pid:2323 Worker process terminated
+2018-02-11 00:26:05 pid:2326 Worker process terminated
+2018-02-11 00:26:05 pid:2328 Worker process terminated
+2018-02-11 00:26:05 pid:2329 Worker process terminated
+2018-02-11 00:26:05 pid:2331 Worker process terminated
+2018-02-11 00:26:07 pid:2289 Workerman[index.php] stopping ...
+2018-02-11 00:26:07 pid:2289 Workerman[index.php] has been stopped
+2018-02-11 00:29:20 pid:2770 Workerman[index.php] start in DEBUG mode
+2018-02-11 00:31:11 pid:2770 Workerman[index.php] stopping ...
+2018-02-11 00:31:11 pid:2770 Workerman[index.php] has been stopped
+2018-02-11 00:31:12 pid:3024 Workerman[index.php] start in DEBUG mode
+2018-02-11 01:04:10 pid:3024 Workerman[index.php] stopping ...
+2018-02-11 01:04:10 pid:3024 Workerman[index.php] has been stopped
+2018-02-11 01:04:10 pid:7454 Workerman[index.php] start in DEBUG mode
+2018-02-11 01:24:26 pid:7454 Workerman[index.php] stopping ...
+2018-02-11 01:24:26 pid:7454 Workerman[index.php] has been stopped
+2018-02-11 01:24:27 pid:10715 Workerman[index.php] start in DEBUG mode
+2018-02-11 01:27:20 pid:10715 Workerman[index.php] stopping ...
+2018-02-11 01:27:20 pid:10715 Workerman[index.php] has been stopped
+2018-02-11 01:27:21 pid:11107 Workerman[index.php] start in DEBUG mode
+2018-02-11 01:28:02 pid:11107 Workerman[index.php] stopping ...
+2018-02-11 01:28:02 pid:11107 Workerman[index.php] has been stopped
+2018-02-11 01:28:03 pid:11207 Workerman[index.php] start in DEBUG mode
+2018-02-11 01:39:28 pid:11207 Workerman[index.php] stopping ...
+2018-02-11 01:39:28 pid:11207 Workerman[index.php] has been stopped
+2018-02-11 01:39:28 pid:12707 Workerman[index.php] start in DEBUG mode
+2018-02-11 01:39:32 pid:12708 Error: Call to undefined method Battleship\Helper\GameHelper::occupationByShip() in /home/staralex/battleship.io/src/Helper/GameHelper.php:425
+Stack trace:
+#0 /home/staralex/battleship.io/src/Helper/GameHelper.php(276): Battleship\Helper\GameHelper::hasCollision(Object(Battleship\App\Cell), Array, 'b', false, 1)
+#1 /home/staralex/battleship.io/src/App/BattleshipServer.php(35): Battleship\Helper\GameHelper::generateBoard(Object(Battleship\App\Player))
+#2 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection), 'GET /?user=test...')
+#3 /home/staralex/battleship.io/vendor/workerman/workerman/Protocols/Websocket.php(388): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection), 'GET /?user=test...')
+#4 /home/staralex/battleship.io/vendor/workerman/workerman/Protocols/Websocket.php(57): Workerman\Protocols\Websocket::dealHandshake('GET /?user=test...', Object(Workerman\Connection\TcpConnection))
+#5 /home/staralex/battleship.io/vendor/workerman/workerman/Connection/TcpConnection.php(621): Workerman\Protocols\Websocket::input('GET /?user=test...', Object(Workerman\Connection\TcpConnection))
+#6 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #26)
+#7 /home/staralex/battleship.io/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#8 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#9 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#10 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#11 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#12 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(459): Workerman\Worker::forkWorkers()
+#13 /home/staralex/battleship.io/src/App/BattleshipServer.php(141): Workerman\Worker::runAll()
+#14 /home/staralex/battleship.io/index.php(10): Battleship\App\BattleshipServer->run()
+#15 {main}
+2018-02-11 01:39:32 pid:12708 Worker process terminated
+2018-02-11 01:39:32 pid:12707 worker[none:12708] exit with status 64000
+2018-02-11 01:41:18 pid:12707 Workerman[index.php] stopping ...
+2018-02-11 01:41:18 pid:12707 Workerman[index.php] has been stopped
+2018-02-11 01:41:19 pid:12973 Workerman[index.php] start in DEBUG mode
+2018-02-11 01:41:22 pid:12977 Error: Call to undefined method Battleship\App\Cell::occupationByShip() in /home/staralex/battleship.io/src/Helper/GameHelper.php:458
+Stack trace:
+#0 /home/staralex/battleship.io/src/Helper/GameHelper.php(276): Battleship\Helper\GameHelper::hasCollision(Object(Battleship\App\Cell), Array, 'b', true, 1)
+#1 /home/staralex/battleship.io/src/App/BattleshipServer.php(35): Battleship\Helper\GameHelper::generateBoard(Object(Battleship\App\Player))
+#2 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection), 'GET /?user=test...')
+#3 /home/staralex/battleship.io/vendor/workerman/workerman/Protocols/Websocket.php(388): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection), 'GET /?user=test...')
+#4 /home/staralex/battleship.io/vendor/workerman/workerman/Protocols/Websocket.php(57): Workerman\Protocols\Websocket::dealHandshake('GET /?user=test...', Object(Workerman\Connection\TcpConnection))
+#5 /home/staralex/battleship.io/vendor/workerman/workerman/Connection/TcpConnection.php(621): Workerman\Protocols\Websocket::input('GET /?user=test...', Object(Workerman\Connection\TcpConnection))
+#6 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #26)
+#7 /home/staralex/battleship.io/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#8 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#9 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#10 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#11 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#12 /home/staralex/battleship.io/vendor/workerman/workerman/Worker.php(459): Workerman\Worker::forkWorkers()
+#13 /home/staralex/battleship.io/src/App/BattleshipServer.php(141): Workerman\Worker::runAll()
+#14 /home/staralex/battleship.io/index.php(10): Battleship\App\BattleshipServer->run()
+#15 {main}
+2018-02-11 01:41:22 pid:12977 Worker process terminated
+2018-02-11 01:41:22 pid:12973 worker[none:12977] exit with status 64000
+2018-02-11 01:42:58 pid:12973 Workerman[index.php] stopping ...
+2018-02-11 01:42:58 pid:12973 Workerman[index.php] has been stopped
+2018-02-11 01:42:58 pid:13206 Workerman[index.php] start in DEBUG mode
+2018-02-11 01:49:04 pid:13206 Workerman[index.php] stopping ...
+2018-02-11 01:49:04 pid:13206 Workerman[index.php] has been stopped
+2018-02-11 01:49:04 pid:14022 Workerman[index.php] start in DEBUG mode
+2018-02-11 01:49:51 pid:14022 Workerman[index.php] stopping ...
+2018-02-11 01:49:51 pid:14022 Workerman[index.php] has been stopped
+2018-02-11 01:49:51 pid:14138 Workerman[index.php] start in DEBUG mode
+2018-02-11 01:55:25 pid:14138 Workerman[index.php] stopping ...
+2018-02-11 01:55:25 pid:14138 Workerman[index.php] has been stopped
+2018-02-11 02:06:22 pid:21663 Workerman[index.php] start in DEBUG mode
+2018-02-11 02:07:01 pid:21663 Workerman[index.php] stopping ...
+2018-02-11 02:07:01 pid:21663 Workerman[index.php] has been stopped
+2018-02-11 02:07:01 pid:21773 Workerman[index.php] start in DEBUG mode
+2018-02-11 02:07:08 pid:21773 Workerman[index.php] stopping ...
+2018-02-11 02:07:08 pid:21773 Workerman[index.php] has been stopped
+2018-02-11 02:07:09 pid:21801 Workerman[index.php] start in DEBUG mode
+2018-02-11 02:10:25 pid:21801 Workerman[index.php] stopping ...
+2018-02-11 02:10:25 pid:21801 Workerman[index.php] has been stopped
+2018-02-11 02:10:25 pid:22278 Workerman[index.php] start in DEBUG mode
+2018-02-11 02:15:14 pid:22278 Workerman[index.php] stopping ...
+2018-02-11 02:15:15 pid:22278 Workerman[index.php] has been stopped
+2018-02-11 02:15:15 pid:22932 Workerman[index.php] start in DEBUG mode
+2018-02-11 02:48:59 pid:22932 Workerman[index.php] stopping ...
+2018-02-11 02:48:59 pid:22932 Workerman[index.php] has been stopped
+2018-02-11 02:48:59 pid:27432 Workerman[index.php] start in DEBUG mode
+2018-02-11 02:49:20 pid:27432 Workerman[index.php] stopping ...
+2018-02-11 02:49:20 pid:27432 Workerman[index.php] has been stopped
+2018-02-11 15:30:26 pid:12525 Workerman[index.php] start in DEBUG mode
+2018-02-11 15:30:45 pid:12525 Workerman[index.php] stopping ...
+2018-02-11 15:30:45 pid:12525 Workerman[index.php] has been stopped
+2018-02-11 15:31:02 pid:12654 Workerman[index.php] start in DEBUG mode
+2018-02-11 15:34:22 pid:12658 Error: Cannot access private property Battleship\App\Player::$firingBoard in /home/staralex/battleship.io.server/src/App/BattleshipServer.php:76
+Stack trace:
+#0 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection), '{"msg":"hit","r...')
+#1 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection), '{"msg":"hit","r...')
+#2 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #40)
+#3 /home/staralex/battleship.io.server/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#4 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#5 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#6 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#8 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(459): Workerman\Worker::forkWorkers()
+#9 /home/staralex/battleship.io.server/src/App/BattleshipServer.php(227): Workerman\Worker::runAll()
+#10 /home/staralex/battleship.io.server/index.php(10): Battleship\App\BattleshipServer->run()
+#11 {main}
+2018-02-11 15:34:22 pid:12658 Worker process terminated
+2018-02-11 15:34:23 pid:12654 worker[none:12658] exit with status 64000
+2018-02-11 15:36:45 pid:12654 Workerman[index.php] stopping ...
+2018-02-11 15:36:45 pid:12654 Workerman[index.php] has been stopped
+2018-02-11 15:36:46 pid:13430 Workerman[index.php] start in DEBUG mode
+2018-02-11 15:37:16 pid:13434 Error: Cannot access private property Battleship\App\Player::$firingBoard in /home/staralex/battleship.io.server/src/App/BattleshipServer.php:76
+Stack trace:
+#0 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection), '{"msg":"hit","r...')
+#1 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection), '{"msg":"hit","r...')
+#2 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #40)
+#3 /home/staralex/battleship.io.server/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#4 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#5 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#6 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#8 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(459): Workerman\Worker::forkWorkers()
+#9 /home/staralex/battleship.io.server/src/App/BattleshipServer.php(227): Workerman\Worker::runAll()
+#10 /home/staralex/battleship.io.server/index.php(10): Battleship\App\BattleshipServer->run()
+#11 {main}
+2018-02-11 15:37:16 pid:13434 Worker process terminated
+2018-02-11 15:37:16 pid:13430 worker[none:13434] exit with status 64000
+2018-02-11 15:37:40 pid:13430 Workerman[index.php] stopping ...
+2018-02-11 15:37:40 pid:13430 Workerman[index.php] has been stopped
+2018-02-11 15:37:40 pid:13564 Workerman[index.php] start in DEBUG mode
+2018-02-11 15:37:47 pid:13568 Error: Call to undefined method Battleship\App\Board\GameBoard::at() in /home/staralex/battleship.io.server/src/App/BattleshipServer.php:76
+Stack trace:
+#0 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection), '{"msg":"hit","r...')
+#1 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection), '{"msg":"hit","r...')
+#2 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #26)
+#3 /home/staralex/battleship.io.server/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#4 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#5 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#6 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#8 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(459): Workerman\Worker::forkWorkers()
+#9 /home/staralex/battleship.io.server/src/App/BattleshipServer.php(227): Workerman\Worker::runAll()
+#10 /home/staralex/battleship.io.server/index.php(10): Battleship\App\BattleshipServer->run()
+#11 {main}
+2018-02-11 15:37:47 pid:13568 Worker process terminated
+2018-02-11 15:37:47 pid:13564 worker[none:13568] exit with status 64000
+2018-02-11 15:39:13 pid:13564 Workerman[index.php] stopping ...
+2018-02-11 15:39:13 pid:13564 Workerman[index.php] has been stopped
+2018-02-11 15:39:13 pid:13778 Workerman[index.php] start in DEBUG mode
+2018-02-11 15:39:17 pid:13782 Error: Call to undefined method Battleship\App\Board\GameBoard::at() in /home/staralex/battleship.io.server/src/App/BattleshipServer.php:167
+Stack trace:
+#0 /home/staralex/battleship.io.server/src/App/BattleshipServer.php(80): Battleship\App\BattleshipServer->hitCell(Object(Workerman\Connection\TcpConnection), Object(Battleship\App\Player), 1, 1, Object(Battleship\App\Cell))
+#1 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection), '{"msg":"hit","r...')
+#2 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection), '{"msg":"hit","r...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #40)
+#4 /home/staralex/battleship.io.server/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#6 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#7 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#9 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(459): Workerman\Worker::forkWorkers()
+#10 /home/staralex/battleship.io.server/src/App/BattleshipServer.php(227): Workerman\Worker::runAll()
+#11 /home/staralex/battleship.io.server/index.php(10): Battleship\App\BattleshipServer->run()
+#12 {main}
+2018-02-11 15:39:17 pid:13782 Worker process terminated
+2018-02-11 15:39:17 pid:13778 worker[none:13782] exit with status 64000
+2018-02-11 15:39:41 pid:13778 Workerman[index.php] stopping ...
+2018-02-11 15:39:41 pid:13778 Workerman[index.php] has been stopped
+2018-02-11 15:39:42 pid:13861 Workerman[index.php] start in DEBUG mode
+2018-02-11 15:39:45 pid:13865 Error: Call to undefined method Battleship\App\Board\GameBoard::at() in /home/staralex/battleship.io.server/src/App/BattleshipServer.php:167
+Stack trace:
+#0 /home/staralex/battleship.io.server/src/App/BattleshipServer.php(80): Battleship\App\BattleshipServer->hitCell(Object(Workerman\Connection\TcpConnection), Object(Battleship\App\Player), 1, 1, Object(Battleship\App\Cell))
+#1 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection), '{"msg":"hit","r...')
+#2 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection), '{"msg":"hit","r...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #40)
+#4 /home/staralex/battleship.io.server/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#6 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#7 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#9 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(459): Workerman\Worker::forkWorkers()
+#10 /home/staralex/battleship.io.server/src/App/BattleshipServer.php(227): Workerman\Worker::runAll()
+#11 /home/staralex/battleship.io.server/index.php(10): Battleship\App\BattleshipServer->run()
+#12 {main}
+2018-02-11 15:39:45 pid:13865 Worker process terminated
+2018-02-11 15:39:45 pid:13861 worker[none:13865] exit with status 64000
+2018-02-11 15:40:36 pid:13861 Workerman[index.php] stopping ...
+2018-02-11 15:40:36 pid:13861 Workerman[index.php] has been stopped
+2018-02-11 15:40:36 pid:13991 Workerman[index.php] start in DEBUG mode
+2018-02-11 15:40:40 pid:13995 Error: Call to undefined method Battleship\App\Board\GameBoard::at() in /home/staralex/battleship.io.server/src/App/BattleshipServer.php:167
+Stack trace:
+#0 /home/staralex/battleship.io.server/src/App/BattleshipServer.php(80): Battleship\App\BattleshipServer->hitCell(Object(Workerman\Connection\TcpConnection), Object(Battleship\App\Player), 1, 1, Object(Battleship\App\Cell))
+#1 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection), '{"msg":"hit","r...')
+#2 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection), '{"msg":"hit","r...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #40)
+#4 /home/staralex/battleship.io.server/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#6 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#7 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#9 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(459): Workerman\Worker::forkWorkers()
+#10 /home/staralex/battleship.io.server/src/App/BattleshipServer.php(227): Workerman\Worker::runAll()
+#11 /home/staralex/battleship.io.server/index.php(10): Battleship\App\BattleshipServer->run()
+#12 {main}
+2018-02-11 15:40:40 pid:13995 Worker process terminated
+2018-02-11 15:40:40 pid:13991 worker[none:13995] exit with status 64000
+2018-02-11 15:41:00 pid:13991 Workerman[index.php] stopping ...
+2018-02-11 15:41:00 pid:13991 Workerman[index.php] has been stopped
+2018-02-11 15:41:00 pid:14057 Workerman[index.php] start in DEBUG mode
+2018-02-11 15:41:09 pid:14057 Workerman[index.php] stopping ...
+2018-02-11 15:41:09 pid:14057 Workerman[index.php] has been stopped
+2018-02-11 15:41:10 pid:14082 Workerman[index.php] start in DEBUG mode
+2018-02-11 15:44:47 pid:14082 Workerman[index.php] stopping ...
+2018-02-11 15:44:47 pid:14082 Workerman[index.php] has been stopped
+2018-02-11 15:44:47 pid:14614 Workerman[index.php] start in DEBUG mode
+2018-02-11 15:51:12 pid:14614 Workerman[index.php] stopping ...
+2018-02-11 15:51:12 pid:14614 Workerman[index.php] has been stopped
+2018-02-11 15:51:12 pid:15488 Workerman[index.php] start in DEBUG mode
+2018-02-11 15:51:50 pid:15488 Workerman[index.php] stopping ...
+2018-02-11 15:51:52 pid:15488 worker[none:15492] exit with status 9
+2018-02-11 15:51:52 pid:15488 Workerman[index.php] has been stopped
+2018-02-11 15:52:34 pid:15667 Workerman[index.php] start in DEBUG mode
+2018-02-11 15:52:41 pid:15667 Workerman[index.php] stopping ...
+2018-02-11 15:52:43 pid:15667 worker[none:15671] exit with status 9
+2018-02-11 15:52:43 pid:15667 Workerman[index.php] has been stopped
+2018-02-11 15:53:10 pid:15758 Workerman[index.php] start in DEBUG mode
+2018-02-11 15:53:14 pid:15762 Error: Call to a member function at() on null in /home/staralex/battleship.io.server/src/Helper/GameHelper.php:87
+Stack trace:
+#0 /home/staralex/battleship.io.server/src/Helper/GameHelper.php(76): Battleship\Helper\GameHelper::printBoards(1)
+#1 /home/staralex/battleship.io.server/src/App/BattleshipServer.php(51): Battleship\Helper\GameHelper::generateBoard(1)
+#2 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection), '{"msg":"findEne...')
+#3 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection), '{"msg":"findEne...')
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #41)
+#5 /home/staralex/battleship.io.server/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#6 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#7 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#8 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#9 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#10 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(459): Workerman\Worker::forkWorkers()
+#11 /home/staralex/battleship.io.server/src/App/BattleshipServer.php(230): Workerman\Worker::runAll()
+#12 /home/staralex/battleship.io.server/index.php(10): Battleship\App\BattleshipServer->run()
+#13 {main}
+2018-02-11 15:53:14 pid:15762 Worker process terminated
+2018-02-11 15:53:14 pid:15758 worker[none:15762] exit with status 64000
+2018-02-11 15:54:13 pid:15758 Workerman[index.php] stopping ...
+2018-02-11 15:54:13 pid:15758 Workerman[index.php] has been stopped
+2018-02-11 15:54:13 pid:15917 Workerman[index.php] start in DEBUG mode
+2018-02-11 15:54:18 pid:15917 Workerman[index.php] stopping ...
+2018-02-11 15:54:20 pid:15917 worker[none:15922] exit with status 9
+2018-02-11 15:54:20 pid:15917 Workerman[index.php] has been stopped
+2018-02-11 15:55:38 pid:16142 Workerman[index.php] start in DEBUG mode
+2018-02-11 15:55:45 pid:16142 Workerman[index.php] stopping ...
+2018-02-11 15:55:47 pid:16142 worker[none:16146] exit with status 9
+2018-02-11 15:55:47 pid:16142 Workerman[index.php] has been stopped
+2018-02-11 15:56:14 pid:16232 Workerman[index.php] start in DEBUG mode
+2018-02-11 16:02:34 pid:16236 Error: Call to a member function at() on null in /home/staralex/battleship.io.server/src/Helper/GameHelper.php:87
+Stack trace:
+#0 /home/staralex/battleship.io.server/src/App/BattleshipServer.php(103): Battleship\Helper\GameHelper::printBoards(NULL)
+#1 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection), '{"msg":"hit","r...')
+#2 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection), '{"msg":"hit","r...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #41)
+#4 /home/staralex/battleship.io.server/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#6 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#7 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#9 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(459): Workerman\Worker::forkWorkers()
+#10 /home/staralex/battleship.io.server/src/App/BattleshipServer.php(229): Workerman\Worker::runAll()
+#11 /home/staralex/battleship.io.server/index.php(10): Battleship\App\BattleshipServer->run()
+#12 {main}
+2018-02-11 16:02:34 pid:16236 Worker process terminated
+2018-02-11 16:02:34 pid:16232 worker[none:16236] exit with status 64000
+2018-02-11 16:46:48 pid:16232 Workerman[index.php] stopping ...
+2018-02-11 16:46:48 pid:16232 Workerman[index.php] has been stopped
+2018-02-11 16:46:49 pid:23220 Workerman[index.php] start in DEBUG mode
+2018-02-11 16:57:41 pid:23220 Workerman[index.php] stopping ...
+2018-02-11 16:57:41 pid:23220 Workerman[index.php] has been stopped
+2018-02-11 16:57:41 pid:24690 Workerman[index.php] start in DEBUG mode
+2018-02-11 16:59:44 pid:24694 Error: Call to a member function at() on null in /home/staralex/battleship.io.server/src/Helper/GameHelper.php:87
+Stack trace:
+#0 /home/staralex/battleship.io.server/src/App/BattleshipServer.php(101): Battleship\Helper\GameHelper::printBoards(NULL)
+#1 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection), '{"msg":"hit","r...')
+#2 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection), '{"msg":"hit","r...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #41)
+#4 /home/staralex/battleship.io.server/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#6 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#7 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#9 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(459): Workerman\Worker::forkWorkers()
+#10 /home/staralex/battleship.io.server/src/App/BattleshipServer.php(230): Workerman\Worker::runAll()
+#11 /home/staralex/battleship.io.server/index.php(10): Battleship\App\BattleshipServer->run()
+#12 {main}
+2018-02-11 16:59:44 pid:24694 Worker process terminated
+2018-02-11 16:59:44 pid:24690 worker[none:24694] exit with status 64000
+2018-02-11 17:01:42 pid:24690 Workerman[index.php] stopping ...
+2018-02-11 17:01:42 pid:24690 Workerman[index.php] has been stopped
+2018-02-11 17:01:47 pid:25382 Workerman[index.php] start in DEBUG mode
+2018-02-11 17:02:23 pid:25382 Workerman[index.php] stopping ...
+2018-02-11 17:02:23 pid:25382 Workerman[index.php] has been stopped
+2018-02-11 17:02:23 pid:25468 Workerman[index.php] start in DEBUG mode
+2018-02-11 17:02:31 pid:25471 Error: Call to a member function at() on null in /home/staralex/battleship.io.server/src/Helper/GameHelper.php:87
+Stack trace:
+#0 /home/staralex/battleship.io.server/src/App/BattleshipServer.php(101): Battleship\Helper\GameHelper::printBoards(NULL)
+#1 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection), '{"msg":"hit","r...')
+#2 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection), '{"msg":"hit","r...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #41)
+#4 /home/staralex/battleship.io.server/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#6 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#7 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#9 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(459): Workerman\Worker::forkWorkers()
+#10 /home/staralex/battleship.io.server/src/App/BattleshipServer.php(230): Workerman\Worker::runAll()
+#11 /home/staralex/battleship.io.server/index.php(10): Battleship\App\BattleshipServer->run()
+#12 {main}
+2018-02-11 17:02:31 pid:25471 Worker process terminated
+2018-02-11 17:02:31 pid:25468 worker[none:25471] exit with status 64000
+2018-02-11 17:04:19 pid:25468 Workerman[index.php] stopping ...
+2018-02-11 17:04:19 pid:25468 Workerman[index.php] has been stopped
+2018-02-11 17:04:19 pid:25768 Workerman[index.php] start in DEBUG mode

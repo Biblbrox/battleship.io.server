@@ -1,0 +1,22 @@
+{
+    "name": "biblbrox/battleship.io",
+    "description": "The battleship game",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Aleksey Kuchkov",
+            "email": "biblbroxxx@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Battleship\\": "src/"
+        }
+    },
+    "require": {
+        "workerman/workerman": "^3.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7"
+    }
+}
