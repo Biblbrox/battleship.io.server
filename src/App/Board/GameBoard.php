@@ -27,4 +27,18 @@ class GameBoard
         }
     }
 
+    /**
+     * Return the game board cells as a string.
+     */
+    public function toArray()
+    {
+        $board_array = [];
+
+        foreach ($this->cells as $cell) {
+            $board_array[] = $cell->occupationType;
+        }
+
+        return $board_array;
+    }
+
 }

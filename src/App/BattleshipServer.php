@@ -19,7 +19,17 @@ class BattleshipServer
      */
     public function __construct()
     {
-        $ws_worker = new Worker("websocket://0.0.0.0:2346");
+        // SSL context.
+        $context = [
+            'ssl' => [
+                'local_cert'  => '/home/staralex/test/localhost.cert',
+                'local_pk'    => '/home/staralex/test/localhost.key',
+                'verify_peer' => false,
+            ]
+        ];
+        $ws_worker = new Worker("websocket://0.0.0.0:2346", $context);
+
+        $ws_worker->transport = "ssl";
 
         // 4 processes
         $ws_worker->count = 4;
@@ -35,6 +45,9 @@ class BattleshipServer
                 GameHelper::generateBoard($user);
                 $user->connection = $connection;
                 $this->users[$connection->id] = $user;
+                $connection->send(json_encode([
+                    'msg' => $user->board->toArray()
+                ]));
             };
         };
 
