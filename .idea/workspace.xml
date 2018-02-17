@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9e126dac-8378-4503-9f8a-2c8700da2b6e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/App/BattleshipServer.php" afterPath="$PROJECT_DIR$/src/App/BattleshipServer.php" />
-      <change beforePath="$PROJECT_DIR$/src/App/Board/GameBoard.php" afterPath="$PROJECT_DIR$/src/App/Board/GameBoard.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/workerman/_home_staralex_battleship.io.server_index.php.pid" afterPath="$PROJECT_DIR$/vendor/workerman/_home_staralex_battleship.io.server_index.php.pid" />
-      <change beforePath="$PROJECT_DIR$/vendor/workerman/workerman.log" afterPath="$PROJECT_DIR$/vendor/workerman/workerman.log" />
-    </list>
+    <list default="true" id="9e126dac-8378-4503-9f8a-2c8700da2b6e" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -326,12 +320,12 @@
       <workItem from="1518280230794" duration="20351000" />
       <workItem from="1518303344353" duration="4964000" />
       <workItem from="1518308932135" duration="10371000" />
-      <workItem from="1518807260843" duration="12016000" />
+      <workItem from="1518807260843" duration="12758000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132456000" />
+    <option name="totallyTimeSpent" value="133198000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="16" width="1280" height="784" extended-state="6" />
