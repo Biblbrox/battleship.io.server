@@ -1,6 +1,5 @@
 <?php
 
-
 use Battleship\App\Cell;
 use Battleship\Helper\OccupationType;
 
@@ -23,7 +22,4 @@ class CellTest extends \PHPUnit\Framework\TestCase
     {
         $this->assertEquals(OccupationType::EMPTY, $this->cell->occupationType);
     }
-
-
-
 }

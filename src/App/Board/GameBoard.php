@@ -5,7 +5,7 @@ namespace Battleship\App\Board;
 
 
 use Battleship\App\Cell;
-use Battleship\CellList;
+use Battleship\Utils\CellList;
 
 class GameBoard
 {

@@ -1281,3 +1281,126 @@ Stack trace:
 2018-02-17 20:11:37 pid:20228 Workerman[index.php] stopping ...
 2018-02-17 20:11:37 pid:20228 Workerman[index.php] has been stopped
 2018-02-17 20:35:07 pid:23652 Workerman[index.php] start in DEBUG mode
+2018-02-18 05:29:25 pid:18134 Workerman[index.php] start in DEBUG mode
+2018-02-18 05:29:29 pid:18134 Workerman[index.php] stopping ...
+2018-02-18 05:29:29 pid:18134 Workerman[index.php] has been stopped
+2018-02-18 20:01:19 pid:13668 Workerman[index.php] start in DEBUG mode
+2018-02-18 20:19:06 pid:13668 Workerman[index.php] stopping ...
+2018-02-18 20:19:07 pid:13668 Workerman[index.php] has been stopped
+2018-02-18 20:19:07 pid:16320 Workerman[index.php] start in DEBUG mode
+2018-02-18 20:21:34 pid:16320 Workerman[index.php] stopping ...
+2018-02-18 20:21:34 pid:16320 Workerman[index.php] has been stopped
+2018-02-18 20:21:34 pid:16741 Workerman[index.php] start in DEBUG mode
+2018-02-18 20:25:31 pid:16741 Workerman[index.php] stopping ...
+2018-02-18 20:25:31 pid:16741 Workerman[index.php] has been stopped
+2018-02-18 20:25:32 pid:17234 Workerman[index.php] start in DEBUG mode
+2018-02-18 20:29:27 pid:17234 Workerman[index.php] stopping ...
+2018-02-18 20:29:27 pid:17234 Workerman[index.php] has been stopped
+2018-02-18 20:29:29 pid:17731 Workerman[index.php] start in DEBUG mode
+2018-02-18 20:29:58 pid:17731 Workerman[index.php] stopping ...
+2018-02-18 20:29:58 pid:17731 Workerman[index.php] has been stopped
+2018-02-18 20:29:59 pid:17795 Workerman[index.php] start in DEBUG mode
+2018-02-18 20:30:40 pid:17795 Workerman[index.php] stopping ...
+2018-02-18 20:30:40 pid:17795 Workerman[index.php] has been stopped
+2018-02-18 20:31:06 pid:18030 Workerman[index.php] start in DEBUG mode
+2018-02-18 20:32:08 pid:18034 Error: Cannot use object of type Battleship\Utils\ArrayCollection as array in /home/staralex/battleship.io.server/src/App/BattleshipServer.php:177
+Stack trace:
+#0 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection), '{"msg":"findRoo...')
+#1 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection), '{"msg":"findRoo...')
+#2 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#3 /home/staralex/battleship.io.server/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#4 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#5 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#6 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#8 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(459): Workerman\Worker::forkWorkers()
+#9 /home/staralex/battleship.io.server/src/App/BattleshipServer.php(264): Workerman\Worker::runAll()
+#10 /home/staralex/battleship.io.server/index.php(10): Battleship\App\BattleshipServer->run()
+#11 {main}
+2018-02-18 20:32:08 pid:18034 Worker process terminated
+2018-02-18 20:32:08 pid:18030 worker[none:18034] exit with status 64000
+2018-02-18 20:34:15 pid:18030 Workerman[index.php] stopping ...
+2018-02-18 20:34:15 pid:18030 Workerman[index.php] has been stopped
+2018-02-18 20:34:15 pid:18527 Workerman[index.php] start in DEBUG mode
+2018-02-18 20:37:29 pid:18527 Workerman[index.php] stopping ...
+2018-02-18 20:37:29 pid:18527 Workerman[index.php] has been stopped
+2018-02-18 20:37:29 pid:19039 Workerman[index.php] start in DEBUG mode
+2018-02-18 20:40:35 pid:19039 Workerman[index.php] stopping ...
+2018-02-18 20:40:35 pid:19039 Workerman[index.php] has been stopped
+2018-02-18 20:40:35 pid:19544 Workerman[index.php] start in DEBUG mode
+2018-02-18 20:41:51 pid:19548 Worker process terminated with ERROR: E_RECOVERABLE_ERROR "Object of class Battleship\App\Player could not be converted to string in /home/staralex/battleship.io.server/src/App/BattleshipServer.php on line 173"
+2018-02-18 20:41:51 pid:19544 worker[none:19548] exit with status 65280
+2018-02-18 20:43:32 pid:19544 Workerman[index.php] stopping ...
+2018-02-18 20:43:32 pid:19544 Workerman[index.php] has been stopped
+2018-02-18 20:43:32 pid:20011 Workerman[index.php] start in DEBUG mode
+2018-02-18 20:47:02 pid:20011 Workerman[index.php] stopping ...
+2018-02-18 20:47:02 pid:20011 Workerman[index.php] has been stopped
+2018-02-18 20:47:03 pid:20518 Workerman[index.php] start in DEBUG mode
+2018-02-18 20:47:26 pid:20518 Workerman[index.php] stopping ...
+2018-02-18 20:47:26 pid:20518 Workerman[index.php] has been stopped
+2018-02-18 20:47:27 pid:20575 Workerman[index.php] start in DEBUG mode
+2018-02-18 21:42:22 pid:20575 Workerman[index.php] stopping ...
+2018-02-18 21:42:22 pid:20575 Workerman[index.php] has been stopped
+2018-02-18 21:42:22 pid:27679 Workerman[index.php] start in DEBUG mode
+2018-02-18 21:46:24 pid:27679 Workerman[index.php] stopping ...
+2018-02-18 21:46:24 pid:27679 Workerman[index.php] has been stopped
+2018-02-18 21:46:25 pid:28238 Workerman[index.php] start in DEBUG mode
+2018-02-18 23:26:53 pid:28238 Workerman[index.php] stopping ...
+2018-02-18 23:26:53 pid:28238 Workerman[index.php] has been stopped
+2018-02-21 13:24:07 pid:16041 Workerman[index.php] start in DEBUG mode
+2018-02-21 13:27:16 pid:16041 Workerman[index.php] stopping ...
+2018-02-21 13:27:16 pid:16041 Workerman[index.php] has been stopped
+2018-02-21 13:27:17 pid:16576 Workerman[index.php] start in DEBUG mode
+2018-02-21 13:36:53 pid:16577 Error: Call to a member function at() on null in /home/staralex/battleship.io.server/src/Helper/GameHelper.php:93
+Stack trace:
+#0 /home/staralex/battleship.io.server/src/App/BattleshipServer.php(185): Battleship\Helper\GameHelper::printBoards(NULL)
+#1 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection), '{"msg":"hit","r...')
+#2 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(657): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection), '{"msg":"hit","r...')
+#3 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #27)
+#4 /home/staralex/battleship.io.server/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#5 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#6 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#7 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#9 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(459): Workerman\Worker::forkWorkers()
+#10 /home/staralex/battleship.io.server/src/App/BattleshipServer.php(272): Workerman\Worker::runAll()
+#11 /home/staralex/battleship.io.server/index.php(10): Battleship\App\BattleshipServer->run()
+#12 {main}
+2018-02-21 13:36:53 pid:16577 Worker process terminated
+2018-02-21 13:36:53 pid:16576 worker[none:16577] exit with status 64000
+2018-02-21 13:38:59 pid:16576 Workerman[index.php] stopping ...
+2018-02-21 13:38:59 pid:16576 Workerman[index.php] has been stopped
+2018-02-21 13:40:07 pid:18316 Workerman[index.php] start in DEBUG mode
+2018-02-21 13:43:03 pid:18316 Workerman[index.php] stopping ...
+2018-02-21 13:43:03 pid:18316 Workerman[index.php] has been stopped
+2018-02-21 13:43:04 pid:18699 Workerman[index.php] start in DEBUG mode
+2018-02-21 13:51:27 pid:18699 Workerman[index.php] stopping ...
+2018-02-21 13:51:27 pid:18699 Workerman[index.php] has been stopped
+2018-02-21 13:51:28 pid:19822 Workerman[index.php] start in DEBUG mode
+2018-02-21 13:52:46 pid:19822 Workerman[index.php] stopping ...
+2018-02-21 13:52:46 pid:19822 Workerman[index.php] has been stopped
+2018-02-21 13:52:46 pid:19998 Workerman[index.php] start in DEBUG mode
+2018-02-21 14:06:19 pid:19998 Workerman[index.php] stopping ...
+2018-02-21 14:06:19 pid:19998 Workerman[index.php] has been stopped
+2018-02-21 14:06:20 pid:21901 Workerman[index.php] start in DEBUG mode
+2018-02-21 14:28:39 pid:21901 Workerman[index.php] stopping ...
+2018-02-21 14:28:39 pid:21901 Workerman[index.php] has been stopped
+2018-02-21 14:28:40 pid:25193 Workerman[index.php] start in DEBUG mode
+2018-02-21 14:31:35 pid:25193 Workerman[index.php] stopping ...
+2018-02-21 14:31:35 pid:25193 Workerman[index.php] has been stopped
+2018-02-21 14:31:35 pid:25599 Workerman[index.php] start in DEBUG mode
+2018-02-21 14:32:23 pid:25599 Workerman[index.php] stopping ...
+2018-02-21 14:32:23 pid:25599 Workerman[index.php] has been stopped
+2018-02-21 14:32:23 pid:25715 Workerman[index.php] start in DEBUG mode
+2018-02-21 14:43:46 pid:25715 Workerman[index.php] stopping ...
+2018-02-21 14:43:46 pid:25715 Workerman[index.php] has been stopped
+2018-02-21 14:43:47 pid:27355 Workerman[index.php] start in DEBUG mode
+2018-02-21 14:46:03 pid:27355 Workerman[index.php] stopping ...
+2018-02-21 14:46:03 pid:27355 Workerman[index.php] has been stopped
+2018-02-21 14:46:32 pid:27769 Workerman[index.php] start in DEBUG mode
+2018-02-21 14:47:50 pid:27769 Workerman[index.php] stopping ...
+2018-02-21 14:47:50 pid:27769 Workerman[index.php] has been stopped
+2018-02-21 14:52:49 pid:28628 Workerman[index.php] start in DEBUG mode
+2018-02-21 15:01:17 pid:28628 Workerman[index.php] stopping ...
+2018-02-21 15:01:17 pid:28628 Workerman[index.php] has been stopped
+2018-02-21 15:01:18 pid:29723 Workerman[index.php] start in DEBUG mode

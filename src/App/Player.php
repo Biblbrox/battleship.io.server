@@ -3,8 +3,6 @@
 
 namespace Battleship\App;
 
-
-use Battleship\App\Board\FIringBoard;
 use Battleship\App\Board\GameBoard;
 use Battleship\App\Ship\Battleship;
 use Battleship\App\Ship\Cruiser;
@@ -15,6 +13,11 @@ use Workerman\Connection\TcpConnection;
 
 class Player
 {
+    /**
+     * @var $id
+     */
+    public $id;
+
     /**
      * @var $enemy
      */
@@ -40,7 +43,7 @@ class Player
     /**
      * The board that contains players shots and misses
      * on enemy board.
-     * @var $firingBoard
+     * @var GameBoard $firingBoard
      */
     public $firingBoard;
 
@@ -51,9 +54,11 @@ class Player
 
     /**
      * Player constructor.
+     * @param $id
      */
-    public function __construct()
+    public function __construct($id)
     {
+        $this->id = $id;
         $this->board = new GameBoard();
         $this->firingBoard = new GameBoard();
         $this->inGame = false;

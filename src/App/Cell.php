@@ -6,6 +6,10 @@ namespace Battleship\App;
 
 use Battleship\Helper\OccupationType;
 
+/**
+ * Class Cell
+ * @package Battleship\App
+ */
 class Cell
 {
     /**
@@ -19,6 +23,11 @@ class Cell
      */
     public $coordinates;
 
+    /**
+     * Cell constructor.
+     * @param $row
+     * @param $column
+     */
     public function __construct($row, $column)
     {
         $this->coordinates = new Coordinates($row, $column);
