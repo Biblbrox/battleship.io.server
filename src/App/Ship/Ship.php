@@ -3,7 +3,10 @@
 
 namespace Battleship\App\Ship;
 
-
+/**
+ * Class Ship
+ * @package Battleship\App\Ship
+ */
 abstract class Ship
 {
     /**

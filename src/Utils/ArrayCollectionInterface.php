@@ -2,6 +2,10 @@
 
 namespace Battleship\Utils;
 
+/**
+ * Interface ArrayCollectionInterface
+ * @package Battleship\Utils
+ */
 interface ArrayCollectionInterface extends \Iterator
 {
     public function get($key);

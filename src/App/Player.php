@@ -11,6 +11,10 @@ use Battleship\App\Ship\Ship;
 use Battleship\App\Ship\Submarine;
 use Workerman\Connection\TcpConnection;
 
+/**
+ * Class Player
+ * @package Battleship\App
+ */
 class Player
 {
     /**

@@ -3,7 +3,10 @@
 
 namespace Battleship\Helper;
 
-
+/**
+ * Class OccupationType
+ * @package Battleship\Helper
+ */
 class OccupationType
 {
     const EMPTY = "0";

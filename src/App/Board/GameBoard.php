@@ -7,6 +7,10 @@ namespace Battleship\App\Board;
 use Battleship\App\Cell;
 use Battleship\Utils\CellList;
 
+/**
+ * Class GameBoard
+ * @package Battleship\App\Board
+ */
 class GameBoard
 {
     /**

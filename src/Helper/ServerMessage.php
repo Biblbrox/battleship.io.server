@@ -62,6 +62,10 @@ namespace Battleship\Helper;
  * *********************************
  **/
 
+/**
+ * Class ServerMessage
+ * @package Battleship\Helper
+ */
 class ServerMessage
 {
     const HIT = "hit";
@@ -74,4 +78,6 @@ class ServerMessage
     const FIND_ROOM = "findRoom";
     const ON_CONNECTION = "onConnection";
     const ENEMY_FOUND = "enemyFound";
+    const YOU_FALL = "youFall";
+    const ENEMY_FALL = "enemyFall";
 }

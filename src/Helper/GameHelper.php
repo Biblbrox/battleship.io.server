@@ -79,39 +79,39 @@ class GameHelper
             }
         }
 
-        self::printBoards($player);
+//        self::printBoards($player);
 
         return "Board";
     }
 
-    public static function printBoards($player)
-    {
-         printf("Own Board:                          Firing Board:\n");
-
-        for ($i = 0; $i < 10; $i++) {
-            for($j = 0; $j < 10; $j++) {
-                $cell = $player->board->cells->at($i, $j);
-                if ($cell->occupationType != OccupationType::EMPTY) {
-                    printf("\033[01;31m{$cell->occupationType}\033[0m");
-                } else {
-                    printf("$cell->occupationType");
-                }
-            }
-
-            printf("\t\t\t    ");
-
-            for($j = 0; $j < 10; $j++) {
-                $cell = $player->firingBoard->cells->at($i, $j);
-                if ($cell->occupationType == OccupationType::HIT) {
-                    printf("\033[01;31m{$cell->occupationType}\033[0m");
-                } else {
-                    printf("$cell->occupationType");
-                }
-            }
-
-            printf("\n");
-        }
-    }
+//    public static function printBoards($player)
+//    {
+//         printf("Own Board:                          Firing Board:\n");
+//
+//        for ($i = 0; $i < 10; $i++) {
+//            for($j = 0; $j < 10; $j++) {
+//                $cell = $player->board->cells->at($i, $j);
+//                if ($cell->occupationType != OccupationType::EMPTY) {
+//                    printf("\033[01;31m{$cell->occupationType}\033[0m");
+//                } else {
+//                    printf("$cell->occupationType");
+//                }
+//            }
+//
+//            printf("\t\t\t    ");
+//
+//            for($j = 0; $j < 10; $j++) {
+//                $cell = $player->firingBoard->cells->at($i, $j);
+//                if ($cell->occupationType == OccupationType::HIT) {
+//                    printf("\033[01;31m{$cell->occupationType}\033[0m");
+//                } else {
+//                    printf("$cell->occupationType");
+//                }
+//            }
+//
+//            printf("\n");
+//        }
+//    }
 
     /**
      * Check area like

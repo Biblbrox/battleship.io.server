@@ -6,6 +6,10 @@ namespace Battleship\Utils;
 use Battleship\App\Cell;
 use Battleship\Utils\ArrayCollection;
 
+/**
+ * Class CellList
+ * @package Battleship\Utils
+ */
 class CellList extends ArrayCollection
 {
     /**

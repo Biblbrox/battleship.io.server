@@ -6,7 +6,9 @@ use Battleship\Helper\OccupationType;
 use Battleship\Helper\ServerMessage;
 use Battleship\Utils\ArrayCollection;
 use Battleship\Utils\CellList;
+use function Sodium\add;
 use Workerman\Connection\TcpConnection;
+use Workerman\Lib\Timer;
 use Workerman\Worker;
 
 /**
@@ -21,7 +23,7 @@ class BattleshipServer
     private $users;
 
     /**
-     * @var $rooms
+     * @var ArrayCollection $rooms
      */
     private $rooms;
 
@@ -37,17 +39,16 @@ class BattleshipServer
                 'verify_peer' => false,
             ]
         ];
-        $ws_worker = new Worker("websocket://0.0.0.0:2346", $context);
+        $ws_worker = new Worker("websocket://0.0.0.0:2346"/*, $context*/);
 
-        $ws_worker->transport = "ssl";
-        $ws_worker->count = 4;
+//        $ws_worker->transport = "ssl";
 
         $this->users = new ArrayCollection();
         $this->rooms = new ArrayCollection();
 
-        $ws_worker->onConnect = function($connection)
+        $ws_worker->onConnect = function($connection) use ($ws_worker)
         {
-            $connection->onWebSocketConnect = function(TcpConnection $connection)
+            $connection->onWebSocketConnect = function(TcpConnection $connection) use ($ws_worker)
             {
                 echo "New connection\n";
                 $user = new Player($connection->id);
@@ -62,9 +63,10 @@ class BattleshipServer
             };
         };
 
-        $ws_worker->onMessage = function(TcpConnection $connection, $data)
+        $ws_worker->onMessage = function(TcpConnection $connection, $data) use ($ws_worker)
         {
             $msg = json_decode($data);
+
             switch ($msg->msg)
             {
                 case "findRoom":
@@ -117,9 +119,9 @@ class BattleshipServer
                     }
                     break;
                 case "hit":
-                    $row = $msg->row;
-                    $column = $msg->column;
-                    $userId = $msg->userId;
+                    $row = isset($msg->row) ? $msg->row : null;
+                    $column = isset($msg->column) ? $msg->column : null;
+                    $userId = isset($msg->userId) ? $msg->userId : null;
 
                     if (!isset($row) || !isset($column)) {
                         $connection->send(json_encode([ 'msg' => "You must set row and column" ]));
@@ -181,28 +183,31 @@ class BattleshipServer
                     $connection->send(json_encode([ 'msg' => "Action $data is not t supported" ]));
                     break;
             }
-
-            /**
-             * @var Player $user
-             */
-            foreach ($this->users as $user) {
-                $enemyId = $user->enemy ? $user->enemy->id : null;
-                $id = $user->connection->id;
-                printf("User {$user->connection->id}: Id = $id; enemyId = $enemyId\n");
-            }
-
-
-            $userToPrint = $this->users->get($connection->id);
-
-            if (!$this->users->isEmpty() && isset($userToPrint)) {
-                GameHelper::printBoards($this->users->get($connection->id));
-            }
         };
 
         $ws_worker->onClose = function($connection)
         {
             echo "Connection closed";
-            $this->users->remove($connection->id);
+            /**
+             * @var GameRoom $room
+             */
+            foreach ($this->rooms as $key => $room) {
+                if ($room->containsUser($connection->id)) {
+                    $user1 = isset($room->user1->id) ? $this->users->get($room->user1->id) : null;
+                    $user2 = isset($room->user2->id) ? $this->users->get($room->user2->id) : null;
+
+                    if (isset($user1)) {
+                        $user1->connection->close();
+                        $this->users->remove($room->user1->id);
+                    }
+                    if (isset($user2)) {
+                        $user2->connection->close();
+                        $this->users->remove($room->user2->id);
+                    }
+
+                    $this->rooms->remove($key);
+                }
+            }
         };
     }
 
@@ -232,12 +237,12 @@ class BattleshipServer
         if ($cell->isOccupied()) {
             $firedCell->occupationType = OccupationType::HIT;
             $userUnderAttack->connection->send(json_encode([
-                'msg' => "youInjured",
+                'msg' => ServerMessage::YOU_INJURED,
                 'row' => $row,
                 'column' => $column
             ]));
             $connection->send(json_encode([
-                'msg' => 'enemyInjured',
+                'msg' => ServerMessage::ENEMY_INJURED,
                 'row' => $row,
                 'column' => $column
             ]));
@@ -253,10 +258,10 @@ class BattleshipServer
             $firedCell->occupationType = OccupationType::HIT;
             if ($userUnderAttack->hasLost()) {
                 $userUnderAttack->connection->send(json_encode([
-                    'msg' => 'lost'
+                    'msg' => ServerMessage::LOST
                 ]));
                 $connection->send(json_encode([
-                    'msg' => 'win'
+                    'msg' => ServerMessage::WIN
                 ]));
                 $connection->close();
                 $userUnderAttack->connection->close();
@@ -264,13 +269,13 @@ class BattleshipServer
             }
         } else {
             $connection->send(json_encode([
-                'msg' => 'youFall',
+                'msg' => ServerMessage::YOU_FALL,
                 'row' => $row,
                 'column' => $column
             ]));
             $firedCell->occupationType = OccupationType::MISS;
             $userUnderAttack->connection->send(json_encode([
-                'msg' => 'enemyFall',
+                'msg' => ServerMessage::ENEMY_FALL,
                 'row' => $row,
                 'column' => $column
             ]));

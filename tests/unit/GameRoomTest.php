@@ -1,6 +1,5 @@
 <?php
 
-
 use Battleship\App\GameRoom;
 
 class GameRoomTest extends \PHPUnit\Framework\TestCase
@@ -49,4 +48,6 @@ class GameRoomTest extends \PHPUnit\Framework\TestCase
 
         $this->assertEquals($gameRoom->walkingUser->id, $user1->id);
     }
+
+
 }

@@ -2,6 +2,10 @@
 
 namespace Battleship\App;
 
+/**
+ * Class GameRoom
+ * @package Battleship\App
+ */
 class GameRoom
 {
     /**
@@ -15,6 +19,11 @@ class GameRoom
      * @var Player $user2
      */
     public $user2;
+
+    /**
+     * @var array $users
+     */
+    public $users = [];
 
     /**
      * The user who created this room.
@@ -42,7 +51,9 @@ class GameRoom
     {
         $this->createdBy = $creator;
         $this->user1 = $creator;
+        $this->user2 = null;
         $this->onFull = function() {};
+        $this->users[] = $creator;
     }
 
     /**
@@ -60,7 +71,7 @@ class GameRoom
      */
     public function isFull()
     {
-        return isset($this->user1) && isset($this->user2);
+        return (isset($this->user1) && isset($this->user2));
     }
 
     /**
@@ -76,6 +87,8 @@ class GameRoom
 
             $this->user1->enemy = $this->user2;
             $this->user2->enemy = $this->user1;
+
+            $this->users[] = $user;
 
             if (!is_callable($this->onFull)) {
                 throw new \Exception('$onFull field must be callable');

@@ -6,6 +6,10 @@ namespace Battleship\App\Ship;
 
 use Battleship\Helper\OccupationType;
 
+/**
+ * Class Destroyer
+ * @package Battleship\App\Ship
+ */
 class Destroyer extends Ship
 {
     /**

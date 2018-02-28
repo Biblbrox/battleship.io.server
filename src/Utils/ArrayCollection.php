@@ -4,6 +4,10 @@ namespace Battleship\Utils;
 
 use Battleship\App\Cell;
 
+/**
+ * Class ArrayCollection
+ * @package Battleship\Utils
+ */
 class ArrayCollection implements ArrayCollectionInterface
 {
 

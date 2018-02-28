@@ -3,7 +3,10 @@
 
 namespace Battleship\App;
 
-
+/**
+ * Class Coordinates
+ * @package Battleship\App
+ */
 class Coordinates
 {
     /**

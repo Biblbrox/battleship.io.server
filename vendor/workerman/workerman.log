@@ -1404,3 +1404,491 @@ Stack trace:
 2018-02-21 15:01:17 pid:28628 Workerman[index.php] stopping ...
 2018-02-21 15:01:17 pid:28628 Workerman[index.php] has been stopped
 2018-02-21 15:01:18 pid:29723 Workerman[index.php] start in DEBUG mode
+2018-02-21 15:12:30 pid:29723 Workerman[index.php] stopping ...
+2018-02-21 15:12:30 pid:29723 Workerman[index.php] has been stopped
+2018-02-21 15:12:31 pid:31475 Workerman[index.php] start in DEBUG mode
+2018-02-21 16:36:29 pid:31475 Workerman[index.php] stopping ...
+2018-02-21 16:36:30 pid:31475 Workerman[index.php] has been stopped
+2018-02-21 16:36:30 pid:11421 Workerman[index.php] start in DEBUG mode
+2018-02-21 16:44:40 pid:11421 Workerman[index.php] stopping ...
+2018-02-21 16:44:40 pid:11421 Workerman[index.php] has been stopped
+2018-02-21 16:44:41 pid:12630 Workerman[index.php] start in DEBUG mode
+2018-02-21 16:49:51 pid:12630 Workerman[index.php] stopping ...
+2018-02-21 16:49:51 pid:12630 Workerman[index.php] has been stopped
+2018-02-21 16:49:51 pid:13370 Workerman[index.php] start in DEBUG mode
+2018-02-21 16:52:36 pid:13370 Workerman[index.php] stopping ...
+2018-02-21 16:52:36 pid:13370 Workerman[index.php] has been stopped
+2018-02-21 16:52:37 pid:13775 Workerman[index.php] start in DEBUG mode
+2018-02-21 19:18:38 pid:13775 Workerman[index.php] stopping ...
+2018-02-21 19:18:38 pid:13775 Workerman[index.php] has been stopped
+2018-02-21 19:18:39 pid:18569 Workerman[index.php] start in DEBUG mode
+2018-02-21 19:19:34 pid:18569 Workerman[index.php] stopping ...
+2018-02-21 19:19:34 pid:18569 Workerman[index.php] has been stopped
+2018-02-21 19:19:35 pid:18736 Workerman[index.php] start in DEBUG mode
+2018-02-21 19:59:53 pid:18736 Workerman[index.php] stopping ...
+2018-02-21 19:59:53 pid:18736 Workerman[index.php] has been stopped
+2018-02-21 19:59:54 pid:24146 Workerman[index.php] start in DEBUG mode
+2018-02-21 20:00:11 pid:24146 Workerman[index.php] stopping ...
+2018-02-21 20:00:11 pid:24146 Workerman[index.php] has been stopped
+2018-02-21 20:00:12 pid:24198 Workerman[index.php] start in DEBUG mode
+2018-02-21 20:34:05 pid:24198 Workerman[index.php] stopping ...
+2018-02-21 20:34:05 pid:24198 Workerman[index.php] has been stopped
+2018-02-21 20:34:08 pid:29132 Workerman[index.php] start in DEBUG mode
+2018-02-21 20:37:19 pid:29132 Workerman[index.php] stopping ...
+2018-02-21 20:37:19 pid:29132 Workerman[index.php] has been stopped
+2018-02-21 20:37:19 pid:29611 Workerman[index.php] start in DEBUG mode
+2018-02-21 20:41:08 pid:29611 Workerman[index.php] stopping ...
+2018-02-21 20:41:08 pid:29611 Workerman[index.php] has been stopped
+2018-02-21 20:41:08 pid:30110 Workerman[index.php] start in DEBUG mode
+2018-02-21 20:43:53 pid:30110 Workerman[index.php] stopping ...
+2018-02-21 20:43:53 pid:30110 Workerman[index.php] has been stopped
+2018-02-21 20:43:53 pid:30490 Workerman[index.php] start in DEBUG mode
+2018-02-21 20:46:17 pid:30490 Workerman[index.php] stopping ...
+2018-02-21 20:46:19 pid:30490 worker[none:30496] exit with status 9
+2018-02-21 20:46:19 pid:30490 worker[none:30494] exit with status 9
+2018-02-21 20:46:19 pid:30490 worker[none:30495] exit with status 9
+2018-02-21 20:46:19 pid:30490 worker[none:30497] exit with status 9
+2018-02-21 20:46:19 pid:30490 Workerman[index.php] has been stopped
+2018-02-21 20:46:20 pid:30839 Workerman[index.php] start in DEBUG mode
+2018-02-21 20:48:00 pid:30839 Workerman[index.php] stopping ...
+2018-02-21 20:48:00 pid:30839 Workerman[index.php] has been stopped
+2018-02-21 20:48:00 pid:31121 Workerman[index.php] start in DEBUG mode
+2018-02-21 20:53:02 pid:31121 Workerman[index.php] stopping ...
+2018-02-21 20:53:02 pid:31121 Workerman[index.php] has been stopped
+2018-02-21 20:53:02 pid:31768 Workerman[index.php] start in DEBUG mode
+2018-02-21 20:57:02 pid:31768 Workerman[index.php] stopping ...
+2018-02-21 20:57:02 pid:31768 Workerman[index.php] has been stopped
+2018-02-21 20:57:03 pid:32311 Workerman[index.php] start in DEBUG mode
+2018-02-21 20:59:20 pid:32311 Workerman[index.php] stopping ...
+2018-02-21 20:59:20 pid:32311 Workerman[index.php] has been stopped
+2018-02-21 20:59:20 pid:32635 Workerman[index.php] start in DEBUG mode
+2018-02-21 21:04:29 pid:32635 Workerman[index.php] stopping ...
+2018-02-21 21:04:29 pid:32635 Workerman[index.php] has been stopped
+2018-02-21 21:04:29 pid:900 Workerman[index.php] start in DEBUG mode
+2018-02-21 21:05:16 pid:900 Workerman[index.php] stopping ...
+2018-02-21 21:05:16 pid:900 Workerman[index.php] has been stopped
+2018-02-21 21:05:17 pid:1037 Workerman[index.php] start in DEBUG mode
+2018-02-21 21:18:33 pid:1037 Workerman[index.php] stopping ...
+2018-02-21 21:18:33 pid:1037 Workerman[index.php] has been stopped
+2018-02-21 21:18:33 pid:3202 Workerman[index.php] start in DEBUG mode
+2018-02-21 21:21:04 pid:3202 Workerman[index.php] stopping ...
+2018-02-21 21:21:04 pid:3202 Workerman[index.php] has been stopped
+2018-02-21 21:21:13 pid:3697 Workerman[index.php] start in DEBUG mode
+2018-02-21 21:31:45 pid:3697 Workerman[index.php] stopping ...
+2018-02-21 21:31:45 pid:3697 Workerman[index.php] has been stopped
+2018-02-21 21:31:45 pid:5213 Workerman[index.php] start in DEBUG mode
+2018-02-21 21:42:32 pid:5213 Workerman[index.php] stopping ...
+2018-02-21 21:42:32 pid:5213 Workerman[index.php] has been stopped
+2018-02-21 21:42:33 pid:6655 Workerman[index.php] start in DEBUG mode
+2018-02-21 21:48:42 pid:6655 Workerman[index.php] stopping ...
+2018-02-21 21:48:42 pid:6655 Workerman[index.php] has been stopped
+2018-02-21 21:48:43 pid:7530 Workerman[index.php] start in DEBUG mode
+2018-02-21 23:07:09 pid:7530 Workerman[index.php] stopping ...
+2018-02-21 23:07:09 pid:7530 Workerman[index.php] has been stopped
+2018-02-21 23:07:09 pid:18590 Workerman[index.php] start in DEBUG mode
+2018-02-21 23:14:34 pid:18590 Workerman[index.php] stopping ...
+2018-02-21 23:14:34 pid:18590 Workerman[index.php] has been stopped
+2018-02-21 23:14:34 pid:19676 Workerman[index.php] start in DEBUG mode
+2018-02-22 00:49:03 pid:19676 Workerman[index.php] stopping ...
+2018-02-22 00:49:03 pid:19676 Workerman[index.php] has been stopped
+2018-02-22 00:49:03 pid:1990 Workerman[index.php] start in DEBUG mode
+2018-02-22 00:52:29 pid:1990 Workerman[index.php] stopping ...
+2018-02-22 00:52:29 pid:1990 Workerman[index.php] has been stopped
+2018-02-22 00:52:29 pid:2602 Workerman[index.php] start in DEBUG mode
+2018-02-22 01:02:08 pid:2602 Workerman[index.php] stopping ...
+2018-02-22 01:02:08 pid:2602 Workerman[index.php] has been stopped
+2018-02-22 01:02:09 pid:4047 Workerman[index.php] start in DEBUG mode
+2018-02-22 01:04:24 pid:4047 Workerman[index.php] stopping ...
+2018-02-22 01:04:24 pid:4047 Workerman[index.php] has been stopped
+2018-02-22 01:04:24 pid:4450 Workerman[index.php] start in DEBUG mode
+2018-02-22 01:06:19 pid:4450 Workerman[index.php] stopping ...
+2018-02-22 01:06:19 pid:4450 Workerman[index.php] has been stopped
+2018-02-22 01:06:19 pid:4787 Workerman[index.php] start in DEBUG mode
+2018-02-22 01:06:53 pid:4787 Workerman[index.php] stopping ...
+2018-02-22 01:06:53 pid:4787 Workerman[index.php] has been stopped
+2018-02-22 01:06:54 pid:4896 Workerman[index.php] start in DEBUG mode
+2018-02-22 01:09:15 pid:4896 Workerman[index.php] stopping ...
+2018-02-22 01:09:15 pid:4896 Workerman[index.php] has been stopped
+2018-02-22 01:09:16 pid:5369 Workerman[index.php] start in DEBUG mode
+2018-02-22 20:13:45 pid:5369 Workerman[index.php] stopping ...
+2018-02-22 20:13:45 pid:5369 Workerman[index.php] has been stopped
+2018-02-22 20:19:30 pid:11125 Workerman[index.php] start in DEBUG mode
+2018-02-22 21:10:19 pid:11125 Workerman[index.php] stopping ...
+2018-02-22 21:10:19 pid:11125 Workerman[index.php] has been stopped
+2018-02-22 21:10:19 pid:18947 Workerman[index.php] start in DEBUG mode
+2018-02-22 21:15:21 pid:18947 Workerman[index.php] stopping ...
+2018-02-22 21:15:22 pid:18947 Workerman[index.php] has been stopped
+2018-02-22 21:15:22 pid:19701 Workerman[index.php] start in DEBUG mode
+2018-02-22 21:15:35 pid:19701 Workerman[index.php] stopping ...
+2018-02-22 21:15:35 pid:19701 Workerman[index.php] has been stopped
+2018-02-22 21:15:36 pid:19742 Workerman[index.php] start in DEBUG mode
+2018-02-22 21:16:25 pid:19742 Workerman[index.php] stopping ...
+2018-02-22 21:16:25 pid:19742 Workerman[index.php] has been stopped
+2018-02-22 21:16:26 pid:19936 Workerman[index.php] start in DEBUG mode
+2018-02-22 21:32:53 pid:19936 Workerman[index.php] stopping ...
+2018-02-22 21:32:53 pid:19936 Workerman[index.php] has been stopped
+2018-02-22 21:32:54 pid:22197 Workerman[index.php] start in DEBUG mode
+2018-02-22 21:35:42 pid:22197 Workerman[index.php] stopping ...
+2018-02-22 21:35:42 pid:22197 Workerman[index.php] has been stopped
+2018-02-22 21:35:42 pid:22578 Workerman[index.php] start in DEBUG mode
+2018-02-22 21:42:08 pid:22578 Workerman[index.php] stopping ...
+2018-02-22 21:42:08 pid:22578 Workerman[index.php] has been stopped
+2018-02-22 21:42:09 pid:23411 Workerman[index.php] start in DEBUG mode
+2018-02-22 21:52:59 pid:23411 Workerman[index.php] stopping ...
+2018-02-22 21:52:59 pid:23411 Workerman[index.php] has been stopped
+2018-02-22 23:55:01 pid:8876 Workerman[index.php] start in DEBUG mode
+2018-02-23 00:21:27 pid:8876 Workerman[index.php] stopping ...
+2018-02-23 00:21:27 pid:8876 Workerman[index.php] has been stopped
+2018-02-23 00:21:28 pid:12538 Workerman[index.php] start in DEBUG mode
+2018-02-23 00:24:57 pid:12538 Workerman[index.php] stopping ...
+2018-02-23 00:24:58 pid:12538 Workerman[index.php] has been stopped
+2018-02-23 00:24:59 pid:13079 Workerman[index.php] start in DEBUG mode
+2018-02-23 02:18:49 pid:13079 Workerman[index.php] stopping ...
+2018-02-23 02:18:50 pid:13079 Workerman[index.php] has been stopped
+2018-02-23 02:18:50 pid:27975 Workerman[index.php] start in DEBUG mode
+2018-02-23 02:23:40 pid:27975 Workerman[index.php] stopping ...
+2018-02-23 02:23:40 pid:27975 Workerman[index.php] has been stopped
+2018-02-23 02:23:41 pid:28695 Workerman[index.php] start in DEBUG mode
+2018-02-23 02:37:16 pid:28695 Workerman[index.php] stopping ...
+2018-02-23 02:37:16 pid:28695 Workerman[index.php] has been stopped
+2018-02-23 02:37:17 pid:30519 Workerman[index.php] start in DEBUG mode
+2018-02-23 02:38:51 pid:30521 Error: Call to a member function close() on null in /home/staralex/battleship.io.server/src/App/BattleshipServer.php:210
+Stack trace:
+#0 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection))
+#1 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(868): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection))
+#2 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(782): Workerman\Connection\TcpConnection->destroy()
+#3 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(2123): Workerman\Connection\TcpConnection->close()
+#4 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1604): Workerman\Worker->stop()
+#5 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(938): Workerman\Worker::stopAll()
+#6 [internal function]: Workerman\Worker::signalHandler(2)
+#7 /home/staralex/battleship.io.server/vendor/workerman/workerman/Events/Select.php(163): call_user_func_array(Array, Array)
+#8 [internal function]: Workerman\Events\Select->signalHandler(2, Array)
+#9 /home/staralex/battleship.io.server/vendor/workerman/workerman/Events/Select.php(263): pcntl_signal_dispatch()
+#10 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#11 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#12 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#13 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#14 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(459): Workerman\Worker::forkWorkers()
+#15 /home/staralex/battleship.io.server/src/App/BattleshipServer.php(297): Workerman\Worker::runAll()
+#16 /home/staralex/battleship.io.server/index.php(10): Battleship\App\BattleshipServer->run()
+#17 {main}
+2018-02-23 02:38:51 pid:30522 Error: Call to a member function close() on null in /home/staralex/battleship.io.server/src/App/BattleshipServer.php:210
+Stack trace:
+#0 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection))
+#1 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(868): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection))
+#2 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(782): Workerman\Connection\TcpConnection->destroy()
+#3 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(2123): Workerman\Connection\TcpConnection->close()
+#4 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1604): Workerman\Worker->stop()
+#5 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(938): Workerman\Worker::stopAll()
+#6 [internal function]: Workerman\Worker::signalHandler(2)
+#7 /home/staralex/battleship.io.server/vendor/workerman/workerman/Events/Select.php(163): call_user_func_array(Array, Array)
+#8 [internal function]: Workerman\Events\Select->signalHandler(2, Array)
+#9 /home/staralex/battleship.io.server/vendor/workerman/workerman/Events/Select.php(263): pcntl_signal_dispatch()
+#10 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#11 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#12 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#13 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#14 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(459): Workerman\Worker::forkWorkers()
+#15 /home/staralex/battleship.io.server/src/App/BattleshipServer.php(297): Workerman\Worker::runAll()
+#16 /home/staralex/battleship.io.server/index.php(10): Battleship\App\BattleshipServer->run()
+#17 {main}
+2018-02-23 02:38:51 pid:30519 Workerman[index.php] stopping ...
+2018-02-23 02:38:51 pid:30519 worker[none:30521] exit with status 64000
+2018-02-23 02:38:51 pid:30519 worker[none:30522] exit with status 64000
+2018-02-23 02:38:51 pid:30519 Workerman[index.php] has been stopped
+2018-02-23 02:38:52 pid:30727 Workerman[index.php] start in DEBUG mode
+2018-02-23 02:42:22 pid:30727 Workerman[index.php] stopping ...
+2018-02-23 02:42:22 pid:30727 Workerman[index.php] has been stopped
+2018-02-23 02:42:23 pid:31281 Workerman[index.php] start in DEBUG mode
+2018-02-23 03:01:00 pid:31281 Workerman[index.php] stopping ...
+2018-02-23 03:01:00 pid:31281 Workerman[index.php] has been stopped
+2018-02-23 03:01:20 pid:1786 Workerman[index.php] start in DEBUG mode
+2018-02-23 03:03:01 pid:1786 Workerman[index.php] stopping ...
+2018-02-23 03:03:01 pid:1786 Workerman[index.php] has been stopped
+2018-02-23 03:03:02 pid:2052 Workerman[index.php] start in DEBUG mode
+2018-02-23 03:30:54 pid:2052 Workerman[index.php] stopping ...
+2018-02-23 03:30:55 pid:2052 Workerman[index.php] has been stopped
+2018-02-23 03:30:55 pid:6016 Workerman[index.php] start in DEBUG mode
+2018-02-23 03:44:26 pid:6016 Workerman[index.php] stopping ...
+2018-02-23 03:44:26 pid:6016 Workerman[index.php] has been stopped
+2018-02-23 03:44:27 pid:7818 Workerman[index.php] start in DEBUG mode
+2018-02-23 03:48:21 pid:7818 Workerman[index.php] stopping ...
+2018-02-23 03:48:21 pid:7818 Workerman[index.php] has been stopped
+2018-02-23 03:48:22 pid:8430 Workerman[index.php] start in DEBUG mode
+2018-02-23 14:42:58 pid:8430 Workerman[index.php] stopping ...
+2018-02-23 14:42:58 pid:8430 Workerman[index.php] has been stopped
+2018-02-23 14:42:59 pid:14883 Workerman[index.php] start in DEBUG mode
+2018-02-23 14:49:03 pid:14883 Workerman[index.php] stopping ...
+2018-02-23 14:49:04 pid:14883 Workerman[index.php] has been stopped
+2018-02-23 14:49:04 pid:15756 Workerman[index.php] start in DEBUG mode
+2018-02-23 15:02:40 pid:15756 Workerman[index.php] stopping ...
+2018-02-23 15:02:41 pid:15756 Workerman[index.php] has been stopped
+2018-02-23 15:02:42 pid:17695 Workerman[index.php] start in DEBUG mode
+2018-02-23 15:16:37 pid:17695 Workerman[index.php] stopping ...
+2018-02-23 15:16:37 pid:17695 Workerman[index.php] has been stopped
+2018-02-23 15:16:37 pid:19562 Workerman[index.php] start in DEBUG mode
+2018-02-23 15:25:36 pid:19562 Workerman[index.php] stopping ...
+2018-02-23 15:25:37 pid:19562 Workerman[index.php] has been stopped
+2018-02-23 16:07:18 pid:28161 Workerman[index.php] start in DEBUG mode
+2018-02-23 16:07:29 pid:28161 Workerman[index.php] stopping ...
+2018-02-23 16:07:29 pid:28161 Workerman[index.php] has been stopped
+2018-02-23 16:07:29 pid:28203 Workerman[index.php] start in DEBUG mode
+2018-02-23 16:33:00 pid:28203 Workerman[index.php] stopping ...
+2018-02-23 16:33:01 pid:28203 Workerman[index.php] has been stopped
+2018-02-23 16:33:01 pid:1542 Workerman[index.php] start in DEBUG mode
+2018-02-23 16:47:22 pid:1542 Workerman[index.php] stopping ...
+2018-02-23 16:47:22 pid:1542 Workerman[index.php] has been stopped
+2018-02-23 16:47:22 pid:4019 Workerman[index.php] start in DEBUG mode
+2018-02-23 16:47:45 pid:4019 Workerman[index.php] stopping ...
+2018-02-23 16:47:45 pid:4019 Workerman[index.php] has been stopped
+2018-02-23 16:47:46 pid:4071 Workerman[index.php] start in DEBUG mode
+2018-02-23 17:12:23 pid:4071 Workerman[index.php] stopping ...
+2018-02-23 17:12:23 pid:4071 Workerman[index.php] has been stopped
+2018-02-23 17:12:24 pid:7351 Workerman[index.php] start in DEBUG mode
+2018-02-23 20:57:15 pid:7351 Workerman[index.php] stopping ...
+2018-02-23 20:57:16 pid:7351 Workerman[index.php] has been stopped
+2018-02-23 20:57:16 pid:14389 Workerman[index.php] start in DEBUG mode
+2018-02-23 21:00:30 pid:14389 Workerman[index.php] stopping ...
+2018-02-23 21:00:30 pid:14389 Workerman[index.php] has been stopped
+2018-02-23 21:00:31 pid:14954 Workerman[index.php] start in DEBUG mode
+2018-02-23 22:02:25 pid:14954 Workerman[index.php] stopping ...
+2018-02-23 22:02:25 pid:14954 Workerman[index.php] has been stopped
+2018-02-23 22:02:25 pid:26571 Workerman[index.php] start in DEBUG mode
+2018-02-23 22:15:34 pid:26571 Workerman[index.php] stopping ...
+2018-02-23 22:15:34 pid:26571 Workerman[index.php] has been stopped
+2018-02-23 22:15:34 pid:28545 Workerman[index.php] start in DEBUG mode
+2018-02-23 22:45:04 pid:28545 Workerman[index.php] stopping ...
+2018-02-23 22:45:04 pid:28545 Workerman[index.php] has been stopped
+2018-02-23 22:46:16 pid:32557 Workerman[index.php] start in DEBUG mode
+2018-02-23 23:15:41 pid:32557 Workerman[index.php] stopping ...
+2018-02-23 23:15:41 pid:32557 Workerman[index.php] has been stopped
+2018-02-23 23:15:42 pid:4863 Workerman[index.php] start in DEBUG mode
+2018-02-23 23:25:45 pid:4863 Workerman[index.php] stopping ...
+2018-02-23 23:25:45 pid:4863 Workerman[index.php] has been stopped
+2018-02-23 23:25:52 pid:6548 Workerman[index.php] status 
+2018-02-23 23:25:52 pid:6548 Workerman[index.php] not run
+2018-02-23 23:26:00 pid:6566 Workerman[index.php] start in DEBUG mode
+2018-02-23 23:26:18 pid:6649 Workerman[index.php] connections 
+2018-02-23 23:26:34 pid:6698 Workerman[index.php] connections 
+2018-02-23 23:26:55 pid:6744 Workerman[index.php] connections 
+2018-02-23 23:27:29 pid:6822 Workerman[index.php] connections 
+2018-02-23 23:31:19 pid:6566 Workerman[index.php] stopping ...
+2018-02-23 23:31:19 pid:6566 Workerman[index.php] has been stopped
+2018-02-23 23:31:20 pid:7419 Workerman[index.php] start in DEBUG mode
+2018-02-23 23:33:03 pid:7697 Workerman[index.php] connections 
+2018-02-23 23:35:47 pid:8117 Workerman[index.php] connections 
+2018-02-24 00:10:36 pid:7419 Workerman[index.php] stopping ...
+2018-02-24 00:10:36 pid:7419 Workerman[index.php] has been stopped
+2018-02-24 00:10:36 pid:13315 Workerman[index.php] start in DEBUG mode
+2018-02-24 00:11:52 pid:13315 Workerman[index.php] stopping ...
+2018-02-24 00:11:52 pid:13315 Workerman[index.php] has been stopped
+2018-02-24 00:11:52 pid:13554 Workerman[index.php] start in DEBUG mode
+2018-02-24 00:16:33 pid:13554 Workerman[index.php] stopping ...
+2018-02-24 00:16:34 pid:13554 Workerman[index.php] has been stopped
+2018-02-24 00:16:34 pid:14290 Workerman[index.php] start in DEBUG mode
+2018-02-24 00:17:48 pid:14522 Workerman[index.php] connections 
+2018-02-24 00:17:52 pid:14531 Workerman[index.php] connections 
+2018-02-24 00:19:27 pid:14290 Workerman[index.php] stopping ...
+2018-02-24 00:19:27 pid:14290 Workerman[index.php] has been stopped
+2018-02-24 00:19:27 pid:14825 Workerman[index.php] start in DEBUG mode
+2018-02-24 00:20:41 pid:15081 Workerman[index.php] connections 
+2018-02-24 00:21:04 pid:14825 Workerman[index.php] stopping ...
+2018-02-24 00:21:05 pid:14825 Workerman[index.php] has been stopped
+2018-02-24 00:21:05 pid:15150 Workerman[index.php] start in DEBUG mode
+2018-02-24 00:31:49 pid:15150 Workerman[index.php] stopping ...
+2018-02-24 00:31:49 pid:15150 Workerman[index.php] has been stopped
+2018-02-24 00:31:49 pid:16912 Workerman[index.php] start in DEBUG mode
+2018-02-24 00:32:57 pid:16912 Workerman[index.php] stopping ...
+2018-02-24 00:32:57 pid:16912 Workerman[index.php] has been stopped
+2018-02-24 00:32:57 pid:17145 Workerman[index.php] start in DEBUG mode
+2018-02-24 00:33:51 pid:17145 Workerman[index.php] stopping ...
+2018-02-24 00:33:51 pid:17145 Workerman[index.php] has been stopped
+2018-02-24 00:33:51 pid:17333 Workerman[index.php] start in DEBUG mode
+2018-02-24 00:37:22 pid:17333 Workerman[index.php] stopping ...
+2018-02-24 00:37:22 pid:17333 Workerman[index.php] has been stopped
+2018-02-24 00:37:22 pid:17920 Workerman[index.php] start in DEBUG mode
+2018-02-24 00:37:44 pid:17920 Workerman[index.php] stopping ...
+2018-02-24 00:37:44 pid:17920 Workerman[index.php] has been stopped
+2018-02-24 00:37:45 pid:18033 Workerman[index.php] start in DEBUG mode
+2018-02-24 00:44:15 pid:19156 Workerman[index.php] connections 
+2018-02-24 01:17:24 pid:18033 Workerman[index.php] stopping ...
+2018-02-24 01:17:25 pid:18033 Workerman[index.php] has been stopped
+2018-02-24 01:17:25 pid:4677 Workerman[index.php] start in DEBUG mode
+2018-02-24 01:22:20 pid:4677 Workerman[index.php] stopping ...
+2018-02-24 01:22:20 pid:4677 Workerman[index.php] has been stopped
+2018-02-24 01:22:21 pid:5741 Workerman[index.php] start in DEBUG mode
+2018-02-24 01:22:37 pid:5741 Workerman[index.php] stopping ...
+2018-02-24 01:22:37 pid:5741 Workerman[index.php] has been stopped
+2018-02-24 01:22:38 pid:5800 Workerman[index.php] start in DEBUG mode
+2018-02-26 13:14:46 pid:5237 Workerman[index.php] start in DEBUG mode
+2018-02-26 17:42:23 pid:5237 Workerman[index.php] stopping ...
+2018-02-26 17:42:24 pid:5237 Workerman[index.php] has been stopped
+2018-02-26 17:42:24 pid:25180 Workerman[index.php] start in DEBUG mode
+2018-02-26 17:43:18 pid:25180 Workerman[index.php] stopping ...
+2018-02-26 17:43:18 pid:25180 Workerman[index.php] has been stopped
+2018-02-26 17:43:18 pid:25334 Workerman[index.php] start in DEBUG mode
+2018-02-26 17:51:18 pid:25334 Workerman[index.php] stopping ...
+2018-02-26 17:51:18 pid:25334 Workerman[index.php] has been stopped
+2018-02-26 17:51:18 pid:26564 Workerman[index.php] start in DEBUG mode
+2018-02-26 17:52:13 pid:26564 Workerman[index.php] stopping ...
+2018-02-26 17:52:13 pid:26564 Workerman[index.php] has been stopped
+2018-02-26 17:52:14 pid:26737 Workerman[index.php] start in DEBUG mode
+2018-02-26 18:19:00 pid:26737 Workerman[index.php] stopping ...
+2018-02-26 18:19:01 pid:26737 Workerman[index.php] has been stopped
+2018-02-26 18:19:01 pid:30891 Workerman[index.php] start in DEBUG mode
+2018-02-26 18:39:43 pid:30891 Workerman[index.php] stopping ...
+2018-02-26 18:39:43 pid:30891 Workerman[index.php] has been stopped
+2018-02-26 18:39:44 pid:1942 Workerman[index.php] start in DEBUG mode
+2018-02-26 18:42:20 pid:1942 Workerman[index.php] stopping ...
+2018-02-26 18:42:20 pid:1942 Workerman[index.php] has been stopped
+2018-02-26 18:42:22 pid:2398 Workerman[index.php] start in DEBUG mode
+2018-02-26 18:45:07 pid:2398 Workerman[index.php] stopping ...
+2018-02-26 18:45:07 pid:2398 Workerman[index.php] has been stopped
+2018-02-26 18:45:07 pid:2864 Workerman[index.php] start in DEBUG mode
+2018-02-26 18:50:25 pid:2864 Workerman[index.php] stopping ...
+2018-02-26 18:50:25 pid:2864 Workerman[index.php] has been stopped
+2018-02-26 18:50:26 pid:3674 Workerman[index.php] start in DEBUG mode
+2018-02-26 18:54:53 pid:3674 Workerman[index.php] stopping ...
+2018-02-26 18:54:54 pid:3674 Workerman[index.php] has been stopped
+2018-02-26 18:54:54 pid:4368 Workerman[index.php] start in DEBUG mode
+2018-02-26 19:02:17 pid:4368 Workerman[index.php] stopping ...
+2018-02-26 19:02:18 pid:4368 Workerman[index.php] has been stopped
+2018-02-26 19:02:21 pid:5592 Workerman[/home/staralex/battleship.io.server/index.php] start in DEBUG mode
+2018-02-26 19:04:39 pid:5592 Workerman[index.php] stopping ...
+2018-02-26 19:04:39 pid:5592 Workerman[index.php] has been stopped
+2018-02-26 19:04:43 pid:5981 Workerman[/home/staralex/battleship.io.server/index.php] start in DEBUG mode
+2018-02-26 19:05:53 pid:5981 Workerman[index.php] stopping ...
+2018-02-26 19:05:54 pid:5981 Workerman[index.php] has been stopped
+2018-02-26 19:06:01 pid:6236 Workerman[/home/staralex/battleship.io.server/index.php] start in DEBUG mode
+2018-02-26 19:08:58 pid:6236 Workerman[index.php] stopping ...
+2018-02-26 19:08:58 pid:6236 Workerman[index.php] has been stopped
+2018-02-26 19:09:01 pid:6745 Workerman[/home/staralex/battleship.io.server/index.php] start in DEBUG mode
+2018-02-26 19:19:38 pid:6745 Workerman[index.php] stopping ...
+2018-02-26 19:19:38 pid:6745 Workerman[index.php] has been stopped
+2018-02-26 19:19:50 pid:14383 Workerman[index.php] start in DEBUG mode
+2018-02-26 19:29:41 pid:14383 Workerman[index.php] stopping ...
+2018-02-26 19:29:41 pid:14383 Workerman[index.php] has been stopped
+2018-02-26 19:29:44 pid:15921 Workerman[index.php] start in DEBUG mode
+2018-02-26 20:09:03 pid:26660 Workerman[/home/staralex/battleship.io.server/index.php] start in DEBUG mode
+2018-02-26 20:09:03 pid:26660 Workerman[/home/staralex/battleship.io.server/index.php] already running
+2018-02-26 20:09:13 pid:26692 Workerman[/home/staralex/battleship.io.server/index.php] start in DEBUG mode
+2018-02-26 20:09:13 pid:26692 Workerman[/home/staralex/battleship.io.server/index.php] already running
+2018-02-26 20:09:27 pid:26732 Workerman[/home/staralex/battleship.io.server/index.php] start in DEBUG mode
+2018-02-26 20:09:27 pid:26732 Workerman[/home/staralex/battleship.io.server/index.php] already running
+2018-02-26 20:09:42 pid:26776 Workerman[/home/staralex/battleship.io.server/index.php] start in DEBUG mode
+2018-02-26 20:09:42 pid:26776 Workerman[/home/staralex/battleship.io.server/index.php] already running
+2018-02-26 20:09:44 pid:15921 Workerman[index.php] stopping ...
+2018-02-26 20:09:45 pid:15921 Workerman[index.php] has been stopped
+2018-02-26 20:09:48 pid:26807 Workerman[/home/staralex/battleship.io.server/index.php] start in DEBUG mode
+2018-02-26 20:36:13 pid:26807 Workerman[index.php] stopping ...
+2018-02-26 20:36:13 pid:26807 Workerman[index.php] has been stopped
+2018-02-26 20:36:32 pid:30746 Workerman[/home/staralex/battleship.io.server/index.php] start in DEBUG mode
+2018-02-26 22:18:32 pid:30746 Workerman[index.php] stopping ...
+2018-02-26 22:18:33 pid:30746 Workerman[index.php] has been stopped
+2018-02-26 22:18:37 pid:12558 Workerman[/home/staralex/battleship.io.server/index.php] start in DEBUG mode
+2018-02-26 22:18:40 pid:12558 Workerman[index.php] stopping ...
+2018-02-26 22:18:41 pid:12558 Workerman[index.php] has been stopped
+2018-02-26 22:19:59 pid:12802 Workerman[index.php] start in DEBUG mode
+2018-02-27 19:38:14 pid:20801 Workerman[index.php] start in DEBUG mode
+2018-02-27 23:08:43 pid:20801 Workerman[index.php] stopping ...
+2018-02-27 23:08:45 pid:20801 Workerman[index.php] has been stopped
+2018-02-27 23:08:47 pid:20112 Workerman[index.php] start in DEBUG mode
+2018-02-27 23:35:42 pid:20112 Workerman[index.php] stopping ...
+2018-02-27 23:35:42 pid:20112 Workerman[index.php] has been stopped
+2018-02-27 23:35:43 pid:24813 Workerman[index.php] start in DEBUG mode
+2018-02-27 23:38:21 pid:24813 Workerman[index.php] stopping ...
+2018-02-27 23:38:21 pid:24813 Workerman[index.php] has been stopped
+2018-02-27 23:38:22 pid:25248 Workerman[index.php] start in DEBUG mode
+2018-02-27 23:52:29 pid:25248 Workerman[index.php] stopping ...
+2018-02-27 23:52:29 pid:25248 Workerman[index.php] has been stopped
+2018-02-27 23:52:29 pid:27468 Workerman[index.php] start in DEBUG mode
+2018-02-27 23:53:08 pid:27468 Workerman[index.php] stopping ...
+2018-02-27 23:53:10 pid:27468 worker[none:27480] exit with status 9
+2018-02-27 23:53:10 pid:27468 worker[none:27483] exit with status 9
+2018-02-27 23:53:10 pid:27468 Workerman[index.php] has been stopped
+2018-02-28 11:46:57 pid:2876 Workerman[index.php] start in DEBUG mode
+2018-02-28 11:48:21 pid:2876 Workerman[index.php] stopping ...
+2018-02-28 11:48:21 pid:2876 Workerman[index.php] has been stopped
+2018-02-28 11:48:22 pid:3141 Workerman[index.php] start in DEBUG mode
+2018-02-28 11:55:37 pid:3141 Workerman[index.php] stopping ...
+2018-02-28 11:55:37 pid:3141 Workerman[index.php] has been stopped
+2018-02-28 11:55:37 pid:4307 Workerman[index.php] start in DEBUG mode
+2018-02-28 11:56:15 pid:4307 Workerman[index.php] stopping ...
+2018-02-28 11:56:15 pid:4307 Workerman[index.php] has been stopped
+2018-02-28 11:57:46 pid:4681 Workerman[index.php] start in DEBUG mode
+2018-02-28 12:01:25 pid:4681 Workerman[index.php] stopping ...
+2018-02-28 12:01:25 pid:4681 Workerman[index.php] has been stopped
+2018-02-28 12:01:26 pid:5318 Workerman[index.php] start in DEBUG mode
+2018-02-28 12:02:45 pid:5318 Workerman[index.php] stopping ...
+2018-02-28 12:02:45 pid:5318 Workerman[index.php] has been stopped
+2018-02-28 12:02:46 pid:5555 Workerman[index.php] start in DEBUG mode
+2018-02-28 12:04:18 pid:5555 Workerman[index.php] stopping ...
+2018-02-28 12:04:18 pid:5555 Workerman[index.php] has been stopped
+2018-02-28 12:04:18 pid:5823 Workerman[index.php] start in DEBUG mode
+2018-02-28 12:09:59 pid:5823 Workerman[index.php] stopping ...
+2018-02-28 12:09:59 pid:5823 Workerman[index.php] has been stopped
+2018-02-28 12:10:01 pid:6736 Workerman[index.php] start in DEBUG mode
+2018-02-28 12:11:03 pid:6736 Workerman[index.php] stopping ...
+2018-02-28 12:11:03 pid:6736 Workerman[index.php] has been stopped
+2018-02-28 12:11:04 pid:6998 Workerman[index.php] start in DEBUG mode
+2018-02-28 12:12:56 pid:7351 Workerman[index.php] start in DEBUG mode
+2018-02-28 12:12:56 pid:7351 Workerman[index.php] already running
+2018-02-28 12:12:58 pid:7357 Workerman[index.php] start in DEBUG mode
+2018-02-28 12:12:58 pid:7357 Workerman[index.php] already running
+2018-02-28 12:13:34 pid:7463 Workerman[index.php] start in DEBUG mode
+2018-02-28 12:15:55 pid:7463 Workerman[index.php] stopping ...
+2018-02-28 12:15:55 pid:7463 Workerman[index.php] has been stopped
+2018-02-28 12:15:56 pid:7848 Workerman[index.php] start in DEBUG mode
+2018-02-28 12:16:44 pid:7848 Workerman[index.php] stopping ...
+2018-02-28 12:16:45 pid:7848 Workerman[index.php] has been stopped
+2018-02-28 12:16:45 pid:8016 Workerman[index.php] start in DEBUG mode
+2018-02-28 12:23:27 pid:8016 Workerman[index.php] stopping ...
+2018-02-28 12:23:27 pid:8016 Workerman[index.php] has been stopped
+2018-02-28 12:23:27 pid:9215 Workerman[index.php] start in DEBUG mode
+2018-02-28 12:25:59 pid:9215 Workerman[index.php] stopping ...
+2018-02-28 12:26:00 pid:9215 Workerman[index.php] has been stopped
+2018-02-28 12:26:06 pid:9672 Workerman[index.php] start in DEBUG mode
+2018-02-28 12:27:57 pid:9672 Workerman[index.php] stopping ...
+2018-02-28 12:27:57 pid:9672 Workerman[index.php] has been stopped
+2018-02-28 12:27:57 pid:10067 Workerman[index.php] start in DEBUG mode
+2018-02-28 12:30:41 pid:10067 Workerman[index.php] stopping ...
+2018-02-28 12:30:41 pid:10067 Workerman[index.php] has been stopped
+2018-02-28 12:30:47 pid:10580 Workerman[/home/staralex/battleship.io.server/index.php] start in DEBUG mode
+2018-02-28 12:35:37 pid:11371 Workerman[/home/staralex/battleship.io.server/index.php] start in DEBUG mode
+2018-02-28 12:35:37 pid:11371 Workerman[/home/staralex/battleship.io.server/index.php] already running
+2018-02-28 12:35:37 pid:10580 Workerman[index.php] stopping ...
+2018-02-28 12:35:37 pid:10580 Workerman[index.php] has been stopped
+2018-02-28 12:35:54 pid:11444 Workerman[/home/staralex/battleship.io.server/index.php] start in DEBUG mode
+2018-02-28 12:37:02 pid:11465 Worker process terminated
+2018-02-28 12:37:04 pid:11444 Workerman[index.php] stopping ...
+2018-02-28 12:37:06 pid:11444 worker[none:11458] exit with status 9
+2018-02-28 12:37:06 pid:11444 worker[none:11697] exit with status 9
+2018-02-28 12:37:06 pid:11444 Workerman[index.php] has been stopped
+2018-02-28 12:37:11 pid:11742 Workerman[/home/staralex/battleship.io.server/index.php] start in DEBUG mode
+2018-02-28 12:43:09 pid:11761 Worker process terminated
+2018-02-28 12:43:11 pid:11742 Workerman[index.php] stopping ...
+2018-02-28 12:43:13 pid:11742 worker[none:11743] exit with status 9
+2018-02-28 12:43:13 pid:11742 worker[none:11748] exit with status 9
+2018-02-28 12:43:13 pid:11742 Workerman[index.php] has been stopped
+2018-02-28 12:43:15 pid:12787 Workerman[index.php] start in DEBUG mode
+2018-02-28 12:49:55 pid:12787 Workerman[index.php] stopping ...
+2018-02-28 12:49:55 pid:12787 Workerman[index.php] has been stopped
+2018-02-28 12:49:56 pid:13851 Workerman[index.php] start in DEBUG mode
+2018-02-28 13:09:15 pid:13851 Workerman[index.php] stopping ...
+2018-02-28 13:09:15 pid:13851 Workerman[index.php] has been stopped
+2018-02-28 13:09:16 pid:16800 Workerman[index.php] start in DEBUG mode
+2018-02-28 13:09:49 pid:16800 Workerman[index.php] stopping ...
+2018-02-28 13:09:49 pid:16800 Workerman[index.php] has been stopped
+2018-02-28 13:09:49 pid:16931 Workerman[index.php] start in DEBUG mode
+2018-02-28 13:10:16 pid:16931 Workerman[index.php] stopping ...
+2018-02-28 13:10:16 pid:16931 Workerman[index.php] has been stopped
+2018-02-28 13:15:30 pid:17806 Workerman[index.php] start in DEBUG mode
+2018-02-28 13:20:38 pid:17806 Workerman[index.php] stopping ...
+2018-02-28 13:20:38 pid:17806 Workerman[index.php] has been stopped
+2018-02-28 13:21:03 pid:18757 Workerman[index.php] start in DEBUG mode
+2018-02-28 13:24:08 pid:18757 Workerman[index.php] stopping ...
+2018-02-28 13:24:09 pid:18757 Workerman[index.php] has been stopped
+2018-02-28 13:24:11 pid:19329 Workerman[index.php] start in DEBUG mode
+2018-02-28 13:25:29 pid:19329 Workerman[index.php] stopping ...
+2018-02-28 13:25:31 pid:19329 worker[none:19332] exit with status 9
+2018-02-28 13:25:31 pid:19329 Workerman[index.php] has been stopped
