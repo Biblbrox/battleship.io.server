@@ -1892,3 +1892,21 @@ Stack trace:
 2018-02-28 13:25:29 pid:19329 Workerman[index.php] stopping ...
 2018-02-28 13:25:31 pid:19329 worker[none:19332] exit with status 9
 2018-02-28 13:25:31 pid:19329 Workerman[index.php] has been stopped
+2018-02-28 13:49:38 pid:24113 Workerman[index.php] start in DEBUG mode
+2018-02-28 14:12:10 pid:24113 Workerman[index.php] stopping ...
+2018-02-28 14:12:10 pid:24113 Workerman[index.php] has been stopped
+2018-02-28 18:16:01 pid:12767 Workerman[index.php] start in DEBUG mode
+2018-02-28 18:31:16 pid:12767 Workerman[index.php] stopping ...
+2018-02-28 18:31:16 pid:12767 Workerman[index.php] has been stopped
+2018-02-28 18:31:19 pid:15080 Workerman[/home/staralex/battleship.io.server/index.php] start in DEBUG mode
+2018-02-28 18:32:51 pid:15372 Workerman[/home/staralex/battleship.io.server/index.php] start in DEBUG mode
+2018-02-28 18:32:51 pid:15372 Workerman[/home/staralex/battleship.io.server/index.php] already running
+2018-02-28 18:32:53 pid:15080 Workerman[index.php] stopping ...
+2018-02-28 18:32:53 pid:15080 Workerman[index.php] has been stopped
+2018-02-28 18:32:55 pid:15391 Workerman[/home/staralex/battleship.io.server/index.php] start in DEBUG mode
+2018-02-28 18:51:24 pid:15392 Worker process terminated
+2018-02-28 18:51:26 pid:15391 Workerman[index.php] stopping ...
+2018-02-28 18:51:26 pid:15391 Workerman[index.php] has been stopped
+2018-02-28 18:51:39 pid:18246 Workerman[index.php] start in DEBUG mode
+2018-02-28 18:58:20 pid:18246 Workerman[index.php] stopping ...
+2018-02-28 18:58:20 pid:18246 Workerman[index.php] has been stopped

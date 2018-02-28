@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Battleship\App\Board;
-
 
 use Battleship\App\Cell;
 use Battleship\Utils\CellList;

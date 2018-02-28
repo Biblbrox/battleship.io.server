@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Battleship\App\Ship;
-
 
 use Battleship\Helper\OccupationType;
 

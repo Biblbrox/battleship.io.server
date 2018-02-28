@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Battleship\App;
 
 use Battleship\App\Board\GameBoard;

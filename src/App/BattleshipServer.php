@@ -1,4 +1,5 @@
 <?php
+
 namespace Battleship\App;
 
 use Battleship\Helper\GameHelper;
@@ -6,9 +7,7 @@ use Battleship\Helper\OccupationType;
 use Battleship\Helper\ServerMessage;
 use Battleship\Utils\ArrayCollection;
 use Battleship\Utils\CellList;
-use function Sodium\add;
 use Workerman\Connection\TcpConnection;
-use Workerman\Lib\Timer;
 use Workerman\Worker;
 
 /**
@@ -81,45 +80,27 @@ class BattleshipServer
                     }
                     $gameRoom = GameHelper::findGameRoom($this->rooms);
 
-                    if (isset($gameRoom)) {
-                        $gameRoom->onFull = function () use($gameRoom) {
-                            $user1 = $gameRoom->user1;
-                            $user2 = $gameRoom->user2;
+                    $onFull = function () use ($gameRoom) {
+                        foreach ($gameRoom->users as $_user) {
+                            $_user->connection->send(json_encode([
+                                'msg' => ServerMessage::ENEMY_FOUND,
+                                'enemyId' => $gameRoom->user1->id === $_user->id ? $gameRoom->user2->id : $gameRoom->user1->id,
+                                'walkingUserId' => $gameRoom->createdBy->id
+                            ]));
+                        }
+                    };
 
-                            $user1->connection->send(json_encode([
-                                'msg' => ServerMessage::ENEMY_FOUND,
-                                'enemyId' => $user2->id,
-                                'walkingUserId' => $gameRoom->createdBy->id
-                            ]));
-                            $user2->connection->send(json_encode([
-                                'msg' => ServerMessage::ENEMY_FOUND,
-                                'enemyId' => $user1->id,
-                                'walkingUserId' => $gameRoom->createdBy->id
-                            ]));
-                        };
+                    if (isset($gameRoom)) {
+                        $gameRoom->onFull = $onFull;
                         $gameRoom->addUser($user);
                     } else {
                         $gameRoom = new GameRoom($user);
                         $this->rooms->push($gameRoom);
-                        $gameRoom->onFull = function () use($gameRoom) {
-                            $user1 = $gameRoom->user1;
-                            $user2 = $gameRoom->user2;
-
-                            $user1->connection->send(json_encode([
-                                'msg' => ServerMessage::ENEMY_FOUND,
-                                'enemyId' => $user2->id,
-                                'walkingUserId' => $gameRoom->createdBy->id
-                            ]));
-                            $user2->connection->send(json_encode([
-                                'msg' => ServerMessage::ENEMY_FOUND,
-                                'enemyId' => $user1->id,
-                                'walkingUserId' => $gameRoom->createdBy->id
-                            ]));
-                        };
+                        $gameRoom->onFull = $onFull;
                     }
                     break;
                 case "hit":
-                    $row = isset($msg->row) ? $msg->row : null;
+                    $row    = isset($msg->row)    ? $msg->row    : null;
                     $column = isset($msg->column) ? $msg->column : null;
                     $userId = isset($msg->userId) ? $msg->userId : null;
 
@@ -149,7 +130,7 @@ class BattleshipServer
                     }
 
                     $gameRoom = null;
-                    $keyRoom = null;
+                    $keyRoom  = null;
                     /**
                      * @var GameRoom $room
                      */
@@ -170,11 +151,9 @@ class BattleshipServer
                         break;
                     }
 
-                    $firedCell = $this->users->get($connection->id)->firingBoard->cells->at(
-                        $row,
-                        $column);
+                    $firedCell = $this->users->get($connection->id)->firingBoard->cells->at($row, $column);
 
-                    if(!$this->hitCell($connection, $user, $row, $column, $firedCell, $keyRoom, $gameRoom)) {
+                    if (!$this->hitCell($connection, $user, $row, $column, $firedCell, $keyRoom, $gameRoom)) {
                         break;
                     }
 
@@ -193,16 +172,10 @@ class BattleshipServer
              */
             foreach ($this->rooms as $key => $room) {
                 if ($room->containsUser($connection->id)) {
-                    $user1 = isset($room->user1->id) ? $this->users->get($room->user1->id) : null;
-                    $user2 = isset($room->user2->id) ? $this->users->get($room->user2->id) : null;
 
-                    if (isset($user1)) {
-                        $user1->connection->close();
-                        $this->users->remove($room->user1->id);
-                    }
-                    if (isset($user2)) {
-                        $user2->connection->close();
-                        $this->users->remove($room->user2->id);
+                    foreach ($room->users as $user) {
+                        $user->connection->close();
+                        $this->users->remove($user->id);
                     }
 
                     $this->rooms->remove($key);
@@ -227,7 +200,7 @@ class BattleshipServer
          * @var CellList $cells
          */
         $cells = $userUnderAttack->board->cells;
-        $cell = $cells->at($row, $column);
+        $cell  = $cells->at($row, $column);
 
         if (!isset($cell)) {
             $connection->send(json_encode([ 'msg' => "Cell at $row, $column was not found on enemy board" ]));
@@ -237,13 +210,13 @@ class BattleshipServer
         if ($cell->isOccupied()) {
             $firedCell->occupationType = OccupationType::HIT;
             $userUnderAttack->connection->send(json_encode([
-                'msg' => ServerMessage::YOU_INJURED,
-                'row' => $row,
+                'msg'    => ServerMessage::YOU_INJURED,
+                'row'    => $row,
                 'column' => $column
             ]));
             $connection->send(json_encode([
-                'msg' => ServerMessage::ENEMY_INJURED,
-                'row' => $row,
+                'msg'    => ServerMessage::ENEMY_INJURED,
+                'row'    => $row,
                 'column' => $column
             ]));
             $attackedShip = $userUnderAttack->shipAt($row, $column);
@@ -269,18 +242,19 @@ class BattleshipServer
             }
         } else {
             $connection->send(json_encode([
-                'msg' => ServerMessage::YOU_FALL,
-                'row' => $row,
+                'msg'    => ServerMessage::YOU_FALL,
+                'row'    => $row,
                 'column' => $column
             ]));
             $firedCell->occupationType = OccupationType::MISS;
             $userUnderAttack->connection->send(json_encode([
-                'msg' => ServerMessage::ENEMY_FALL,
-                'row' => $row,
+                'msg'    => ServerMessage::ENEMY_FALL,
+                'row'    => $row,
                 'column' => $column
             ]));
             $gameRoom->walkingUser = $userUnderAttack;
         }
+
         return true;
     }
 

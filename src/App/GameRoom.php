@@ -50,10 +50,10 @@ class GameRoom
     public function __construct(Player $creator)
     {
         $this->createdBy = $creator;
-        $this->user1 = $creator;
-        $this->user2 = null;
-        $this->onFull = function() {};
-        $this->users[] = $creator;
+        $this->user1     = $creator;
+        $this->user2     = null;
+        $this->onFull    = function() {};
+        $this->users[]   = $creator;
     }
 
     /**

@@ -19,7 +19,6 @@ class GameHelper
      * This method generating board for battleship game
      * and returns it as a array.
      * @param Player $player
-     * @return string
      */
     public static function generateBoard($player)
     {
@@ -72,7 +71,7 @@ class GameHelper
 
                 foreach ($affectedCells as $cell) {
                     $cell->occupationType = $ship->occupationType;
-                    $ship->coordinates[] = $cell->coordinates;
+                    $ship->coordinates[]  = $cell->coordinates;
                 }
 
                 $isOpen = false;
@@ -80,8 +79,6 @@ class GameHelper
         }
 
 //        self::printBoards($player);
-
-        return "Board";
     }
 
 //    public static function printBoards($player)
@@ -177,25 +174,25 @@ class GameHelper
                     && ($item->coordinates->row == $cell->coordinates->row - 1)
                     && ($item->coordinates->column == $cell->coordinates->column)
                     && ($item->isOccupied())
-                    && ($item->occupationType != $occupationType)) {
+                    && ($item->status() != $occupationType)) {
                     return true;
                 } else if (isset($item) && $orientation == 1 /* horizontal */
-                    && ($item->coordinates->row == $cell->coordinates->row)
+                    && ($item->coordinates->row    == $cell->coordinates->row)
                     && ($item->coordinates->column == $cell->coordinates->column - 1)
                     && ($item->isOccupied())
-                    && ($item->occupationType != $occupationType)) {
+                    && ($item->status() != $occupationType)) {
                     return true;
                 } else if (isset($item) && $orientation == 1 /* Horizontal. Checking on collision with same type ship on top of movement */
-                    && ($item->coordinates->row == $cell->coordinates->row)
+                    && ($item->coordinates->row    == $cell->coordinates->row)
                     && ($item->coordinates->column == $cell->coordinates->column + 1)
                     && ($item->isOccupied())
-                    && ($item->occupationType == $occupationType)) {
+                    && ($item->status() == $occupationType)) {
                     return true;
                 } else if (isset($item) && $orientation == 0 /* Vertical. Checking on collision with same type ship on right of movement */
                     && ($item->coordinates->row == $cell->coordinates->row + 1)
                     && ($item->coordinates->column == $cell->coordinates->column)
                     && ($item->isOccupied())
-                    && ($item->occupationType == $occupationType)) {
+                    && ($item->status() == $occupationType)) {
                     return true;
                 }
             }
