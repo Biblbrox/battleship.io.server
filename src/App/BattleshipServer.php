@@ -60,14 +60,12 @@ class BattleshipServer
             $connection->onWebSocketConnect = function(TcpConnection $connection) use ($ws_worker)
             {
                 echo "New connection\n";
-                $user = new Player($connection->id);
-                GameHelper::generateBoard($user);
-                $user->connection = $connection;
+                $user = GameHelper::generateUser($connection);
                 $this->users->push($user, $connection->id);
                 $connection->send(json_encode([
-                    'msg' => "onConnection",
+                    'msg'   => "onConnection",
                     'board' => $user->board->toArray(),
-                    'id' => $user->id
+                    'id'    => $user->id
                 ]));
             };
         };

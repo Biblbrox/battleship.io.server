@@ -8,6 +8,7 @@ use Battleship\App\Player;
 use Battleship\App\Ship\Ship;
 use Battleship\Utils\ArrayCollection;
 use Battleship\Utils\CellList;
+use Workerman\Connection\TcpConnection;
 
 /**
  * Class GameHelper
@@ -18,10 +19,13 @@ class GameHelper
     /**
      * This method generating board for battleship game
      * and returns it as a array.
-     * @param Player $player
+     * @param TcpConnection $connection
+     * @return \Battleship\App\Player
      */
-    public static function generateBoard($player)
+    public static function generateUser($connection)
     {
+        $player = new Player($connection->id);
+        $player->connection = $connection;
         /**
          * @var Ship $ship
          */
@@ -77,6 +81,8 @@ class GameHelper
                 $isOpen = false;
             }
         }
+
+        return $player;
     }
 
     /**
