@@ -32,13 +32,6 @@ class Player
     public $board;
 
     /**
-     * True means that player send message to some player
-     * about a game and answer was right.
-     * @var bool $inGame
-     */
-    public $inGame;
-
-    /**
      * @var TcpConnection $connection
      */
     public $connection;
@@ -64,7 +57,6 @@ class Player
         $this->id = $id;
         $this->board = new GameBoard();
         $this->firingBoard = new GameBoard();
-        $this->inGame = false;
         $this->enemy = false;
         $this->ships = [
             new Battleship(),
@@ -111,13 +103,5 @@ class Player
         }
 
         return $lost;
-    }
-
-    /**
-     * @return bool
-     */
-    public function inGame()
-    {
-        return $this->inGame;
     }
 }

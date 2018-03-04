@@ -1910,3 +1910,343 @@ Stack trace:
 2018-02-28 18:51:39 pid:18246 Workerman[index.php] start in DEBUG mode
 2018-02-28 18:58:20 pid:18246 Workerman[index.php] stopping ...
 2018-02-28 18:58:20 pid:18246 Workerman[index.php] has been stopped
+2018-02-28 19:07:44 pid:21141 Workerman[index.php] start in DAEMON mode
+2018-02-28 22:46:37 pid:28435 Workerman[index.php] start in DEBUG mode
+2018-02-28 22:46:37 pid:28435 Workerman[index.php] already running
+2018-02-28 22:46:49 pid:28474 Workerman[index.php] stop 
+2018-02-28 22:46:49 pid:28474 Workerman[index.php] is stoping ...
+2018-02-28 22:46:49 pid:21143 Workerman[index.php] stopping ...
+2018-02-28 22:46:49 pid:21143 Workerman[index.php] has been stopped
+2018-02-28 22:46:49 pid:28474 Workerman[index.php] stop success
+2018-02-28 22:46:50 pid:28480 Workerman[index.php] start in DEBUG mode
+2018-02-28 23:17:29 pid:28481 Error: Call to a member function send() on null in /home/staralex/battleship.io.server/src/App/BattleshipServer.php:178
+Stack trace:
+#0 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection))
+#1 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(868): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection))
+#2 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(782): Workerman\Connection\TcpConnection->destroy()
+#3 /home/staralex/battleship.io.server/vendor/workerman/workerman/Protocols/Websocket.php(98): Workerman\Connection\TcpConnection->close()
+#4 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(621): Workerman\Protocols\Websocket::input('\x88\x82\xB2\xB8\xD8+\xB1Q', Object(Workerman\Connection\TcpConnection))
+#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #50)
+#6 /home/staralex/battleship.io.server/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#7 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#8 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#9 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#10 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#11 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(459): Workerman\Worker::forkWorkers()
+#12 /home/staralex/battleship.io.server/src/App/BattleshipServer.php(272): Workerman\Worker::runAll()
+#13 /home/staralex/battleship.io.server/index.php(10): Battleship\App\BattleshipServer->run()
+#14 {main}
+2018-02-28 23:17:29 pid:28481 Worker process terminated
+2018-02-28 23:17:29 pid:28480 worker[none:28481] exit with status 64000
+2018-02-28 23:29:34 pid:692 Error: Call to a member function send() on null in /home/staralex/battleship.io.server/src/App/BattleshipServer.php:178
+Stack trace:
+#0 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection))
+#1 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(868): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection))
+#2 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(782): Workerman\Connection\TcpConnection->destroy()
+#3 /home/staralex/battleship.io.server/vendor/workerman/workerman/Protocols/Websocket.php(98): Workerman\Connection\TcpConnection->close()
+#4 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(621): Workerman\Protocols\Websocket::input('\x88\x82\x9C\xFC\xDE6\x9F\x15', Object(Workerman\Connection\TcpConnection))
+#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #29)
+#6 /home/staralex/battleship.io.server/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#7 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#8 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#9 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#10 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#11 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#12 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#13 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#14 /home/staralex/battleship.io.server/src/App/BattleshipServer.php(272): Workerman\Worker::runAll()
+#15 /home/staralex/battleship.io.server/index.php(10): Battleship\App\BattleshipServer->run()
+#16 {main}
+2018-02-28 23:29:34 pid:692 Worker process terminated
+2018-02-28 23:29:34 pid:28480 worker[none:692] exit with status 64000
+2018-02-28 23:30:27 pid:3086 Error: Call to a member function send() on null in /home/staralex/battleship.io.server/src/App/BattleshipServer.php:178
+Stack trace:
+#0 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection))
+#1 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(868): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection))
+#2 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(782): Workerman\Connection\TcpConnection->destroy()
+#3 /home/staralex/battleship.io.server/vendor/workerman/workerman/Protocols/Websocket.php(98): Workerman\Connection\TcpConnection->close()
+#4 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(621): Workerman\Protocols\Websocket::input('\x88\x82>\xF4\x84\x97=\x1D', Object(Workerman\Connection\TcpConnection))
+#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #30)
+#6 /home/staralex/battleship.io.server/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#7 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#8 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#9 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#10 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#11 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#12 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#13 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#14 /home/staralex/battleship.io.server/src/App/BattleshipServer.php(272): Workerman\Worker::runAll()
+#15 /home/staralex/battleship.io.server/index.php(10): Battleship\App\BattleshipServer->run()
+#16 {main}
+2018-02-28 23:30:27 pid:3086 Worker process terminated
+2018-02-28 23:30:27 pid:28480 worker[none:3086] exit with status 64000
+2018-02-28 23:31:38 pid:3249 Error: Call to a member function send() on null in /home/staralex/battleship.io.server/src/App/BattleshipServer.php:178
+Stack trace:
+#0 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection))
+#1 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(868): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection))
+#2 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(782): Workerman\Connection\TcpConnection->destroy()
+#3 /home/staralex/battleship.io.server/vendor/workerman/workerman/Protocols/Websocket.php(98): Workerman\Connection\TcpConnection->close()
+#4 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(621): Workerman\Protocols\Websocket::input('\x88\x82\xF1\xD4\xDB\x04\xF2=', Object(Workerman\Connection\TcpConnection))
+#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #31)
+#6 /home/staralex/battleship.io.server/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#7 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#8 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#9 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#10 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#11 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#12 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#13 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#14 /home/staralex/battleship.io.server/src/App/BattleshipServer.php(272): Workerman\Worker::runAll()
+#15 /home/staralex/battleship.io.server/index.php(10): Battleship\App\BattleshipServer->run()
+#16 {main}
+2018-02-28 23:31:38 pid:3249 Worker process terminated
+2018-02-28 23:31:38 pid:28480 worker[none:3249] exit with status 64000
+2018-02-28 23:32:15 pid:3438 Error: Call to a member function send() on null in /home/staralex/battleship.io.server/src/App/BattleshipServer.php:178
+Stack trace:
+#0 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection))
+#1 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(868): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection))
+#2 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(782): Workerman\Connection\TcpConnection->destroy()
+#3 /home/staralex/battleship.io.server/vendor/workerman/workerman/Protocols/Websocket.php(98): Workerman\Connection\TcpConnection->close()
+#4 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(621): Workerman\Protocols\Websocket::input('\x88\x82\xD9\xDF\xF5\xDC\xDA6', Object(Workerman\Connection\TcpConnection))
+#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #32)
+#6 /home/staralex/battleship.io.server/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#7 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#8 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#9 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#10 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#11 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#12 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#13 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#14 /home/staralex/battleship.io.server/src/App/BattleshipServer.php(272): Workerman\Worker::runAll()
+#15 /home/staralex/battleship.io.server/index.php(10): Battleship\App\BattleshipServer->run()
+#16 {main}
+2018-02-28 23:32:15 pid:3438 Worker process terminated
+2018-02-28 23:32:15 pid:28480 worker[none:3438] exit with status 64000
+2018-02-28 23:32:47 pid:3562 Error: Call to a member function send() on null in /home/staralex/battleship.io.server/src/App/BattleshipServer.php:178
+Stack trace:
+#0 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection))
+#1 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(868): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection))
+#2 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(782): Workerman\Connection\TcpConnection->destroy()
+#3 /home/staralex/battleship.io.server/vendor/workerman/workerman/Protocols/Websocket.php(98): Workerman\Connection\TcpConnection->close()
+#4 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(621): Workerman\Protocols\Websocket::input('\x88\x82\x14_\x0E\xC6\x17\xB6', Object(Workerman\Connection\TcpConnection))
+#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #33)
+#6 /home/staralex/battleship.io.server/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#7 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#8 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#9 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#10 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#11 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#12 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#13 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#14 /home/staralex/battleship.io.server/src/App/BattleshipServer.php(272): Workerman\Worker::runAll()
+#15 /home/staralex/battleship.io.server/index.php(10): Battleship\App\BattleshipServer->run()
+#16 {main}
+2018-02-28 23:32:47 pid:3562 Worker process terminated
+2018-02-28 23:32:47 pid:28480 worker[none:3562] exit with status 64000
+2018-02-28 23:33:21 pid:3665 Error: Call to a member function send() on null in /home/staralex/battleship.io.server/src/App/BattleshipServer.php:178
+Stack trace:
+#0 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection))
+#1 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(868): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection))
+#2 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(782): Workerman\Connection\TcpConnection->destroy()
+#3 /home/staralex/battleship.io.server/vendor/workerman/workerman/Protocols/Websocket.php(98): Workerman\Connection\TcpConnection->close()
+#4 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(621): Workerman\Protocols\Websocket::input('\x88\x82\x85\xA0*\xAF\x86I', Object(Workerman\Connection\TcpConnection))
+#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #34)
+#6 /home/staralex/battleship.io.server/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#7 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#8 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#9 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#10 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#11 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#12 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#13 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#14 /home/staralex/battleship.io.server/src/App/BattleshipServer.php(272): Workerman\Worker::runAll()
+#15 /home/staralex/battleship.io.server/index.php(10): Battleship\App\BattleshipServer->run()
+#16 {main}
+2018-02-28 23:33:21 pid:3665 Worker process terminated
+2018-02-28 23:33:21 pid:28480 worker[none:3665] exit with status 64000
+2018-02-28 23:34:22 pid:3773 Error: Call to a member function send() on null in /home/staralex/battleship.io.server/src/App/BattleshipServer.php:178
+Stack trace:
+#0 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection))
+#1 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(868): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection))
+#2 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(782): Workerman\Connection\TcpConnection->destroy()
+#3 /home/staralex/battleship.io.server/vendor/workerman/workerman/Protocols/Websocket.php(98): Workerman\Connection\TcpConnection->close()
+#4 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(621): Workerman\Protocols\Websocket::input('\x88\x82\x85T}\xC1\x86\xBD', Object(Workerman\Connection\TcpConnection))
+#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #35)
+#6 /home/staralex/battleship.io.server/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#7 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#8 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#9 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#10 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#11 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#12 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#13 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#14 /home/staralex/battleship.io.server/src/App/BattleshipServer.php(272): Workerman\Worker::runAll()
+#15 /home/staralex/battleship.io.server/index.php(10): Battleship\App\BattleshipServer->run()
+#16 {main}
+2018-02-28 23:34:22 pid:3773 Worker process terminated
+2018-02-28 23:34:22 pid:28480 worker[none:3773] exit with status 64000
+2018-02-28 23:35:12 pid:3945 Error: Call to a member function send() on null in /home/staralex/battleship.io.server/src/App/BattleshipServer.php:178
+Stack trace:
+#0 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection))
+#1 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(868): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection))
+#2 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(782): Workerman\Connection\TcpConnection->destroy()
+#3 /home/staralex/battleship.io.server/vendor/workerman/workerman/Protocols/Websocket.php(98): Workerman\Connection\TcpConnection->close()
+#4 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(621): Workerman\Protocols\Websocket::input('\x88\x82$\xDD\xE6\x13'4', Object(Workerman\Connection\TcpConnection))
+#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #36)
+#6 /home/staralex/battleship.io.server/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#7 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#8 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#9 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#10 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#11 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#12 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#13 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#14 /home/staralex/battleship.io.server/src/App/BattleshipServer.php(272): Workerman\Worker::runAll()
+#15 /home/staralex/battleship.io.server/index.php(10): Battleship\App\BattleshipServer->run()
+#16 {main}
+2018-02-28 23:35:12 pid:3945 Worker process terminated
+2018-02-28 23:35:12 pid:28480 worker[none:3945] exit with status 64000
+2018-02-28 23:36:09 pid:4118 Error: Call to a member function send() on null in /home/staralex/battleship.io.server/src/App/BattleshipServer.php:178
+Stack trace:
+#0 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection))
+#1 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(868): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection))
+#2 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(782): Workerman\Connection\TcpConnection->destroy()
+#3 /home/staralex/battleship.io.server/vendor/workerman/workerman/Protocols/Websocket.php(98): Workerman\Connection\TcpConnection->close()
+#4 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(621): Workerman\Protocols\Websocket::input('\x88\x82\xF9\xDB\x06\xBD\xFA2', Object(Workerman\Connection\TcpConnection))
+#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #37)
+#6 /home/staralex/battleship.io.server/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#7 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#8 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#9 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#10 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#11 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#12 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#13 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#14 /home/staralex/battleship.io.server/src/App/BattleshipServer.php(272): Workerman\Worker::runAll()
+#15 /home/staralex/battleship.io.server/index.php(10): Battleship\App\BattleshipServer->run()
+#16 {main}
+2018-02-28 23:36:09 pid:4118 Worker process terminated
+2018-02-28 23:36:09 pid:28480 worker[none:4118] exit with status 64000
+2018-02-28 23:44:12 pid:4278 Error: Call to a member function send() on null in /home/staralex/battleship.io.server/src/App/BattleshipServer.php:178
+Stack trace:
+#0 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection))
+#1 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(868): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection))
+#2 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(782): Workerman\Connection\TcpConnection->destroy()
+#3 /home/staralex/battleship.io.server/vendor/workerman/workerman/Protocols/Websocket.php(98): Workerman\Connection\TcpConnection->close()
+#4 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(621): Workerman\Protocols\Websocket::input('\x88\x82b\x9A\xA9"as', Object(Workerman\Connection\TcpConnection))
+#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #38)
+#6 /home/staralex/battleship.io.server/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#7 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#8 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#9 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#10 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#11 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#12 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#13 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#14 /home/staralex/battleship.io.server/src/App/BattleshipServer.php(272): Workerman\Worker::runAll()
+#15 /home/staralex/battleship.io.server/index.php(10): Battleship\App\BattleshipServer->run()
+#16 {main}
+2018-02-28 23:44:12 pid:4278 Worker process terminated
+2018-02-28 23:44:13 pid:28480 worker[none:4278] exit with status 64000
+2018-02-28 23:45:24 pid:5620 Error: Call to a member function send() on null in /home/staralex/battleship.io.server/src/App/BattleshipServer.php:178
+Stack trace:
+#0 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection))
+#1 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(868): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection))
+#2 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(782): Workerman\Connection\TcpConnection->destroy()
+#3 /home/staralex/battleship.io.server/vendor/workerman/workerman/Protocols/Websocket.php(98): Workerman\Connection\TcpConnection->close()
+#4 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(621): Workerman\Protocols\Websocket::input('\x88\x82e\xEA\xC0\xACf\x03', Object(Workerman\Connection\TcpConnection))
+#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #39)
+#6 /home/staralex/battleship.io.server/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#7 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#8 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#9 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#10 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#11 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#12 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#13 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#14 /home/staralex/battleship.io.server/src/App/BattleshipServer.php(272): Workerman\Worker::runAll()
+#15 /home/staralex/battleship.io.server/index.php(10): Battleship\App\BattleshipServer->run()
+#16 {main}
+2018-02-28 23:45:24 pid:5620 Worker process terminated
+2018-02-28 23:45:24 pid:28480 worker[none:5620] exit with status 64000
+2018-02-28 23:45:55 pid:5849 Error: Call to a member function send() on null in /home/staralex/battleship.io.server/src/App/BattleshipServer.php:178
+Stack trace:
+#0 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection))
+#1 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(868): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection))
+#2 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(782): Workerman\Connection\TcpConnection->destroy()
+#3 /home/staralex/battleship.io.server/vendor/workerman/workerman/Protocols/Websocket.php(98): Workerman\Connection\TcpConnection->close()
+#4 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(621): Workerman\Protocols\Websocket::input('\x88\x82j\x10\xF2&i\xF9', Object(Workerman\Connection\TcpConnection))
+#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #40)
+#6 /home/staralex/battleship.io.server/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#7 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#8 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#9 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#10 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#11 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#12 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#13 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#14 /home/staralex/battleship.io.server/src/App/BattleshipServer.php(272): Workerman\Worker::runAll()
+#15 /home/staralex/battleship.io.server/index.php(10): Battleship\App\BattleshipServer->run()
+#16 {main}
+2018-02-28 23:45:55 pid:5849 Worker process terminated
+2018-02-28 23:45:55 pid:28480 worker[none:5849] exit with status 64000
+2018-02-28 23:48:36 pid:5956 Error: Call to a member function send() on null in /home/staralex/battleship.io.server/src/App/BattleshipServer.php:178
+Stack trace:
+#0 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection))
+#1 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(868): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection))
+#2 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(782): Workerman\Connection\TcpConnection->destroy()
+#3 /home/staralex/battleship.io.server/vendor/workerman/workerman/Protocols/Websocket.php(98): Workerman\Connection\TcpConnection->close()
+#4 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(621): Workerman\Protocols\Websocket::input('\x88\x82\x11\xB7\xC8\xDA\x12^', Object(Workerman\Connection\TcpConnection))
+#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #41)
+#6 /home/staralex/battleship.io.server/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#7 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#8 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#9 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#10 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#11 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#12 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#13 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#14 /home/staralex/battleship.io.server/src/App/BattleshipServer.php(272): Workerman\Worker::runAll()
+#15 /home/staralex/battleship.io.server/index.php(10): Battleship\App\BattleshipServer->run()
+#16 {main}
+2018-02-28 23:48:36 pid:5956 Worker process terminated
+2018-02-28 23:48:36 pid:28480 worker[none:5956] exit with status 64000
+2018-02-28 23:50:52 pid:6456 Error: Call to a member function send() on null in /home/staralex/battleship.io.server/src/App/BattleshipServer.php:178
+Stack trace:
+#0 [internal function]: Battleship\App\BattleshipServer->Battleship\App\{closure}(Object(Workerman\Connection\TcpConnection))
+#1 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(868): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection))
+#2 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(782): Workerman\Connection\TcpConnection->destroy()
+#3 /home/staralex/battleship.io.server/vendor/workerman/workerman/Protocols/Websocket.php(98): Workerman\Connection\TcpConnection->close()
+#4 /home/staralex/battleship.io.server/vendor/workerman/workerman/Connection/TcpConnection.php(621): Workerman\Protocols\Websocket::input('\x88\x82\xB8r\x8B\xA1\xBB\x9B', Object(Workerman\Connection\TcpConnection))
+#5 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #60)
+#6 /home/staralex/battleship.io.server/vendor/workerman/workerman/Events/Select.php(286): call_user_func_array(Array, Array)
+#7 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(2096): Workerman\Events\Select->loop()
+#8 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker->run()
+#9 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#10 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#11 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#12 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#13 /home/staralex/battleship.io.server/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#14 /home/staralex/battleship.io.server/src/App/BattleshipServer.php(272): Workerman\Worker::runAll()
+#15 /home/staralex/battleship.io.server/index.php(10): Battleship\App\BattleshipServer->run()
+#16 {main}
+2018-02-28 23:50:52 pid:6456 Worker process terminated
+2018-02-28 23:50:52 pid:28480 worker[none:6456] exit with status 64000
+2018-02-28 23:59:47 pid:28480 Workerman[index.php] stopping ...
+2018-02-28 23:59:47 pid:28480 Workerman[index.php] has been stopped
+2018-02-28 23:59:48 pid:8137 Workerman[index.php] start in DEBUG mode
+2018-03-02 02:57:38 pid:8792 Workerman[index.php] start in DEBUG mode
+2018-03-02 19:19:45 pid:8792 Workerman[index.php] stopping ...
+2018-03-02 19:19:45 pid:8792 Workerman[index.php] has been stopped
+2018-03-02 19:19:46 pid:23753 Workerman[index.php] start in DEBUG mode
+2018-03-02 20:42:41 pid:23753 Workerman[index.php] stopping ...
+2018-03-02 20:42:41 pid:23753 Workerman[index.php] has been stopped
+2018-03-02 20:47:53 pid:6215 Workerman[index.php] start in DEBUG mode
+2018-03-02 20:48:07 pid:6215 Workerman[index.php] stopping ...
+2018-03-02 20:48:07 pid:6215 Workerman[index.php] has been stopped
+2018-03-02 20:54:41 pid:7417 Workerman[index.php] start in DEBUG mode
+2018-03-03 20:32:30 pid:15370 Workerman[index.php] start in DEBUG mode
+2018-03-03 20:38:17 pid:15370 Workerman[index.php] stopping ...
+2018-03-03 20:38:18 pid:15370 Workerman[index.php] has been stopped
+2018-03-04 00:01:21 pid:8120 Workerman[index.php] start in DEBUG mode
+2018-03-04 01:35:09 pid:6351 Workerman[index.php] start in DEBUG mode

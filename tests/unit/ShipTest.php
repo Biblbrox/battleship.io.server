@@ -1,6 +1,8 @@
 <?php
 
 
+use Battleship\App\Player;
+
 class ShipTest extends \PHPUnit\Framework\TestCase
 {
     public function testDeadAfterShots()
@@ -27,5 +29,26 @@ class ShipTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals($cruiser->isDead(), true);
         $this->assertEquals($destroyer->isDead(), true);
         $this->assertEquals($submarine->isDead(), true);
+    }
+
+    public function testShipsAliveWhenOneCellStay()
+    {
+        $player = new Player(1);
+
+        foreach ($player->ships as $ship) {
+            if ($ship->name === "Submarine") {
+                $ship->hits = 1;
+                $this->assertEquals(true, $ship->isDead());
+            } else if ($ship->name === "Battleship") {
+                $ship->hits = 3;
+                $this->assertEquals(false, $ship->isDead());
+            } else if ($ship->name === "Destroyer") {
+                $ship->hits = 1;
+                $this->assertEquals(false, $ship->isDead());
+            } else if ($ship->name === "Cruiser") {
+                $ship->hits = 2;
+                $this->assertEquals(false, $ship->isDead());
+            }
+        }
     }
 }

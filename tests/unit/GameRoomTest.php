@@ -49,4 +49,15 @@ class GameRoomTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals($gameRoom->walkingUser->id, $user1->id);
     }
 
+    public function testRoomIsFullWhenTwoPlayers()
+    {
+        $user1 = new \Battleship\App\Player(1);
+        $user2 = new \Battleship\App\Player(2);
+
+        $gameRoom = new GameRoom($user1);
+        $gameRoom->addUser($user2);
+
+        $this->assertEquals(true, $gameRoom->isFull());
+    }
+
 }

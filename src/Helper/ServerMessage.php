@@ -80,4 +80,5 @@ class ServerMessage
     const ENEMY_FOUND = "enemyFound";
     const YOU_FALL = "youFall";
     const ENEMY_FALL = "enemyFall";
+    const ENEMY_DISCONNECT = "enemyDisconnect";
 }

@@ -7,6 +7,7 @@ use Battleship\Helper\OccupationType;
 use Battleship\Helper\ServerMessage;
 use Battleship\Utils\ArrayCollection;
 use Battleship\Utils\CellList;
+use PHPUnit\Framework\SkippedTestSuiteError;
 use Workerman\Connection\TcpConnection;
 use Workerman\Worker;
 
@@ -27,23 +28,32 @@ class BattleshipServer
     private $rooms;
 
     /**
+     * @var $context
+     */
+    private $context = [
+        'ssl' => [
+            'local_cert'  => '/home/staralex/test/localhost.cert',
+            'local_pk'    => '/home/staralex/test/localhost.key',
+            'verify_peer' => false,
+        ]
+    ];
+
+    /**
      * BattleshipServer constructor.
      */
     public function __construct()
     {
-        $context = [
-            'ssl' => [
-                'local_cert'  => '/home/staralex/test/localhost.cert',
-                'local_pk'    => '/home/staralex/test/localhost.key',
-                'verify_peer' => false,
-            ]
-        ];
+        $this->users = new ArrayCollection();
+        $this->rooms = new ArrayCollection();
+
+        $this->initWebSocket();
+    }
+
+    private function initWebSocket()
+    {
         $ws_worker = new Worker("websocket://0.0.0.0:2346"/*, $context*/);
 
 //        $ws_worker->transport = "ssl";
-
-        $this->users = new ArrayCollection();
-        $this->rooms = new ArrayCollection();
 
         $ws_worker->onConnect = function($connection) use ($ws_worker)
         {
@@ -65,6 +75,10 @@ class BattleshipServer
         $ws_worker->onMessage = function(TcpConnection $connection, $data) use ($ws_worker)
         {
             $msg = json_decode($data);
+
+            if (!isset($msg)) {
+                return;
+            }
 
             switch ($msg->msg)
             {
@@ -172,6 +186,20 @@ class BattleshipServer
              */
             foreach ($this->rooms as $key => $room) {
                 if ($room->containsUser($connection->id)) {
+
+                    $user1 = $room->user1;
+                    $user2 = $room->user2;
+
+                    if (isset($user1) && $user1->id !== $connection->id) {
+                        $user1->connection->send(json_encode([
+                            'msg' => ServerMessage::ENEMY_DISCONNECT
+                        ]));
+                    }
+                    if (isset($user2) && $user2->id !== $connection->id) {
+                        $user2->connection->send(json_encode([
+                            'msg' => ServerMessage::ENEMY_DISCONNECT
+                        ]));
+                    }
 
                     foreach ($room->users as $user) {
                         $user->connection->close();
