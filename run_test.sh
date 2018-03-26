@@ -1,3 +1,3 @@
 #!/bin/bash
 
-phpunit tests/unit --color
+vendor/bin/phpunit tests/unit --color
