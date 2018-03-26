@@ -3,3 +3,5 @@ php:
   - 7.1
 
 script: ./run_test.sh
+
+install: php composer.phar install
