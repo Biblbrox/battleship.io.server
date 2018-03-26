@@ -2,6 +2,16 @@ language: php
 php:
   - 7.1
 
-script: ./run_test.sh
+script:
+ - ./run_test_unit.sh
+ - bundle exec rspec
 
 install: php composer.phar install
+
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
