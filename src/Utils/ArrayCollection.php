@@ -2,7 +2,6 @@
 
 namespace Battleship\Utils;
 
-use Battleship\App\Cell;
 
 /**
  * Class ArrayCollection
@@ -20,7 +19,7 @@ class ArrayCollection implements ArrayCollectionInterface
      * @param array $params
      * @return ArrayCollection
      */
-    public function where($params = [])
+    public function where($params = []) : ArrayCollection
     {
         $result = new ArrayCollection();
 
@@ -65,7 +64,7 @@ class ArrayCollection implements ArrayCollectionInterface
     /**
      * @param $item
      * @param null $key
-     * @return Cell
+     * @return mixed
      */
     public function push($item, $key = null)
     {
@@ -81,7 +80,7 @@ class ArrayCollection implements ArrayCollectionInterface
     /**
      * @param $key
      */
-    public function remove($key)
+    public function remove($key) : void
     {
         if (isset($this->data[$key])) {
             unset($this->data[$key]);
@@ -95,7 +94,7 @@ class ArrayCollection implements ArrayCollectionInterface
     /**
      * @return bool
      */
-    public function isEmpty()
+    public function isEmpty() : bool
     {
         return empty($this->data);
     }

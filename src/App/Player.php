@@ -77,7 +77,7 @@ class Player
      * @param $column
      * @return Ship|null
      */
-    public function shipAt($row, $column)
+    public function shipAt($row, $column) : Ship
     {
         $result = null;
         foreach ($this->ships as $ship) {
@@ -93,7 +93,7 @@ class Player
     /**
      * @return bool
      */
-    public function hasLost()
+    public function hasLost() : bool
     {
         $lost = true;
         foreach ($this->ships as $ship) {
