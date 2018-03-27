@@ -24,7 +24,7 @@ class GameBoard
         $this->cells = new CellList();
         foreach (range(0, 9) as $i) {
             foreach (range(0, 9) as $j) {
-                $this->cells->push(new Cell($i, $j));
+                $this->cells[] = new Cell($i, $j);
             }
         }
     }
