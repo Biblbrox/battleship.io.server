@@ -2,41 +2,26 @@
 
 namespace Battleship\Utils;
 
-use Battleship\App\Cell;
-
 /**
  * Interface ArrayCollectionInterface
  * @package Battleship\Utils
  */
-interface ArrayCollectionInterface extends \Iterator
+interface ArrayCollectionInterface extends \Iterator, \ArrayAccess
 {
-    /**
-     * @param $key
-     * @return mixed|null
-     */
-    public function get($key);
-
-    /**
-     * @param $item
-     * @param null $key
-     * @return Cell
-     */
-    public function push($item, $key = null);
-
     /**
      * @return mixed|null
      */
     public function first();
 
     /**
-     * @param $key
-     */
-    public function remove($key);
-
-    /**
      * @return bool
      */
     public function isEmpty();
+
+    /**
+     * @param callable $callback
+     */
+    public function forEach(callable $callback) : void; // TODO: fix function
 
     /**
      * @param array $params

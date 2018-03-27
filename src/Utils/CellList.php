@@ -33,11 +33,11 @@ class CellList extends ArrayCollection
      * @param $startColumn
      * @param $endRow
      * @param $endColumn
-     * @return array
+     * @return CellList
      */
-    public function range($startRow, $startColumn, $endRow, $endColumn) : array
+    public function range($startRow, $startColumn, $endRow, $endColumn) : CellList
     {
-        $ranged = [];
+        $ranged = new CellList();
         foreach ($this->data as $key => $cell) {
             if ($cell->coordinates->row >= $startRow
                 && $cell->coordinates->column >= $startColumn
