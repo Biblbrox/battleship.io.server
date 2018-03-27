@@ -35,7 +35,7 @@ class Cell
     /**
      * @return string
      */
-    public function status()
+    public function status() : string
     {
         return $this->occupationType;
     }
@@ -43,7 +43,7 @@ class Cell
     /**
      * @return bool
      */
-    public function isEmpty()
+    public function isEmpty() : bool
     {
         return ($this->occupationType == OccupationType::EMPTY);
     }
@@ -51,7 +51,7 @@ class Cell
     /**
      * @return bool
      */
-    public function isOccupied()
+    public function isOccupied() : bool
     {
         return $this->occupationType === OccupationType::BATTLESHIP
             || $this->occupationType === OccupationType::CRUISER

@@ -7,7 +7,6 @@ use Battleship\Helper\OccupationType;
 use Battleship\Helper\ServerMessage;
 use Battleship\Utils\ArrayCollection;
 use Battleship\Utils\CellList;
-use PHPUnit\Framework\SkippedTestSuiteError;
 use Workerman\Connection\TcpConnection;
 use Workerman\Worker;
 
@@ -30,13 +29,13 @@ class BattleshipServer
     /**
      * @var $context
      */
-    private $context = [
-        'ssl' => [
-            'local_cert'  => '/home/staralex/test/localhost.cert',
-            'local_pk'    => '/home/staralex/test/localhost.key',
-            'verify_peer' => false,
-        ]
-    ];
+//    private $context = [
+//        'ssl' => [
+//            'local_cert'  => '/home/staralex/test/localhost.cert',
+//            'local_pk'    => '/home/staralex/test/localhost.key',
+//            'verify_peer' => false,
+//        ]
+//    ];
 
     /**
      * BattleshipServer constructor.
@@ -49,7 +48,7 @@ class BattleshipServer
         $this->initWebSocket();
     }
 
-    private function initWebSocket()
+    private function initWebSocket() : void
     {
         $ws_worker = new Worker("websocket://0.0.0.0:2346"/*, $context*/);
 
@@ -80,11 +79,8 @@ class BattleshipServer
 
             switch ($msg->msg)
             {
-                case "findRoom":
+                case ServerMessage::FIND_ROOM:
                     $user = $this->users->get($connection->id);
-                    /**
-                     * @var GameRoom $room
-                     */
                     foreach ($this->rooms as $room) {
                         if ($room->containsUser($user->id)) {
                             break 2;
@@ -111,7 +107,7 @@ class BattleshipServer
                         $gameRoom->onFull = $onFull;
                     }
                     break;
-                case "hit":
+                case ServerMessage::HIT:
                     $row    = isset($msg->row)    ? $msg->row    : null;
                     $column = isset($msg->column) ? $msg->column : null;
                     $userId = isset($msg->userId) ? $msg->userId : null;
@@ -179,9 +175,6 @@ class BattleshipServer
         $ws_worker->onClose = function($connection)
         {
             echo "Connection closed";
-            /**
-             * @var GameRoom $room
-             */
             foreach ($this->rooms as $key => $room) {
                 if ($room->containsUser($connection->id)) {
 
@@ -220,7 +213,7 @@ class BattleshipServer
      * @param GameRoom $gameRoom
      * @return bool
      */
-    private function hitCell($connection, $userUnderAttack, $row, $column, $firedCell, $keyRoom, $gameRoom = null)
+    private function hitCell($connection, $userUnderAttack, $row, $column, $firedCell, $keyRoom, $gameRoom = null) : bool
     {
         /**
          * @var CellList $cells
@@ -287,7 +280,7 @@ class BattleshipServer
     /**
      * Run the Battleship websocket server
      */
-    public function run()
+    public function run() : void
     {
         Worker::runAll();
     }
