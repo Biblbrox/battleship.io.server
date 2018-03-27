@@ -99,14 +99,22 @@ class GameHelper
     {
         $checkCells = new CellList();
 
-        $topLeft = $checkCells->push($cells->at($cell->coordinates->row - 1, $cell->coordinates->column - 1));
-        $checkCells->push($cells->at($cell->coordinates->row - 1, $cell->coordinates->column));
-        $topRight = $checkCells->push($cells->at($cell->coordinates->row - 1, $cell->coordinates->column + 1));
-        $checkCells->push($cells->at($cell->coordinates->row, $cell->coordinates->column - 1));
-        $checkCells->push($cells->at($cell->coordinates->row, $cell->coordinates->column + 1));
-        $lowLeft = $checkCells->push($cells->at($cell->coordinates->row + 1, $cell->coordinates->column - 1));
-        $checkCells->push($cells->at($cell->coordinates->row + 1, $cell->coordinates->column));
-        $lowRight = $checkCells->push($cells->at($cell->coordinates->row + 1, $cell->coordinates->column + 1));
+        $checkCells[] = $cells->at($cell->coordinates->row - 1, $cell->coordinates->column);
+        $checkCells[] = $cells->at($cell->coordinates->row, $cell->coordinates->column - 1);
+        $checkCells[] = $cells->at($cell->coordinates->row, $cell->coordinates->column + 1);
+        $checkCells[] = $cells->at($cell->coordinates->row + 1, $cell->coordinates->column);
+
+        $checkCells[] = $cells->at($cell->coordinates->row - 1, $cell->coordinates->column - 1);
+        $topLeft = $checkCells->at($cell->coordinates->row - 1, $cell->coordinates->column - 1);
+
+        $checkCells[] = $cells->at($cell->coordinates->row - 1, $cell->coordinates->column + 1);
+        $topRight = $checkCells->at($cell->coordinates->row - 1, $cell->coordinates->column + 1);
+
+        $checkCells[] = $cells->at($cell->coordinates->row + 1, $cell->coordinates->column - 1);
+        $lowLeft = $checkCells->at($cell->coordinates->row + 1, $cell->coordinates->column - 1);
+
+        $checkCells[] = $cells->at($cell->coordinates->row + 1, $cell->coordinates->column + 1);
+        $lowRight = $checkCells->at($cell->coordinates->row + 1, $cell->coordinates->column + 1);
 
         /**
          * Check on collision with other type ships on all cells
