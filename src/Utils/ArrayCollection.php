@@ -191,8 +191,16 @@ class ArrayCollection implements ArrayCollectionInterface
             throw new \InvalidArgumentException("Argument of forEach must be callable");
         }
 
-        foreach ($this->data as $item) {
-            $callback($item);
+        $refl = new \ReflectionFunction($callback);
+        $argc = $refl->getNumberOfParameters();
+
+        if ($argc < 1 || $argc > 2) {
+            throw new
+            \InvalidArgumentException("Callable must have one or two arguments: item and/or key of collection");
+        }
+
+        foreach ($this->data as $key => $item) {
+            $argc === 2 ? $callback($item, $key) : $callback($item);
         }
     }
 }

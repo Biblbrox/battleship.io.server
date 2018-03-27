@@ -19,9 +19,11 @@ interface ArrayCollectionInterface extends \Iterator, \ArrayAccess
     public function isEmpty();
 
     /**
+     * This function call $callback on every $element of collection
+     * The callable func must take two arguments: $item, $key
      * @param callable $callback
      */
-    public function forEach(callable $callback) : void; // TODO: fix function
+    public function forEach(callable $callback) : void;
 
     /**
      * @param array $params

@@ -136,15 +136,12 @@ class BattleshipServer
 
                     $gameRoom = null;
                     $keyRoom  = null;
-                    /**
-                     * @var GameRoom $room
-                     */
-                    foreach ($this->rooms as $key => $room) {
+                    $this->rooms->forEach(function($room, $key) use (&$gameRoom, &$keyRoom, $user, $connection) {
                         if ($room->containsUser($user->id) && $room->containsUser($connection->id)) {
                             $keyRoom = $key;
                             $gameRoom = $room;
                         }
-                    }
+                    });
 
                     if (!isset($gameRoom)) {
                         $connection->send(json_encode([ 'msg' => "Room with such players was not found" ]));
@@ -172,7 +169,7 @@ class BattleshipServer
         $ws_worker->onClose = function($connection)
         {
             echo "Connection closed";
-            foreach ($this->rooms as $key => $room) {
+            $this->rooms->forEach(function($room, $key) use ($connection) {
                 if ($room->containsUser($connection->id)) {
 
                     $user1 = $room->user1;
@@ -196,7 +193,7 @@ class BattleshipServer
 
                     unset($this->rooms[$key]);
                 }
-            }
+            });
         };
     }
 
@@ -212,9 +209,6 @@ class BattleshipServer
      */
     private function hitCell($connection, $userUnderAttack, $row, $column, $firedCell, $keyRoom, $gameRoom = null) : bool
     {
-        /**
-         * @var CellList $cells
-         */
         $cells = $userUnderAttack->board->cells;
         $cell  = $cells->at($row, $column);
 
@@ -236,14 +230,12 @@ class BattleshipServer
                 'column' => $column
             ]));
             $attackedShip = $userUnderAttack->shipAt($row, $column);
-            /**
-             * @var Coordinates $item
-             */
-            foreach ($attackedShip->coordinates as $item) {
+            $attackedShip->coordinates->forEach(function($item) use($row, $column, $attackedShip) {
                 if ($item->row == $row && $item->column == $column) {
                     $attackedShip->hits++;
                 }
-            }
+            });
+
             $firedCell->occupationType = OccupationType::HIT;
             if ($userUnderAttack->hasLost()) {
                 $userUnderAttack->connection->send(json_encode([

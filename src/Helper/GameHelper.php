@@ -27,7 +27,6 @@ class GameHelper
         $player->connection = $connection;
 
         foreach ($player->ships as $ship) {
-
             $truePlace = true;
             while($truePlace) {
                 $startColumn = mt_rand(0, 9);
@@ -184,9 +183,6 @@ class GameHelper
     public static function findGameRoom($rooms) : GameRoom
     {
         $result = null;
-        /**
-         * @var GameRoom $room
-         */
         foreach ($rooms as $room) {
             if (!$room->isFull()) {
                 $result = $room;
