@@ -5,7 +5,6 @@ namespace Battleship\Helper;
 use Battleship\App\Cell;
 use Battleship\App\GameRoom;
 use Battleship\App\Player;
-use Battleship\App\Ship\Ship;
 use Battleship\Utils\ArrayCollection;
 use Battleship\Utils\CellList;
 use Workerman\Connection\TcpConnection;
@@ -26,13 +25,11 @@ class GameHelper
     {
         $player = new Player($connection->id);
         $player->connection = $connection;
-        /**
-         * @var Ship $ship
-         */
+
         foreach ($player->ships as $ship) {
 
-            $isOpen = true;
-            while($isOpen) {
+            $truePlace = true;
+            while($truePlace) {
                 $startColumn = mt_rand(0, 9);
                 $startRow = mt_rand(0, 9);
 
@@ -52,7 +49,7 @@ class GameHelper
                 }
 
                 if ($endRow > 9 || $endColumn > 9) {
-                    $isOpen = true;
+                    $truePlace = true;
                     continue;
                 }
 
@@ -63,7 +60,7 @@ class GameHelper
                 foreach ($affectedCells as $cell) {
                     if ($cell->isOccupied()
                         || self::checkCollision($cell, $player->board->cells, $ship->occupationType, $hasMovement, $orientation)) {
-                        $isOpen = true;
+                        $truePlace = true;
                         continue 2;
                     }
                     $hasMovement = true;
@@ -74,7 +71,7 @@ class GameHelper
                     $ship->coordinates[]  = $cell->coordinates;
                 }
 
-                $isOpen = false;
+                $truePlace = false;
             }
         }
 
@@ -113,12 +110,12 @@ class GameHelper
 
         /**
          * Check on collision with other type ships on all cells
-         * @var Cell $item
+         * @var Cell $cell
          */
-        foreach ($checkCells as $item) {
-            if (isset($item)
-                && $item->isOccupied()
-                && ($item->occupationType != $occupationType)) {
+        foreach ($checkCells as $cell) {
+            if (isset($cell)
+                && $cell->isOccupied()
+                && ($cell->occupationType != $occupationType)) {
                 return true;
             }
         }
@@ -134,36 +131,36 @@ class GameHelper
         }
 
         if (!$hasMovement) {
-            foreach ($checkCells as $item) {
-                if (isset($item) && !$item->isEmpty()) {
+            foreach ($checkCells as $cell) {
+                if (isset($cell) && !$cell->isEmpty()) {
                     return true;
                 }
             }
         } else {
-            foreach ($checkCells as $item) {
-                if (isset($item) && $orientation == 0 /* vertical */
-                    && ($item->coordinates->row == $cell->coordinates->row - 1)
-                    && ($item->coordinates->column == $cell->coordinates->column)
-                    && ($item->isOccupied())
-                    && ($item->status() != $occupationType)) {
+            foreach ($checkCells as $cell) {
+                if (isset($cell) && $orientation == 0 /* vertical */
+                    && ($cell->coordinates->row == $cell->coordinates->row - 1)
+                    && ($cell->coordinates->column == $cell->coordinates->column)
+                    && ($cell->isOccupied())
+                    && ($cell->status() != $occupationType)) {
                     return true;
-                } else if (isset($item) && $orientation == 1 /* horizontal */
-                    && ($item->coordinates->row    == $cell->coordinates->row)
-                    && ($item->coordinates->column == $cell->coordinates->column - 1)
-                    && ($item->isOccupied())
-                    && ($item->status() != $occupationType)) {
+                } else if (isset($cell) && $orientation == 1 /* horizontal */
+                    && ($cell->coordinates->row    == $cell->coordinates->row)
+                    && ($cell->coordinates->column == $cell->coordinates->column - 1)
+                    && ($cell->isOccupied())
+                    && ($cell->status() != $occupationType)) {
                     return true;
-                } else if (isset($item) && $orientation == 1 /* Horizontal. Checking on collision with same type ship on top of movement */
-                    && ($item->coordinates->row    == $cell->coordinates->row)
-                    && ($item->coordinates->column == $cell->coordinates->column + 1)
-                    && ($item->isOccupied())
-                    && ($item->status() == $occupationType)) {
+                } else if (isset($cell) && $orientation == 1 /* Horizontal. Checking on collision with same type ship on top of movement */
+                    && ($cell->coordinates->row    == $cell->coordinates->row)
+                    && ($cell->coordinates->column == $cell->coordinates->column + 1)
+                    && ($cell->isOccupied())
+                    && ($cell->status() == $occupationType)) {
                     return true;
-                } else if (isset($item) && $orientation == 0 /* Vertical. Checking on collision with same type ship on right of movement */
-                    && ($item->coordinates->row == $cell->coordinates->row + 1)
-                    && ($item->coordinates->column == $cell->coordinates->column)
-                    && ($item->isOccupied())
-                    && ($item->status() == $occupationType)) {
+                } else if (isset($cell) && $orientation == 0 /* Vertical. Checking on collision with same type ship on right of movement */
+                    && ($cell->coordinates->row == $cell->coordinates->row + 1)
+                    && ($cell->coordinates->column == $cell->coordinates->column)
+                    && ($cell->isOccupied())
+                    && ($cell->status() == $occupationType)) {
                     return true;
                 }
             }

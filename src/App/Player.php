@@ -17,7 +17,7 @@ use Workerman\Connection\TcpConnection;
 class Player
 {
     /**
-     * @var $id
+     * @var int $id
      */
     public $id;
 
@@ -50,9 +50,9 @@ class Player
 
     /**
      * Player constructor.
-     * @param $id
+     * @param int $id
      */
-    public function __construct($id)
+    public function __construct(int $id)
     {
         $this->id = $id;
         $this->board = new GameBoard();
@@ -77,7 +77,7 @@ class Player
      * @param $column
      * @return Ship|null
      */
-    public function shipAt($row, $column) : Ship
+    public function shipAt(int $row, int $column) : Ship
     {
         $result = null;
         foreach ($this->ships as $ship) {
