@@ -22,7 +22,7 @@ class GameHelper
      * @param TcpConnection $connection
      * @return \Battleship\App\Player
      */
-    public static function generateUser($connection)
+    public static function generateUser($connection) : Player
     {
         $player = new Player($connection->id);
         $player->connection = $connection;
@@ -60,10 +60,6 @@ class GameHelper
                     $startColumn, $endRow, $endColumn);
 
                 $hasMovement = false;
-                /**
-                 * Check cell $cell on collision.
-                 * @var Cell $cell
-                 */
                 foreach ($affectedCells as $cell) {
                     if ($cell->isOccupied()
                         || self::checkCollision($cell, $player->board->cells, $ship->occupationType, $hasMovement, $orientation)) {
@@ -102,7 +98,7 @@ class GameHelper
      * @param integer $orientation
      * @return bool
      */
-    public static function checkCollision($cell, $cells, $occupationType, $hasMovement, $orientation)
+    public static function checkCollision($cell, $cells, $occupationType, $hasMovement, $orientation) : bool
     {
         $checkCells = new CellList();
 
@@ -180,7 +176,7 @@ class GameHelper
      * @param ArrayCollection $rooms
      * @return GameRoom | null
      */
-    public static function findGameRoom($rooms)
+    public static function findGameRoom($rooms) : GameRoom
     {
         $result = null;
         /**

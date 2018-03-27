@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Battleship\Utils;
 
 use Battleship\App\Cell;
@@ -16,7 +15,7 @@ class CellList extends ArrayCollection
     * @param $column
     * @return Cell
     */
-    public function at($row, $column)
+    public function at($row, $column) : Cell
     {
         $return = null;
         foreach ($this->data as $key => $cell) {
@@ -36,7 +35,7 @@ class CellList extends ArrayCollection
      * @param $endColumn
      * @return array
      */
-    public function range($startRow, $startColumn, $endRow, $endColumn)
+    public function range($startRow, $startColumn, $endRow, $endColumn) : array
     {
         $ranged = [];
         foreach ($this->data as $key => $cell) {

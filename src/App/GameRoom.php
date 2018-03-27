@@ -60,7 +60,7 @@ class GameRoom
      * @param $userId
      * @return bool
      */
-    public function containsUser($userId)
+    public function containsUser($userId) : bool
     {
         return (isset($this->user1) && $this->user1->id === $userId)
             || (isset($this->user2) && $this->user2->id === $userId);
@@ -69,7 +69,7 @@ class GameRoom
     /**
      * @return bool
      */
-    public function isFull()
+    public function isFull() : bool
     {
         return (isset($this->user1) && isset($this->user2));
     }
@@ -79,7 +79,7 @@ class GameRoom
      * If room already is full then nothing.
      * @param Player $user
      */
-    public function addUser(Player $user)
+    public function addUser(Player $user) : void
     {
         if (!$this->isFull()) {
             $this->user2 = $user;

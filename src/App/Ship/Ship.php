@@ -9,30 +9,30 @@ namespace Battleship\App\Ship;
 abstract class Ship
 {
     /**
-     * @var
+     * @var string $name
      */
     public $name;
     /**
-     * @var
+     * @var int $width
      */
     public $width;
     /**
-     * @var
+     * @var int $hits
      */
     public $hits;
     /**
-     * @var
+     * @var string $occupationType
      */
     public $occupationType;
 
     /**
-     * @var
+     * @var array Coordinates
      */
     public $coordinates = [];
     /**
      * @return bool
      */
-    public function isDead()
+    public function isDead() : bool
     {
         return $this->hits >= $this->width;
     }
