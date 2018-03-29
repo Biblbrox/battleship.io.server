@@ -31,13 +31,6 @@ class BattleshipServer
     /**
      * @var $context
      */
-//    private $context = [
-//        'ssl' => [
-//            'local_cert'  => '/home/staralex/test/localhost.cert',
-//            'local_pk'    => '/home/staralex/test/localhost.key',
-//            'verify_peer' => false,
-//        ]
-//    ];
 
     /**
      * BattleshipServer constructor.
@@ -52,9 +45,7 @@ class BattleshipServer
 
     private function initWebSocket() : void
     {
-        $ws_worker = new Worker("websocket://0.0.0.0:2346"/*, $context*/);
-
-//        $ws_worker->transport = "ssl";
+        $ws_worker = new Worker("websocket://0.0.0.0:2346");
 
         $ws_worker->onConnect = function($connection) use ($ws_worker)
         {
@@ -208,6 +199,7 @@ class BattleshipServer
      * @param integer $keyRoom
      * @param GameRoom $gameRoom
      * @return bool
+     * @throws \ReflectionException
      */
     private function hitCell($connection, $userUnderAttack, $row, $column, $firedCell, $keyRoom, $gameRoom = null) : bool
     {
