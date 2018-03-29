@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Battleship\App;
 
 use Battleship\Helper\GameHelper;
@@ -29,13 +31,6 @@ class BattleshipServer
     /**
      * @var $context
      */
-//    private $context = [
-//        'ssl' => [
-//            'local_cert'  => '/home/staralex/test/localhost.cert',
-//            'local_pk'    => '/home/staralex/test/localhost.key',
-//            'verify_peer' => false,
-//        ]
-//    ];
 
     /**
      * BattleshipServer constructor.
@@ -50,9 +45,7 @@ class BattleshipServer
 
     private function initWebSocket() : void
     {
-        $ws_worker = new Worker("websocket://0.0.0.0:2346"/*, $context*/);
-
-//        $ws_worker->transport = "ssl";
+        $ws_worker = new Worker("websocket://0.0.0.0:2346");
 
         $ws_worker->onConnect = function($connection) use ($ws_worker)
         {
@@ -60,7 +53,7 @@ class BattleshipServer
             {
                 echo "New connection\n";
                 $user = GameHelper::generateUser($connection);
-                $this->users->push($user, $connection->id);
+                $this->users[$connection->id] = $user;
                 $connection->send(json_encode([
                     'msg'   => "onConnection",
                     'board' => $user->board->toArray(),
@@ -80,7 +73,7 @@ class BattleshipServer
             switch ($msg->msg)
             {
                 case ServerMessage::FIND_ROOM:
-                    $user = $this->users->get($connection->id);
+                    $user = $this->users[$connection->id];
                     foreach ($this->rooms as $room) {
                         if ($room->containsUser($user->id)) {
                             break 2;
@@ -89,10 +82,10 @@ class BattleshipServer
                     $gameRoom = GameHelper::findGameRoom($this->rooms);
 
                     $onFull = function () use ($gameRoom) {
-                        foreach ($gameRoom->users as $_user) {
-                            $_user->connection->send(json_encode([
+                        foreach ($gameRoom->users as $user) {
+                            $user->connection->send(json_encode([
                                 'msg' => ServerMessage::ENEMY_FOUND,
-                                'enemyId' => $gameRoom->user1->id === $_user->id ? $gameRoom->user2->id : $gameRoom->user1->id,
+                                'enemyId' => $gameRoom->user1->id === $user->id ? $gameRoom->user2->id : $gameRoom->user1->id,
                                 'walkingUserId' => $gameRoom->createdBy->id
                             ]));
                         }
@@ -103,14 +96,14 @@ class BattleshipServer
                         $gameRoom->addUser($user);
                     } else {
                         $gameRoom = new GameRoom($user);
-                        $this->rooms->push($gameRoom);
+                        $this->rooms[] = $gameRoom;
                         $gameRoom->onFull = $onFull;
                     }
                     break;
                 case ServerMessage::HIT:
-                    $row    = isset($msg->row)    ? $msg->row    : null;
-                    $column = isset($msg->column) ? $msg->column : null;
-                    $userId = isset($msg->userId) ? $msg->userId : null;
+                    $row    = $msg->row ?? null;
+                    $column = $msg->column ?? null;
+                    $userId = $msg->userId ?? null;
 
                     if (!isset($row) || !isset($column)) {
                         $connection->send(json_encode([ 'msg' => "You must set row and column" ]));
@@ -122,10 +115,7 @@ class BattleshipServer
                         break;
                     }
 
-                    /**
-                     * @var Player $user
-                     */
-                    $user = $this->users->get($userId);
+                    $user = $this->users[$userId];
 
                     if (!isset($user)) {
                         $connection->send(json_encode([ 'msg' => "User with id: $userId was not found" ]));
@@ -139,15 +129,12 @@ class BattleshipServer
 
                     $gameRoom = null;
                     $keyRoom  = null;
-                    /**
-                     * @var GameRoom $room
-                     */
-                    foreach ($this->rooms as $key => $room) {
+                    $this->rooms->forEach(function($room, $key) use (&$gameRoom, &$keyRoom, $user, $connection) {
                         if ($room->containsUser($user->id) && $room->containsUser($connection->id)) {
                             $keyRoom = $key;
                             $gameRoom = $room;
                         }
-                    }
+                    });
 
                     if (!isset($gameRoom)) {
                         $connection->send(json_encode([ 'msg' => "Room with such players was not found" ]));
@@ -159,7 +146,7 @@ class BattleshipServer
                         break;
                     }
 
-                    $firedCell = $this->users->get($connection->id)->firingBoard->cells->at($row, $column);
+                    $firedCell = $this->users[$connection->id]->firingBoard->cells->at($row, $column);
 
                     if (!$this->hitCell($connection, $user, $row, $column, $firedCell, $keyRoom, $gameRoom)) {
                         break;
@@ -175,7 +162,7 @@ class BattleshipServer
         $ws_worker->onClose = function($connection)
         {
             echo "Connection closed";
-            foreach ($this->rooms as $key => $room) {
+            $this->rooms->forEach(function($room, $key) use ($connection) {
                 if ($room->containsUser($connection->id)) {
 
                     $user1 = $room->user1;
@@ -194,12 +181,12 @@ class BattleshipServer
 
                     foreach ($room->users as $user) {
                         $user->connection->close();
-                        $this->users->remove($user->id);
+                        unset($this->users[$user->id]);
                     }
 
-                    $this->rooms->remove($key);
+                    unset($this->rooms[$key]);
                 }
-            }
+            });
         };
     }
 
@@ -212,12 +199,10 @@ class BattleshipServer
      * @param integer $keyRoom
      * @param GameRoom $gameRoom
      * @return bool
+     * @throws \ReflectionException
      */
     private function hitCell($connection, $userUnderAttack, $row, $column, $firedCell, $keyRoom, $gameRoom = null) : bool
     {
-        /**
-         * @var CellList $cells
-         */
         $cells = $userUnderAttack->board->cells;
         $cell  = $cells->at($row, $column);
 
@@ -239,14 +224,12 @@ class BattleshipServer
                 'column' => $column
             ]));
             $attackedShip = $userUnderAttack->shipAt($row, $column);
-            /**
-             * @var Coordinates $item
-             */
-            foreach ($attackedShip->coordinates as $item) {
+            $attackedShip->coordinates->forEach(function($item) use($row, $column, $attackedShip) {
                 if ($item->row == $row && $item->column == $column) {
                     $attackedShip->hits++;
                 }
-            }
+            });
+
             $firedCell->occupationType = OccupationType::HIT;
             if ($userUnderAttack->hasLost()) {
                 $userUnderAttack->connection->send(json_encode([
@@ -257,7 +240,7 @@ class BattleshipServer
                 ]));
                 $connection->close();
                 $userUnderAttack->connection->close();
-                $this->rooms->remove($keyRoom);
+                unset($this->rooms[$keyRoom]);
             }
         } else {
             $connection->send(json_encode([

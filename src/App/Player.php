@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types=1);
 namespace Battleship\App;
 
 use Battleship\App\Board\GameBoard;
@@ -17,7 +17,7 @@ use Workerman\Connection\TcpConnection;
 class Player
 {
     /**
-     * @var $id
+     * @var int $id
      */
     public $id;
 
@@ -50,9 +50,9 @@ class Player
 
     /**
      * Player constructor.
-     * @param $id
+     * @param int $id
      */
-    public function __construct($id)
+    public function __construct(int $id)
     {
         $this->id = $id;
         $this->board = new GameBoard();
@@ -77,8 +77,13 @@ class Player
      * @param $column
      * @return Ship|null
      */
-    public function shipAt($row, $column) : Ship
+    public function shipAt(int $row, int $column) : ?Ship
     {
+        if (!in_array($row, range(0, 9))
+            || !in_array($column, range(0, 9))) {
+            throw new \InvalidArgumentException("Ships coordinates must be in range(0..9)");
+        }
+
         $result = null;
         foreach ($this->ships as $ship) {
             foreach ($ship->coordinates as $item) {

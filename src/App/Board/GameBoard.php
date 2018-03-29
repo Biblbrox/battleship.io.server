@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types=1);
 namespace Battleship\App\Board;
 
 use Battleship\App\Cell;
@@ -24,15 +24,17 @@ class GameBoard
         $this->cells = new CellList();
         foreach (range(0, 9) as $i) {
             foreach (range(0, 9) as $j) {
-                $this->cells->push(new Cell($i, $j));
+                $this->cells[] = new Cell($i, $j);
             }
         }
     }
 
+
     /**
      * Return the game board cells as a string.
+     * @return array
      */
-    public function toArray()
+    public function toArray() : array
     {
         $board_array = [];
 

@@ -15,6 +15,7 @@ class Battleship extends Ship
      */
     public function __construct()
     {
+        parent::__construct();
         $this->name = "Battleship";
         $this->width = 4;
         $this->occupationType = OccupationType::BATTLESHIP;

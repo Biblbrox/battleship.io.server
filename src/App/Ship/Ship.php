@@ -1,6 +1,8 @@
 <?php
-
+declare(strict_types=1);
 namespace Battleship\App\Ship;
+
+use Battleship\Utils\ArrayCollection;
 
 /**
  * Class Ship
@@ -26,9 +28,18 @@ abstract class Ship
     public $occupationType;
 
     /**
-     * @var array Coordinates
+     * @var ArrayCollection Coordinates
      */
-    public $coordinates = [];
+    public $coordinates;
+
+    /**
+     * Ship constructor.
+     */
+    public function __construct()
+    {
+        $this->coordinates = new ArrayCollection();
+    }
+
     /**
      * @return bool
      */

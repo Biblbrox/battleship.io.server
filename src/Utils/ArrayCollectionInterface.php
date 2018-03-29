@@ -1,42 +1,29 @@
 <?php
-
+declare(strict_types=1);
 namespace Battleship\Utils;
-
-use Battleship\App\Cell;
 
 /**
  * Interface ArrayCollectionInterface
  * @package Battleship\Utils
  */
-interface ArrayCollectionInterface extends \Iterator
+interface ArrayCollectionInterface extends \Iterator, \ArrayAccess, \Countable
 {
-    /**
-     * @param $key
-     * @return mixed|null
-     */
-    public function get($key);
-
-    /**
-     * @param $item
-     * @param null $key
-     * @return Cell
-     */
-    public function push($item, $key = null);
-
     /**
      * @return mixed|null
      */
     public function first();
 
     /**
-     * @param $key
-     */
-    public function remove($key);
-
-    /**
      * @return bool
      */
     public function isEmpty();
+
+    /**
+     * This function call $callback on every $element of collection
+     * The callable func must take two arguments: $item, $key
+     * @param callable $callback
+     */
+    public function forEach(callable $callback) : void;
 
     /**
      * @param array $params

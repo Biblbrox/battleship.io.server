@@ -1,6 +1,8 @@
 <?php
 
+declare(strict_types=1);
 
+use Battleship\App\Coordinates;
 use Battleship\App\Player;
 
 class ShipTest extends \PHPUnit\Framework\TestCase

@@ -1,13 +1,15 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Battleship\Helper;
 
 use Battleship\App\Cell;
 use Battleship\App\GameRoom;
 use Battleship\App\Player;
-use Battleship\App\Ship\Ship;
 use Battleship\Utils\ArrayCollection;
 use Battleship\Utils\CellList;
+use Closure;
 use Workerman\Connection\TcpConnection;
 
 /**
@@ -18,7 +20,7 @@ class GameHelper
 {
     /**
      * This method generating board for battleship game
-     * and returns it as a array.
+     * and returns it as an array.
      * @param TcpConnection $connection
      * @return \Battleship\App\Player
      */
@@ -26,13 +28,10 @@ class GameHelper
     {
         $player = new Player($connection->id);
         $player->connection = $connection;
-        /**
-         * @var Ship $ship
-         */
-        foreach ($player->ships as $ship) {
 
-            $isOpen = true;
-            while($isOpen) {
+        foreach ($player->ships as $ship) {
+            $placeNotFound = true;
+            while($placeNotFound) {
                 $startColumn = mt_rand(0, 9);
                 $startRow = mt_rand(0, 9);
 
@@ -42,17 +41,13 @@ class GameHelper
                 $orientation = mt_rand(1, 100) % 2;
 
                 if ($orientation == 0) { // vertical
-                    for ($i = 0; $i < $ship->width - 1; $i++) {
-                        $endRow++;
-                    }
+                    $endRow += $ship->width - 1;
                 } else { // horizontal
-                    for ($i = 0; $i < $ship->width - 1; $i++) {
-                        $endColumn++;
-                    }
+                    $endColumn += $ship->width - 1;
                 }
 
                 if ($endRow > 9 || $endColumn > 9) {
-                    $isOpen = true;
+                    $placeNotFound = true;
                     continue;
                 }
 
@@ -63,7 +58,7 @@ class GameHelper
                 foreach ($affectedCells as $cell) {
                     if ($cell->isOccupied()
                         || self::checkCollision($cell, $player->board->cells, $ship->occupationType, $hasMovement, $orientation)) {
-                        $isOpen = true;
+                        $placeNotFound = true;
                         continue 2;
                     }
                     $hasMovement = true;
@@ -74,7 +69,7 @@ class GameHelper
                     $ship->coordinates[]  = $cell->coordinates;
                 }
 
-                $isOpen = false;
+                $placeNotFound = false;
             }
         }
 
@@ -86,11 +81,11 @@ class GameHelper
      * _______
      * |1|2|3|
      * -------
-     * |4|5|6|
+     * |4|x|6|
      * -------
      * |7|8|9|
      * -------
-     * where 5 is $cell on collision with other ships.
+     * where x is $cell which we are checking
      * @param Cell $cell
      * @param CellList $cells
      * @param OccupationType $occupationType
@@ -102,23 +97,31 @@ class GameHelper
     {
         $checkCells = new CellList();
 
-        $topLeft = $checkCells->push($cells->at($cell->coordinates->row - 1, $cell->coordinates->column - 1));
-        $checkCells->push($cells->at($cell->coordinates->row - 1, $cell->coordinates->column));
-        $topRight = $checkCells->push($cells->at($cell->coordinates->row - 1, $cell->coordinates->column + 1));
-        $checkCells->push($cells->at($cell->coordinates->row, $cell->coordinates->column - 1));
-        $checkCells->push($cells->at($cell->coordinates->row, $cell->coordinates->column + 1));
-        $lowLeft = $checkCells->push($cells->at($cell->coordinates->row + 1, $cell->coordinates->column - 1));
-        $checkCells->push($cells->at($cell->coordinates->row + 1, $cell->coordinates->column));
-        $lowRight = $checkCells->push($cells->at($cell->coordinates->row + 1, $cell->coordinates->column + 1));
+        $checkCells[] = $cells->at($cell->coordinates->row - 1, $cell->coordinates->column);
+        $checkCells[] = $cells->at($cell->coordinates->row, $cell->coordinates->column - 1);
+        $checkCells[] = $cells->at($cell->coordinates->row, $cell->coordinates->column + 1);
+        $checkCells[] = $cells->at($cell->coordinates->row + 1, $cell->coordinates->column);
+
+        $checkCells[] = $cells->at($cell->coordinates->row - 1, $cell->coordinates->column - 1);
+        $topLeft = $checkCells->at($cell->coordinates->row - 1, $cell->coordinates->column - 1);
+
+        $checkCells[] = $cells->at($cell->coordinates->row - 1, $cell->coordinates->column + 1);
+        $topRight = $checkCells->at($cell->coordinates->row - 1, $cell->coordinates->column + 1);
+
+        $checkCells[] = $cells->at($cell->coordinates->row + 1, $cell->coordinates->column - 1);
+        $lowLeft = $checkCells->at($cell->coordinates->row + 1, $cell->coordinates->column - 1);
+
+        $checkCells[] = $cells->at($cell->coordinates->row + 1, $cell->coordinates->column + 1);
+        $lowRight = $checkCells->at($cell->coordinates->row + 1, $cell->coordinates->column + 1);
 
         /**
          * Check on collision with other type ships on all cells
-         * @var Cell $item
+         * @var Cell $cell
          */
-        foreach ($checkCells as $item) {
-            if (isset($item)
-                && $item->isOccupied()
-                && ($item->occupationType != $occupationType)) {
+        foreach ($checkCells as $cell) {
+            if (isset($cell)
+                && $cell->isOccupied()
+                && ($cell->occupationType != $occupationType)) {
                 return true;
             }
         }
@@ -133,37 +136,40 @@ class GameHelper
             return true;
         }
 
+        /**
+         * Check if we're already have checked one or more cells of this ship.
+         */
         if (!$hasMovement) {
-            foreach ($checkCells as $item) {
-                if (isset($item) && !$item->isEmpty()) {
+            foreach ($checkCells as $cell) {
+                if (isset($cell) && !$cell->isEmpty()) {
                     return true;
                 }
             }
         } else {
-            foreach ($checkCells as $item) {
-                if (isset($item) && $orientation == 0 /* vertical */
-                    && ($item->coordinates->row == $cell->coordinates->row - 1)
-                    && ($item->coordinates->column == $cell->coordinates->column)
-                    && ($item->isOccupied())
-                    && ($item->status() != $occupationType)) {
+            foreach ($checkCells as $cell) {
+                if (isset($cell) && $orientation == 0 /* vertical */
+                    && ($cell->coordinates->row == $cell->coordinates->row - 1)
+                    && ($cell->coordinates->column == $cell->coordinates->column)
+                    && ($cell->isOccupied())
+                    && ($cell->status() != $occupationType)) {
                     return true;
-                } else if (isset($item) && $orientation == 1 /* horizontal */
-                    && ($item->coordinates->row    == $cell->coordinates->row)
-                    && ($item->coordinates->column == $cell->coordinates->column - 1)
-                    && ($item->isOccupied())
-                    && ($item->status() != $occupationType)) {
+                } else if (isset($cell) && $orientation == 1 /* horizontal */
+                    && ($cell->coordinates->row    == $cell->coordinates->row)
+                    && ($cell->coordinates->column == $cell->coordinates->column - 1)
+                    && ($cell->isOccupied())
+                    && ($cell->status() != $occupationType)) {
                     return true;
-                } else if (isset($item) && $orientation == 1 /* Horizontal. Checking on collision with same type ship on top of movement */
-                    && ($item->coordinates->row    == $cell->coordinates->row)
-                    && ($item->coordinates->column == $cell->coordinates->column + 1)
-                    && ($item->isOccupied())
-                    && ($item->status() == $occupationType)) {
+                } else if (isset($cell) && $orientation == 1 /* Horizontal. Checking on collision with same type ship on top of movement */
+                    && ($cell->coordinates->row    == $cell->coordinates->row)
+                    && ($cell->coordinates->column == $cell->coordinates->column + 1)
+                    && ($cell->isOccupied())
+                    && ($cell->status() == $occupationType)) {
                     return true;
-                } else if (isset($item) && $orientation == 0 /* Vertical. Checking on collision with same type ship on right of movement */
-                    && ($item->coordinates->row == $cell->coordinates->row + 1)
-                    && ($item->coordinates->column == $cell->coordinates->column)
-                    && ($item->isOccupied())
-                    && ($item->status() == $occupationType)) {
+                } else if (isset($cell) && $orientation == 0 /* Vertical. Checking on collision with same type ship on right of movement */
+                    && ($cell->coordinates->row == $cell->coordinates->row + 1)
+                    && ($cell->coordinates->column == $cell->coordinates->column)
+                    && ($cell->isOccupied())
+                    && ($cell->status() == $occupationType)) {
                     return true;
                 }
             }
@@ -176,12 +182,9 @@ class GameHelper
      * @param ArrayCollection $rooms
      * @return GameRoom | null
      */
-    public static function findGameRoom($rooms) : GameRoom
+    public static function findGameRoom($rooms) : ?GameRoom
     {
         $result = null;
-        /**
-         * @var GameRoom $room
-         */
         foreach ($rooms as $room) {
             if (!$room->isFull()) {
                 $result = $room;

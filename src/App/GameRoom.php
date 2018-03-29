@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types=1);
 namespace Battleship\App;
 
 /**
@@ -78,6 +78,7 @@ class GameRoom
      * Add user to the room.
      * If room already is full then nothing.
      * @param Player $user
+     * @throws \Exception
      */
     public function addUser(Player $user) : void
     {

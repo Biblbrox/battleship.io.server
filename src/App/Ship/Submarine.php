@@ -15,6 +15,7 @@ class Submarine extends Ship
      */
     public function __construct()
     {
+        parent::__construct();
         $this->name = "Submarine";
         $this->width = 1;
         $this->occupationType = OccupationType::SUBMARINE;

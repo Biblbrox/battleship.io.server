@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types=1);
 use Battleship\App\Cell;
 use Battleship\Helper\OccupationType;
 

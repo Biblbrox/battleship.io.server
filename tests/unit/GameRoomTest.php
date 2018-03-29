@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types=1);
 use Battleship\App\GameRoom;
 
 class GameRoomTest extends \PHPUnit\Framework\TestCase
@@ -59,5 +59,4 @@ class GameRoomTest extends \PHPUnit\Framework\TestCase
 
         $this->assertEquals(true, $gameRoom->isFull());
     }
-
 }

@@ -1,7 +1,8 @@
 <?php
 
-namespace Battleship\Utils;
+declare(strict_types=1);
 
+namespace Battleship\Utils;
 
 /**
  * Class ArrayCollection
@@ -9,9 +10,8 @@ namespace Battleship\Utils;
  */
 class ArrayCollection implements ArrayCollectionInterface
 {
-
     /**
-     * @var $data
+     * @var array $data
      */
     protected $data = [];
 
@@ -28,7 +28,6 @@ class ArrayCollection implements ArrayCollectionInterface
         }
 
         foreach ($this->data as $item) {
-
             $add = true;
             foreach ($params as $key => $value) {
                 if (!isset($item->{$key}) || $item->{$key} != $value) {
@@ -36,7 +35,7 @@ class ArrayCollection implements ArrayCollectionInterface
                 }
 
                 if ($add) {
-                    $result->push($item);
+                    $result[] = $item;
                 }
             }
         }
@@ -50,45 +49,6 @@ class ArrayCollection implements ArrayCollectionInterface
     public function first()
     {
         return isset($this->data[0]) ? $this->data[0] : null;
-    }
-
-    /**
-     * @param $key
-     * @return mixed|null
-     */
-    public function get($key)
-    {
-        return isset($this->data[$key]) ? $this->data[$key] : null;
-    }
-
-    /**
-     * @param $item
-     * @param null $key
-     * @return mixed
-     */
-    public function push($item, $key = null)
-    {
-        if (isset($key)) {
-            $this->data[$key] = $item;
-        } else {
-            $this->data[] = $item;
-        }
-
-        return $item;
-    }
-
-    /**
-     * @param $key
-     */
-    public function remove($key) : void
-    {
-        if (isset($this->data[$key])) {
-            unset($this->data[$key]);
-        }
-
-        $this->data = array_filter($this->data, function ($item) {
-            return isset($item);
-        });
     }
 
     /**
@@ -155,4 +115,106 @@ class ArrayCollection implements ArrayCollectionInterface
         reset($this->data);
     }
 
+    /**
+     * Whether a offset exists
+     * @link http://php.net/manual/en/arrayaccess.offsetexists.php
+     * @param mixed $offset <p>
+     * An offset to check for.
+     * </p>
+     * @return boolean true on success or false on failure.
+     * </p>
+     * <p>
+     * The return value will be casted to boolean if non-boolean was returned.
+     * @since 5.0.0
+     */
+    public function offsetExists($offset)
+    {
+        return isset($this->data[$offset]);
+    }
+
+    /**
+     * Offset to retrieve
+     * @link http://php.net/manual/en/arrayaccess.offsetget.php
+     * @param mixed $offset <p>
+     * The offset to retrieve.
+     * </p>
+     * @return mixed Can return all value types.
+     * @since 5.0.0
+     */
+    public function offsetGet($offset)
+    {
+        return isset($this->data[$offset]) ? $this->data[$offset] : null;
+    }
+
+    /**
+     * Offset to set
+     * @link http://php.net/manual/en/arrayaccess.offsetset.php
+     * @param mixed $offset <p>
+     * The offset to assign the value to.
+     * </p>
+     * @param mixed $value <p>
+     * The value to set.
+     * </p>
+     * @return void
+     * @since 5.0.0
+     */
+    public function offsetSet($offset, $value)
+    {
+        if (is_null($offset)) {
+            $this->data[] = $value;
+        } else {
+            $this->data[$offset] = $value;
+        }
+    }
+
+    /**
+     * Offset to unset
+     * @link http://php.net/manual/en/arrayaccess.offsetunset.php
+     * @param mixed $offset <p>
+     * The offset to unset.
+     * </p>
+     * @return void
+     * @since 5.0.0
+     */
+    public function offsetUnset($offset)
+    {
+        unset($this->data[$offset]);
+    }
+
+    /**
+     * @param callable $callback
+     * @throws \ReflectionException
+     */
+    public function forEach(callable $callback) : void
+    {
+        if (!is_callable($callback)) {
+            throw new \InvalidArgumentException("Argument of forEach must be callable");
+        }
+
+        $refl = new \ReflectionFunction($callback);
+        $argc = $refl->getNumberOfParameters();
+
+        if ($argc < 1 || $argc > 2) {
+            throw new
+            \InvalidArgumentException("Callable must have one or two arguments: item and/or key of collection");
+        }
+
+        foreach ($this->data as $key => $item) {
+            $argc === 2 ? $callback($item, $key) : $callback($item);
+        }
+    }
+
+    /**
+     * Count elements of an object
+     * @link http://php.net/manual/en/countable.count.php
+     * @return int The custom count as an integer.
+     * </p>
+     * <p>
+     * The return value is cast to an integer.
+     * @since 5.1.0
+     */
+    public function count()
+    {
+        return count($this->data);
+    }
 }

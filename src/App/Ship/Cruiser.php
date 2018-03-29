@@ -15,6 +15,7 @@ class Cruiser extends Ship
      */
     public function __construct()
     {
+        parent::__construct();
         $this->name = "Cruiser";
         $this->width = 3;
         $this->occupationType = OccupationType::CRUISER;

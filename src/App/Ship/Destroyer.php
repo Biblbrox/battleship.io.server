@@ -15,6 +15,7 @@ class Destroyer extends Ship
      */
     public function __construct()
     {
+        parent::__construct();
         $this->name = "Destroyer";
         $this->width = 2;
         $this->occupationType = OccupationType::DESTROYER;
