@@ -32,6 +32,9 @@ abstract class Ship
      */
     public $coordinates;
 
+    /**
+     * Ship constructor.
+     */
     public function __construct()
     {
         $this->coordinates = new ArrayCollection();

@@ -9,6 +9,7 @@ use Battleship\App\GameRoom;
 use Battleship\App\Player;
 use Battleship\Utils\ArrayCollection;
 use Battleship\Utils\CellList;
+use Closure;
 use Workerman\Connection\TcpConnection;
 
 /**
