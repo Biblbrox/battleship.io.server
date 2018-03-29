@@ -1,7 +1,8 @@
 <?php
 
-namespace Battleship\Utils;
+declare(strict_types=1);
 
+namespace Battleship\Utils;
 
 /**
  * Class ArrayCollection
@@ -9,9 +10,8 @@ namespace Battleship\Utils;
  */
 class ArrayCollection implements ArrayCollectionInterface
 {
-
     /**
-     * @var $data
+     * @var array $data
      */
     protected $data = [];
 
@@ -28,7 +28,6 @@ class ArrayCollection implements ArrayCollectionInterface
         }
 
         foreach ($this->data as $item) {
-
             $add = true;
             foreach ($params as $key => $value) {
                 if (!isset($item->{$key}) || $item->{$key} != $value) {
@@ -184,6 +183,7 @@ class ArrayCollection implements ArrayCollectionInterface
 
     /**
      * @param callable $callback
+     * @throws \ReflectionException
      */
     public function forEach(callable $callback) : void
     {
@@ -202,5 +202,19 @@ class ArrayCollection implements ArrayCollectionInterface
         foreach ($this->data as $key => $item) {
             $argc === 2 ? $callback($item, $key) : $callback($item);
         }
+    }
+
+    /**
+     * Count elements of an object
+     * @link http://php.net/manual/en/countable.count.php
+     * @return int The custom count as an integer.
+     * </p>
+     * <p>
+     * The return value is cast to an integer.
+     * @since 5.1.0
+     */
+    public function count()
+    {
+        return count($this->data);
     }
 }

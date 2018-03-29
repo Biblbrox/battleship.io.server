@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types=1);
 namespace Battleship\App;
 
 use Battleship\Helper\OccupationType;
@@ -26,8 +26,13 @@ class Cell
      * @param $row
      * @param $column
      */
-    public function __construct($row, $column)
+    public function __construct(int $row, int $column)
     {
+        if (!in_array($row, range(0, 9))
+            || !in_array($column, range(0, 9))) {
+            throw new \InvalidArgumentException("Ships coordinates must be in range(0..9)");
+        }
+
         $this->coordinates = new Coordinates($row, $column);
         $this->occupationType = OccupationType::EMPTY;
     }
@@ -45,7 +50,7 @@ class Cell
      */
     public function isEmpty() : bool
     {
-        return ($this->occupationType == OccupationType::EMPTY);
+        return ($this->occupationType === OccupationType::EMPTY);
     }
 
     /**

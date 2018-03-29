@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Battleship\App;
 
 use Battleship\Helper\GameHelper;
@@ -108,9 +110,9 @@ class BattleshipServer
                     }
                     break;
                 case ServerMessage::HIT:
-                    $row    = isset($msg->row)    ? $msg->row    : null;
-                    $column = isset($msg->column) ? $msg->column : null;
-                    $userId = isset($msg->userId) ? $msg->userId : null;
+                    $row    = $msg->row ?? null;
+                    $column = $msg->column ?? null;
+                    $userId = $msg->userId ?? null;
 
                     if (!isset($row) || !isset($column)) {
                         $connection->send(json_encode([ 'msg' => "You must set row and column" ]));

@@ -1,12 +1,12 @@
 <?php
-
+declare(strict_types=1);
 namespace Battleship\Utils;
 
 /**
  * Interface ArrayCollectionInterface
  * @package Battleship\Utils
  */
-interface ArrayCollectionInterface extends \Iterator, \ArrayAccess
+interface ArrayCollectionInterface extends \Iterator, \ArrayAccess, \Countable
 {
     /**
      * @return mixed|null

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Battleship\Helper;
 
 use Battleship\App\Cell;
@@ -17,7 +19,7 @@ class GameHelper
 {
     /**
      * This method generating board for battleship game
-     * and returns it as a array.
+     * and returns it as an array.
      * @param TcpConnection $connection
      * @return \Battleship\App\Player
      */
@@ -27,8 +29,8 @@ class GameHelper
         $player->connection = $connection;
 
         foreach ($player->ships as $ship) {
-            $truePlace = true;
-            while($truePlace) {
+            $placeNotFound = true;
+            while($placeNotFound) {
                 $startColumn = mt_rand(0, 9);
                 $startRow = mt_rand(0, 9);
 
@@ -38,17 +40,13 @@ class GameHelper
                 $orientation = mt_rand(1, 100) % 2;
 
                 if ($orientation == 0) { // vertical
-                    for ($i = 0; $i < $ship->width - 1; $i++) {
-                        $endRow++;
-                    }
+                    $endRow += $ship->width - 1;
                 } else { // horizontal
-                    for ($i = 0; $i < $ship->width - 1; $i++) {
-                        $endColumn++;
-                    }
+                    $endColumn += $ship->width - 1;
                 }
 
                 if ($endRow > 9 || $endColumn > 9) {
-                    $truePlace = true;
+                    $placeNotFound = true;
                     continue;
                 }
 
@@ -59,7 +57,7 @@ class GameHelper
                 foreach ($affectedCells as $cell) {
                     if ($cell->isOccupied()
                         || self::checkCollision($cell, $player->board->cells, $ship->occupationType, $hasMovement, $orientation)) {
-                        $truePlace = true;
+                        $placeNotFound = true;
                         continue 2;
                     }
                     $hasMovement = true;
@@ -70,7 +68,7 @@ class GameHelper
                     $ship->coordinates[]  = $cell->coordinates;
                 }
 
-                $truePlace = false;
+                $placeNotFound = false;
             }
         }
 
@@ -82,11 +80,11 @@ class GameHelper
      * _______
      * |1|2|3|
      * -------
-     * |4|5|6|
+     * |4|x|6|
      * -------
      * |7|8|9|
      * -------
-     * where 5 is $cell on collision with other ships.
+     * where x is $cell which we are checking
      * @param Cell $cell
      * @param CellList $cells
      * @param OccupationType $occupationType
@@ -137,6 +135,9 @@ class GameHelper
             return true;
         }
 
+        /**
+         * Check if we're already have checked one or more cells of this ship.
+         */
         if (!$hasMovement) {
             foreach ($checkCells as $cell) {
                 if (isset($cell) && !$cell->isEmpty()) {
@@ -180,7 +181,7 @@ class GameHelper
      * @param ArrayCollection $rooms
      * @return GameRoom | null
      */
-    public static function findGameRoom($rooms) : GameRoom
+    public static function findGameRoom($rooms) : ?GameRoom
     {
         $result = null;
         foreach ($rooms as $room) {

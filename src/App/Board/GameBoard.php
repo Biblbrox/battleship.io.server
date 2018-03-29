@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types=1);
 namespace Battleship\App\Board;
 
 use Battleship\App\Cell;
@@ -29,10 +29,12 @@ class GameBoard
         }
     }
 
+
     /**
      * Return the game board cells as a string.
+     * @return array
      */
-    public function toArray()
+    public function toArray() : array
     {
         $board_array = [];
 

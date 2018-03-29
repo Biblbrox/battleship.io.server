@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types=1);
 namespace Battleship\App\Ship;
 
 use Battleship\Utils\ArrayCollection;
